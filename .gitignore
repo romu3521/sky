@@ -1,1 +1,4 @@
 db.sqlite3
+skyopen/__pycache__
+basecom/__pycache__
+basecom/migrations/__pycache__/
