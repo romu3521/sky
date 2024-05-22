@@ -21,10 +21,10 @@ env.read_env(os.path.join(BASE_DIR, "../.env"))
 
 
 try:
-	DOMAIN_NAME=os.environ["DOMAIN_NAME"]
+    DOMAIN_NAME=os.environ["DOMAIN_NAME"]
 except Exception as e:
-	DOMAIN_NAME=""
-	print("error",e)
+    DOMAIN_NAME=""
+    print("error",e)
 
 
 
@@ -43,9 +43,10 @@ ALLOWED_HOSTS = [DOMAIN_NAME]
 # Application definition
 
 INSTALLED_APPS = [
+    "basecom.apps.BasecomConfig",
     'django.contrib.admin',
     'django.contrib.auth',
-    "basecom.apps.BasecomConfig",
+    'django_cleanup.apps.CleanupConfig',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -117,9 +119,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
