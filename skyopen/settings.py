@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     "basecom.apps.BasecomConfig",
     'django.contrib.admin',
     'django.contrib.auth',
-    'django_cleanup.apps.CleanupConfig',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
