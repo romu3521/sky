@@ -3,3 +3,4 @@ skyopen/__pycache__
 basecom/__pycache__
 basecom/migrations/__pycache__/
 staticfiles/
+static/js/vite.svg
