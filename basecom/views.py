@@ -13,11 +13,21 @@ from django.shortcuts import redirect
 from django.core.exceptions import ObjectDoesNotExist
 
 
+class HomeView(TemplateView):
+    model = None
+    template_name="basecom/home.html"
 
-def index(request):
+    def get_context_data(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get(self, request, **kwargs):
         context = dict()
         context.update({
             })
 
-        return render(request, "basecom/home.html", context)
+        return render(request, self.template_name, context)
+
+
+
 
