@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+    <head>
+    <title id="navTitle" data-title="タイトル">skyopener</title>
+<meta http-equiv=”Content-Type” content=”text/html; charset="utf-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+<link href='https://fonts.googleapis.com/css?family=Dela Gothic One' rel='stylesheet' type='text/css'>
+
+
+    </head>
+<body >
+<style>
+body{
+ overflow-x:hidden;
+ margin:0;padding:0;font-size:"0.1em";
+opacity:1}
+</style>
+
+{% block content %}
+{% endblock %}
+
+
+
+
+
+</body>
+
+     <script type="text/javascript" crossorigin  src="{% static 'js/umd_main.js' %}?p={{fileparam}}"  ></script> 
+
+</html>
