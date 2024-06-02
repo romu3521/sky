@@ -22,8 +22,10 @@ env.read_env(os.path.join(BASE_DIR, "../.env"))
 
 try:
     DOMAIN_NAME=os.environ["DOMAIN_NAME"]
+    DEBUG_TF=os.environ["DEBUG_TF"]
 except Exception as e:
     DOMAIN_NAME=""
+    DEBUG_TF=False
     print("error",e)
 
 
@@ -35,7 +37,7 @@ except Exception as e:
 SECRET_KEY = 'django-insecure-8_bq)@!ly$nbtxehomrw75$beozf65m!x*2-0$+hsgh&c@wj(@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True#False
+DEBUG = DEBUG_TF
 
 ALLOWED_HOSTS = [DOMAIN_NAME]
 
