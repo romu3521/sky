@@ -8,9 +8,16 @@
 <br/>
 <br/>
 <br/>
-<div> {{content.post_title}}</div>
 
-<div>
+<div id="rom_content" data-title="{{content.post_title}}">
+<div> {{content.post_title}}</div>
+<div id="rom_content_content">
 {{content.post_content}}
 </div>
+</div>
+
+
+
+
+
 {% endblock %}
