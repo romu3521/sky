@@ -9,6 +9,7 @@ from django.template.response import TemplateResponse
 import os
 from django.views.generic import TemplateView
 from django.shortcuts import redirect
+from .models import FoPosts
 
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -23,7 +24,9 @@ class HomeView(TemplateView):
 
     def get(self, request, **kwargs):
         context = dict()
+        posted = FoPosts.objects.filter()
         context.update({
+            "posted":posted[0:10]
             })
 
         return render(request, self.template_name, context)
@@ -40,6 +43,25 @@ class ProfileView(TemplateView):
     def get(self, request, **kwargs):
         context = dict()
         context.update({
+            })
+
+        return render(request, self.template_name, context)
+
+
+class PostsView(TemplateView):
+    model = None
+    template_name="basecom/post.html"
+
+    def get_context_data(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get(self, request, **kwargs):
+
+        posted = FoPosts.objects.filter(url_name=kwargs["urlstr"])[0]
+        context = dict()
+        context.update({
+            "content":posted
             })
 
         return render(request, self.template_name, context)
