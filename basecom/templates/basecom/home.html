@@ -1,18 +1,22 @@
 {% extends "basecom/base.html" %}
 
 {% block content %}
+
+
+<div data-baseurl="" data-picurl="/static/pic" id="RomMain"></div>
+
+
+<div id="rom_urllist"  data-baseurl="" data-picurl="/static/pic">{% for p in posted %}
 <style>
 #rom_urllist{
  display:none;
 }
 </style>
-<div id="rom_urllist">{% for p in posted %}
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
 {{ p.post_title }}
 </a>
 {% endfor %}</div>
 
 
-<div data-baseurl="" data-picurl="/static/pic" id="RomMain"></div>
 
 {% endblock %}
