@@ -25,7 +25,7 @@ try:
     DEBUG_TF=os.environ["DEBUG_TF"]
 except Exception as e:
     DOMAIN_NAME=""
-    DEBUG_TF=False
+    DEBUG_TF="False"
     print("error",e)
 
 
@@ -37,7 +37,7 @@ except Exception as e:
 SECRET_KEY = 'django-insecure-8_bq)@!ly$nbtxehomrw75$beozf65m!x*2-0$+hsgh&c@wj(@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG_TF
+DEBUG = True if DEBUG_TF == "True" else False
 
 ALLOWED_HOSTS = [DOMAIN_NAME]
 
