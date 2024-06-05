@@ -24,9 +24,9 @@ class HomeView(TemplateView):
 
     def get(self, request, **kwargs):
         context = dict()
-        posted = FoPosts.objects.filter()
+        posted = FoPosts.objects.filter().order_by("-created_at")
         context.update({
-            "posted":posted[0:10]
+            "posted":posted[0:6]
             })
 
         return render(request, self.template_name, context)
