@@ -4,3 +4,9 @@ basecom/__pycache__
 basecom/migrations/__pycache__/
 staticfiles/
 static/js/vite.svg
+
+node_modules/
+package-lock.json
+package.json
+assets
+vite.config.js
