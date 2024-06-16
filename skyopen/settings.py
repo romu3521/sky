@@ -23,9 +23,11 @@ env.read_env(os.path.join(BASE_DIR, "../.env"))
 try:
     DOMAIN_NAME=os.environ["DOMAIN_NAME"]
     DEBUG_TF=os.environ["DEBUG_TF"]
+    MEDROO=os.environ["MEDROO"]
 except Exception as e:
     DOMAIN_NAME=""
     DEBUG_TF="False"
+    MEDROO="./media"
     print("error",e)
 
 
@@ -132,6 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR, MEDROO)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static',]

@@ -4,6 +4,7 @@ basecom/__pycache__
 basecom/migrations/__pycache__/
 staticfiles/
 static/js/vite.svg
+basecom/migrations/
 
 node_modules/
 package-lock.json
