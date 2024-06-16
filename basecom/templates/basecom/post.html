@@ -29,6 +29,7 @@ div#rom_content:has(div#rom_content_content){
  white-space:nowrap;
  line-height: 1.5em;
  margin:2em;
+ box-sizing:border-box;
 
 }
  @media screen and (min-width:0px) {
@@ -40,6 +41,10 @@ div#rom_content:has(div#rom_content_content){
  color: rgba(150,150,100,1);
  font-size:1.5em;
   }
+ .code{
+  width:100%;
+  margin:0em !important;
+ }
 }@media screen and (min-width:600px) {
 #rom_content_title{
  font-size:1.7em;
@@ -49,6 +54,18 @@ div#rom_content:has(div#rom_content_content){
     font-size:1.8em;
     line-height: 1.1em;
   }
+
+ #rom_content_content img{
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+ }
+ #rom_content_content img.left{
+  margin-left:0px !important;
+ }
+ #rom_content_content img.right{
+  margin-right:0px !important;
+ }
 
 
 
