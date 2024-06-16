@@ -18,7 +18,10 @@ div#rom_content:has(div#rom_content_content) {
 
   .code {
     width: 100%;
-    margin: 0em !important; } }
+    margin: 0em !important; }
+
+  img {
+    height: 5em !important; } }
 @media screen and (min-width: 600px) {
   #rom_content_title {
     font-size: 1.7em; }
