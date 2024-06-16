@@ -33,14 +33,21 @@ div#rom_content:has(div#rom_content_content) {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    height: 10em; }
+    height: 10em;
+    padding: 0.1em;
+    box-sizing: border-box;
+    background-color: #010101; }
   #rom_content_content img.left {
     margin-left: 1em !important; }
   #rom_content_content img.right {
     margin-right: 1em !important; }
   #rom_content_content .code {
+    position: relative;
     background-color: black;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 20px;
     font-size: 0.5em;
     overflow-x: scroll;
     white-space: nowrap;
