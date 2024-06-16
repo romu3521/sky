@@ -87,7 +87,8 @@ class PostsView(TemplateView):
         posted = FoPosts.objects.filter(url_name=kwargs["urlstr"])[0]
         context = dict()
         context.update({
-            "content":posted
+            "content":posted,
+            "content_post_content":posted.post_content.replace('\n', '<br>')
             })
 
         return render(request, self.template_name, context)
