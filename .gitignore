@@ -12,3 +12,5 @@ package.json
 assets
 vite.config.js
 日記.txt
+.sass-cache/
+static/css/style.css.map
