@@ -56,6 +56,28 @@ class SecView(TemplateView):
         return render(request, self.template_name, context)
 
 
+class UrllistView(TemplateView):
+    model = None
+    template_name="basecom/urllist.html"
+
+    def get_context_data(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get(self, request, **kwargs):
+        context = dict()
+        posted = FoPosts.objects.filter().order_by("-created_at")
+
+
+        context.update({
+            "posted":posted
+            })
+
+
+
+        return render(request, self.template_name, context)
+
+
 
 
 class ProfileView(TemplateView):

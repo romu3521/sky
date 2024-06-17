@@ -13,7 +13,9 @@
 
 </div>
 
-<div id="rom_urllist"  data-baseurl="" data-picurl="/static/pic">{% for p in posted %}
+<div id="rom_urllist"  data-baseurl="" 
+ data-linksurl="/loglist.html"
+ data-picurl="/static/pic">{% for p in posted %}
 <style>
 #rom_urllist{
  display:none;
@@ -23,6 +25,12 @@
 {{ p.post_title }}
 </a>
 {% endfor %}</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 <style>

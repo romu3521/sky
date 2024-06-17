@@ -1,3 +1,26 @@
+div.rm_realurllist {
+  margin-top: 100px;
+  text-align: center; }
+  div.rm_realurllist div {
+    background-color: #ebe6e6;
+    display: inline-block;
+    text-align: center;
+    padding: 0.1em;
+    margin: 0.1em; }
+    @media screen and (min-width: 0px) {
+      div.rm_realurllist div {
+        width: 100%;
+        font-size: 2em; } }
+    @media screen and (min-width: 600px) {
+      div.rm_realurllist div {
+        width: 70%;
+        font-size: 1.5em; } }
+  div.rm_realurllist a {
+    color: black;
+    text-decoration: none; }
+    div.rm_realurllist a:visited {
+      color: black; }
+
 div#rom_content:has(div#rom_content_content) {
   text-align: center;
   padding-bottom: 100px;

@@ -1,0 +1,15 @@
+{% extends "basecom/base.html" %}
+{% block content %}
+
+
+<div class="rm_realurllist">
+ {% for p in posted %}
+ <div>
+ <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
+{{ p.post_title }}
+</a>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}
