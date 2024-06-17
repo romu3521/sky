@@ -1,6 +1,12 @@
 div.rm_realurllist {
-  margin-top: 100px;
-  text-align: center; }
+  text-align: center;
+  min-height: 80vh; }
+  @media screen and (min-width: 0px) {
+    div.rm_realurllist {
+      margin-top: 15vh; } }
+  @media screen and (min-width: 600px) {
+    div.rm_realurllist {
+      margin-top: 18vh; } }
   div.rm_realurllist div {
     background-color: #ebe6e6;
     display: inline-block;
