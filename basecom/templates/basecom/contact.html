@@ -1,0 +1,36 @@
+{% extends "basecom/base.html" %}
+{% block content %}
+
+<style>
+div#rm_contactform{
+width:80vw;
+height:80vh;
+margin:20vh;
+text-align:center;
+}
+div#rm_contactform>form{
+display:inline-block;
+width:200px;
+height:300px;
+margin:0;
+text-align:left;
+}
+
+</style>
+<div id="rm_contactform">
+<form  method="post">
+    {% csrf_token %}
+
+    <label for="name">名前: </label><br>
+    <input data-display="名前" class="rm_inputpost"  type="text" name="name" id="name"  /><br>
+
+    <label for="mail">メール: </label>
+    <input data-display="メール" class="rm_inputpost"  type="text" name="mail" id="mail"  /><br>
+
+    <label for="contact">お問い合わせ本文: </label>
+    <textarea  data-display="本文" class="rm_inputpost"  name="contact" id="contact"  ></textarea><br>
+
+    <input type="submit" value="送信" />
+</form>
+</div>
+{% endblock %}
