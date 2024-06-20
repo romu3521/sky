@@ -7,13 +7,13 @@
 <form  method="post">
     {% csrf_token %}
 
-    <label for="name">名前: </label><br>
+    <label for="name">名前: </label>
     <input data-display="名前" class="rm_inputpost"  type="text" name="name" id="name"  /><br>
 
     <label for="mail">メール: </label>
     <input data-display="メール" class="rm_inputpost"  type="text" name="mail" id="mail"  /><br>
 
-    <label for="contact">お問い合わせ本文: </label>
+    <label for="contact">お問い合わせ: </label>
     <textarea  data-display="本文" class="rm_inputpost"  name="contact" id="contact"  ></textarea><br>
 
     <input type="submit" value="送信" />
