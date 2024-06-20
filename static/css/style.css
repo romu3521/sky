@@ -8,23 +8,26 @@ div#rm_contactform {
   @media screen and (min-width: 600px) {
     div#rm_contactform {
       width: 80vw;
-      margin-left: 10vh;
-      margin-right: 10vh; } }
+      margin-left: 10vw;
+      margin-right: 10vw; } }
   div#rm_contactform > form {
     display: inline-block;
     height: 300px;
+    padding-top: 1em;
+    padding-bottom: 4em;
     margin: 0;
     text-align: left;
-    padding-top: 2em;
-    padding-bottom: 2em;
     background-color: #ffc8c8; }
     @media screen and (min-width: 600px) {
       div#rm_contactform > form {
-        padding: 5em; } }
+        padding-left: 5em;
+        padding-right: 5em; } }
     @media screen and (min-width: 0px) {
       div#rm_contactform > form {
-        padding: 0em; } }
+        padding-left: 0em;
+        padding-right: 0em; } }
     div#rm_contactform > form > label {
+      margin-top: 0.4em;
       margin-left: 5vw;
       margin-right: 5vw;
       display: block;
@@ -34,7 +37,8 @@ div#rm_contactform {
       margin-left: 25%;
       margin-right: 25%; }
     div#rm_contactform > form > input {
-      padding: 0; }
+      font-size: 1.1em;
+      padding: 0.3em; }
       @media screen and (min-width: 0px) {
         div#rm_contactform > form > input {
           width: 90vw;
@@ -44,8 +48,9 @@ div#rm_contactform {
         div#rm_contactform > form > input {
           width: 30em; } }
     div#rm_contactform > form > textarea {
-      height: 8em;
-      padding: 0; }
+      font-size: 1.1em;
+      padding: 0.3em;
+      height: 8em; }
       @media screen and (min-width: 0px) {
         div#rm_contactform > form > textarea {
           width: 90vw;
@@ -53,7 +58,7 @@ div#rm_contactform {
           margin-right: 5vw; } }
       @media screen and (min-width: 600px) {
         div#rm_contactform > form > textarea {
-          width: 30em; } }
+          width: 37em; } }
 
 div.rm_realurllist {
   text-align: center;
