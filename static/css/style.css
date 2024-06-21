@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=DotGothic16");
 div#rm_contactform {
   margin-top: 20vh;
   height: 80vh;
@@ -11,54 +12,61 @@ div#rm_contactform {
       margin-left: 10vw;
       margin-right: 10vw; } }
   div#rm_contactform > form {
+    overflow-x: hidden;
     display: inline-block;
-    height: 300px;
     padding-top: 1em;
     padding-bottom: 4em;
-    margin: 0;
     text-align: left;
-    background-color: #ffc8c8; }
+    background-color: #ffc8c8;
+    box-sizing: border-box; }
     @media screen and (min-width: 600px) {
       div#rm_contactform > form {
-        padding-left: 5em;
-        padding-right: 5em; } }
+        padding-left: 5em !important;
+        padding-right: 5em !important;
+        width: auto !important; } }
     @media screen and (min-width: 0px) {
       div#rm_contactform > form {
         padding-left: 0em;
-        padding-right: 0em; } }
+        padding-right: 0em;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        width: 100vw; } }
     div#rm_contactform > form > label {
+      font-family: 'DotGothic16';
       margin-top: 0.4em;
-      margin-left: 5vw;
-      margin-right: 5vw;
+      margin-left: 1em;
       display: block;
       text-align: left; }
     div#rm_contactform > form > input[type=submit] {
+      font-family: 'DotGothic16';
+      display: block;
       width: 50%;
-      margin-left: 25%;
-      margin-right: 25%; }
+      margin-right: auto; }
     div#rm_contactform > form > input {
+      display: block;
       font-size: 1.1em;
-      padding: 0.3em; }
+      padding: 0.3em;
+      margin: auto;
+      box-sizing: border-box; }
       @media screen and (min-width: 0px) {
         div#rm_contactform > form > input {
-          width: 90vw;
-          margin-left: 5vw;
-          margin-right: 5vw; } }
+          width: 20em; } }
       @media screen and (min-width: 600px) {
         div#rm_contactform > form > input {
-          width: 30em; } }
+          width: 30em !important; } }
     div#rm_contactform > form > textarea {
       font-size: 1.1em;
       padding: 0.3em;
+      display: block;
+      box-sizing: border-box;
+      margin: auto;
       height: 8em; }
       @media screen and (min-width: 0px) {
         div#rm_contactform > form > textarea {
-          width: 90vw;
-          margin-left: 5vw;
-          margin-right: 5vw; } }
+          width: 25em; } }
       @media screen and (min-width: 600px) {
         div#rm_contactform > form > textarea {
-          width: 37em; } }
+          width: 35em !important; } }
 
 div.rm_realurllist {
   text-align: center;
