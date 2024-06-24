@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.conf import settings
+import re
 
 if settings.DEBUG:
     imgpath="static/"
@@ -37,5 +38,10 @@ class FoPosts(models.Model):
     post_pic3 = models.ImageField(upload_to=imgpath, null=True,blank=True)
     def __str__(self):
         return str(self.created_at)+"　　"+self.post_title
+    def get_description_summary(self):
+        clean = re.compile('<.*?>')
+        cleaned = re.sub(clean, '', self.post_content)
+        return cleaned[:160]
     class Meta:
         verbose_name_plural = "投稿"
+
