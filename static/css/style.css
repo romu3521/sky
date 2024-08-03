@@ -108,18 +108,18 @@ div.rm_realurllist {
     text-align: right;
     padding-right: 2em;
     box-sizing: border-box; }
-  div.rm_realurllist div {
+  div.rm_realurllist > div {
     background-color: #ebe6e6;
     display: inline-block;
     text-align: center;
     padding: 0.0em;
     margin: 0.0em; }
     @media screen and (min-width: 0px) {
-      div.rm_realurllist div {
+      div.rm_realurllist > div {
         width: 100vw;
         font-size: 2em; } }
     @media screen and (min-width: 600px) {
-      div.rm_realurllist div {
+      div.rm_realurllist > div {
         width: 70vw;
         font-size: 1.5em; } }
   div.rm_realurllist a {

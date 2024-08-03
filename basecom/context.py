@@ -8,13 +8,17 @@ def get_context(request):
     param = ""
     param2 = ""
 
-    path_t=f"{settings.BASE_DIR}/static/"
+    path_t=f"{settings.BASE_DIR}/static/css"
     param_t = os.path.getmtime(path_t)
 
+
+    path_js=f"{settings.BASE_DIR}/static/js"
+    param_js = os.path.getmtime(path_js)
 
 
     context['fileparam'] =param_t
     context['fileparam2'] =param_t
+    context['fileparamjs'] =param_js
 
 
 

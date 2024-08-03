@@ -7,10 +7,11 @@
  <div class="rm_postblock">
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
 <div class="title">
- <img src="{{p.post_pic|default:"/static/pic/nophoto.jpg"}}"/>{{ p.post_title }}
+ <img src="{{p.post_pic|default:"/static/pic/nophoto.jpg"}}"/>
+ <span class="StrEnphOpa">{{ p.post_title }}</span>
 </div>
 <div class="content_mini">
-{{ p.get_description_summary }}
+ {{ p.get_description_summary }}
 </div>
 <div class="desc">
 {{p.created_at | date:"Y/m/d"}}

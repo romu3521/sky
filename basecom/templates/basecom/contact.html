@@ -8,16 +8,16 @@
 <form  method="post">
     {% csrf_token %}
 
-    <label for="name">名前: </label>
+    <label class="StrEnphOpa" for="name">名前: </label>
     <input data-display="名前" class="rm_inputpost"  type="text" name="name" id="name"  />
 
-    <label for="mail">メール: </label>
+    <label  class="StrEnphOpa" for="mail">メール: </label>
     <input data-display="メール" class="rm_inputpost"  type="text" name="mail" id="mail"  />
 
-    <label for="contact">お問い合わせ: </label>
+    <label  class="StrEnphOpa" for="contact">お問い合わせ: </label>
     <textarea  data-display="本文" class="rm_inputpost"  name="contact" id="contact"  ></textarea>
 
-    <input type="submit" id="sbm" value="送信" />
+    <input  type="submit" id="sbm" value="送信" />
 </form>
 </div>
 <link rel="stylesheet" href="{% static 'css/contact.css' %}?p={{fileparam}}">
