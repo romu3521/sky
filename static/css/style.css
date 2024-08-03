@@ -75,9 +75,10 @@ div.rm_realurllist {
   padding: 0.4em;
   margin-bottom: 100px; }
   div.rm_realurllist .rm_postblock {
-    margin: 3px;
     min-height: 200px;
-    border: solid 1px black; }
+    box-sizing: border-box;
+    border: solid 1px black;
+    max-width: 90vw; }
   @media screen and (min-width: 0px) {
     div.rm_realurllist {
       margin-top: 18vh; } }
@@ -96,11 +97,11 @@ div.rm_realurllist {
     box-sizing: border-box;
     text-align: left;
     line-height: 2.2em; }
-    div.rm_realurllist .title img {
+    div.rm_realurllist .title > img {
       height: 2.2em !important;
       width: 3em !important;
-      display: inline-block;
-      background-color: blue;
+      display: inline-block !important;
+      background-color: rgba(0, 0, 0, 0);
       vertical-align: middle;
       margin-right: 1em; }
   div.rm_realurllist .desc {
