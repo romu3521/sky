@@ -3,7 +3,7 @@
 {% load static %}
 
 
-<div class="rm_realurllist">
+<div class="rm_realurllist" style="opacity:0">
  {% for p in posted %}
  <div class="rm_postblock">
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">

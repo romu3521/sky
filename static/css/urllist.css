@@ -1,4 +1,5 @@
 div.rm_realurllist {
+  opacity: 1 !important;
   font-family: 'DotGothic16';
   text-align: center;
   min-height: 80vh;
