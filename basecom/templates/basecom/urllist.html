@@ -1,5 +1,6 @@
 {% extends "basecom/base.html" %}
 {% block content %}
+{% load static %}
 
 
 <div class="rm_realurllist">
@@ -22,4 +23,5 @@
 {% endfor %}
 
 </div>
+<link rel="stylesheet" href="{% static 'css/urllist.css' %}?p={{fileparam2}}">
 {% endblock %}
