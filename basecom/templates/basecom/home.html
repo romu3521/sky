@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div data-baseurl="" data-picurl="/static/pic" id="RomMain">
+<div data-baseurl="" data-picurl="/static/pic" id="RomMain" style="text-align:center;min-height:70vh">
  <a href="https://wordpress.com/ja/"
   data-href="https://wordpress.com/ja/"
   data-title="Wordpress"
@@ -13,18 +13,25 @@
 
 </div>
 
-<div id="rom_urllist"  data-baseurl="" 
+<div id="romMidashi" style="display:none;"><div><span class="StrEnphOpa" >Update Log</span></div></div>
+
+<div id="rom_urllist2" style="display:none;"  data-baseurl="" 
  data-linksurl="/loglist.html"
- data-picurl="/static/pic">{% for p in posted %}
-<style>
-#rom_urllist{
- display:none;
-}
-</style>
+ data-picurl="/static/pic">
+ <a class="next" href="/loglist.html"><span class="StrEnphOpa" >read more...</span></a>
+
+
+ <img src="/static/pic/juwel.jpg">
+<div class="wrapper">
+ {% for p in posted %}
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
-{{ p.post_title }}
+  {{p.created_at | date:"Y/m/d"}} <span class="StrEnphOpa" >{{ p.post_title }}</span>
 </a>
-{% endfor %}</div>
+<br>
+{% endfor %}
+</div>
+
+</div>
 
 <br>
 <br>
