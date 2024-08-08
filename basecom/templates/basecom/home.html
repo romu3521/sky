@@ -1,5 +1,5 @@
 {% extends "basecom/base.html" %}
-
+{% load static %}
 {% block content %}
 
 <div data-baseurl="" data-picurl="/static/pic" id="RomMain" style="text-align:center;min-height:80vh">
@@ -18,14 +18,14 @@
 <div id="rom_urllist2" style="display:none;"  data-baseurl="" 
  data-linksurl="/loglist.html"
  data-picurl="/static/pic">
- <a class="next" href="/loglist.html"><span class="StrEnphOpa" >read more...</span></a>
+ <a class="next" href="/loglist.html"><span  class="StrEnphOpa" >read more...</span></a>
 
 
  <img src="/static/pic/juwel.jpg">
 <div class="wrapper">
  {% for p in posted %}
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
-  {{p.created_at | date:"Y/m/d"}} <span class="StrEnphOpa" >{{ p.post_title }}</span>
+  <span class="date">{{p.created_at | date:"Y/m/d"}} </span><span class="StrEnphOpa" >{{ p.post_title }}</span>
 </a>
 <br>
 {% endfor %}
@@ -46,10 +46,9 @@
  height:1000px;
  background-color:rgba(100,100,100,1);
  display:inline-block;
- 
-
 }
 </style>
+<link rel="stylesheet" href="{% static 'css/home.css' %}?p={{fileparam2}}">
 
 
 {% endblock %}
