@@ -1,5 +1,4 @@
 .rmdsn {
-  color: green;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -57,12 +56,6 @@ div.rm_realurllist {
     border: solid 1px black;
     position: relative;
     max-width: 90vw; }
-  @media screen and (min-width: 0px) {
-    div.rm_realurllist {
-      margin-top: 18vh; } }
-  @media screen and (min-width: 600px) {
-    div.rm_realurllist {
-      margin-top: 28vh !important; } }
   div.rm_realurllist .content_mini {
     font-size: 0.7em;
     text-align: left;

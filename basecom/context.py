@@ -19,6 +19,7 @@ def get_context(request):
     context['fileparam'] =param_t
     context['fileparam2'] =param_t
     context['fileparamjs'] =param_js
+    context['host'] =request.get_host()
 
 
 

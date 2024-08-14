@@ -22,7 +22,10 @@ body{
 <a href="profile.html" data-linkurl="profile.html"  data-titlename="プロフィール">プロフィール</a>
 <a href="contact.html" data-linkurl="contact.html"  data-titlename="Contact">Contact</a>
 </div>
-<div style="height:13vh"></div>
+
+{% if host != "www.skyopener2.shop" %}
+<div style="height:20vh"></div>
+{% endif %}
 
 {% block content %}
 {% endblock %}
