@@ -10,10 +10,10 @@ body {
     height: 25vh; } }
 
 @media screen and (max-width: 1000px) {
-  div.rmdmin {
+  div.rmdmin_ad {
     height: 1vh; } }
 @media screen and (min-width: 1000px) {
-  div.rmdmin {
+  div.rmdmin_ad {
     height: 15vh; } }
 
 div#rom_content:has(div#rom_content_content) {
