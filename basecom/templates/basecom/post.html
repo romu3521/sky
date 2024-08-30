@@ -1,4 +1,5 @@
 {% extends "basecom/base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -11,6 +12,7 @@
 </div>
 </div>
 
+<link rel="stylesheet" href="{% static 'css/articles.css' %}?p={{fileparam2}}">
 
 
 
