@@ -1,4 +1,5 @@
 div#rm_contactform2 {
+  font-family: DotGothic16;
   opacity: 1 !important;
   display: block;
   min-height: 80vh;
@@ -10,11 +11,13 @@ div#rm_contactform2 {
     div#rm_contactform2 {
       margin-top: 10em; } }
   div#rm_contactform2 form {
+    font-size: 1.2em;
     box-shadow: 5px 1px 75px rgba(222, 222, 222, 0.6);
     border-radius: 5px;
-    background-color: #ffc8c8;
+    background-color: #414141;
     box-sizing: border-box;
     display: inline-block;
+    color: honeydew;
     text-align: center;
     padding-top: 1.5em;
     padding-bottom: 1.5em; }
@@ -30,8 +33,12 @@ div#rm_contactform2 {
         padding-left: 2.5em;
         padding-right: 2.5em; } }
     div#rm_contactform2 form label {
+      margin-top: 0.3em;
       display: block;
       text-align: left; }
+      @media screen and (max-width: 1000px) {
+        div#rm_contactform2 form label {
+          padding-left: 0.3em; } }
     div#rm_contactform2 form input {
       display: block;
       width: 50%; }
@@ -44,6 +51,12 @@ div#rm_contactform2 {
       width: 6em !important;
       display: inline-block;
       margin: 1em; }
+      @media screen and (min-width: 1000px) {
+        div#rm_contactform2 form input#sbm {
+          font-size: 1.3em; } }
+      @media screen and (max-width: 1000px) {
+        div#rm_contactform2 form input#sbm {
+          padding-left: 0.3em; } }
     div#rm_contactform2 form textarea {
       display: block;
       width: 100%;

@@ -20,13 +20,18 @@ div.rm_realurllist {
   position: relative; }
   div.rm_realurllist .wrap_urlist {
     border-top: 1.5em grey solid;
-    border-bottom: 1.5em grey solid; }
+    border-bottom: 1.5em grey solid;
+    display: inline-block;
+    max-width: 97vw; }
+    @media screen and (min-width: 600px) {
+      div.rm_realurllist .wrap_urlist {
+        width: 70vw; } }
   div.rm_realurllist .rm_postblock {
     min-height: 200px;
     box-sizing: border-box;
     border: solid 1px black;
     position: relative;
-    max-width: 90vw; }
+    max-width: 97vw; }
   div.rm_realurllist .content_mini {
     font-size: 0.7em;
     text-align: left;
