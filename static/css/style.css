@@ -14,7 +14,7 @@ div#RomNavi {
 
 @media screen and (max-width: 1000px) {
   div.rmdmin_ad {
-    height: 1vh; } }
+    height: 0.5vh; } }
 @media screen and (min-width: 1000px) {
   div.rmdmin_ad {
     height: 15vh; } }
