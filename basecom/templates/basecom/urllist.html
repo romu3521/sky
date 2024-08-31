@@ -4,6 +4,8 @@
 
 
 <div class="rm_realurllist" style="opacity:0">
+
+ <div class="wrap_urlist">
  {% for p in posted %}
  <div class="rm_postblock">
   <div class="rmdsn"></div>
@@ -22,6 +24,7 @@
 </a>
 </div>
 {% endfor %}
+</div>
 
 </div>
 <link rel="stylesheet" href="{% static 'css/urllist.css' %}?p={{fileparam2}}">

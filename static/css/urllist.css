@@ -18,38 +18,9 @@ div.rm_realurllist {
   padding: 0.4em;
   margin-bottom: 100px;
   position: relative; }
-  div.rm_realurllist::after {
-    position: absolute;
-    content: "";
-    background-color: #666;
-    border-bottom: rgba(1, 1, 1, 0.2) 5px solid;
-    display: inline-block;
-    box-sizing: border-box;
-    height: 2rem;
-    bottom: -1.5rem; }
-    @media screen and (max-width: 1000px) {
-      div.rm_realurllist::after {
-        width: 90vw;
-        left: 5vw; } }
-    @media screen and (min-width: 1000px) {
-      div.rm_realurllist::after {
-        width: 70vw;
-        left: 14.5vw; } }
-  div.rm_realurllist::before {
-    position: absolute;
-    content: "";
-    background-color: #666;
-    border-bottom: rgba(1, 1, 1, 0.2) 5px solid;
-    display: inline-block;
-    box-sizing: border-box;
-    height: 2rem;
-    top: -1rem; }
-    @media screen and (max-width: 1000px) {
-      div.rm_realurllist::before {
-        width: 90vw; } }
-    @media screen and (min-width: 1000px) {
-      div.rm_realurllist::before {
-        width: 70vw; } }
+  div.rm_realurllist .wrap_urlist {
+    border-top: 1.5em grey solid;
+    border-bottom: 1.5em grey solid; }
   div.rm_realurllist .rm_postblock {
     min-height: 200px;
     box-sizing: border-box;
