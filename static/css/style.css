@@ -2,6 +2,9 @@
 body {
   background-image: linear-gradient(94deg, rgba(200, 200, 200, 0.7) 80%, #7a7a7a); }
 
+div#RomNavi {
+  opacity: 1 !important; }
+
 @media screen and (max-width: 1000px) {
   div.rmdmin {
     height: 11vh; } }

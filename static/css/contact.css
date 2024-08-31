@@ -1,4 +1,5 @@
 div#rm_contactform2 {
+  opacity: 1 !important;
   display: block;
   min-height: 80vh;
   text-align: center; }
