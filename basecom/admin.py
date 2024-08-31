@@ -16,3 +16,6 @@ class FoContactAdmin(admin.ModelAdmin):
 
 admin.site.register(FoPosts)
 admin.site.register(FoContact,FoContactAdmin)
+admin.site.site_header = 'romの管理サイト'
+admin.site.index_title = 'romの管理サイト'
+admin.site.site_title = 'romの管理サイト'
