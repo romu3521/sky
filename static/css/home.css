@@ -50,8 +50,15 @@
       #rom_urllist2 div.wrapper {
         margin-left: 3em; } }
     @media screen and (max-width: 1000px) {
-      #rom_urllist2 div.wrapper span.date {
-        font-size: 0.4em; } }
+      #rom_urllist2 div.wrapper div.date {
+        font-size: 0.4em !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        display: block !important; } }
+    @media screen and (min-width: 1000px) {
+      #rom_urllist2 div.wrapper div.date {
+        display: inline-block !important;
+        margin-right: 1em !important; } }
   #rom_urllist2 a {
     font-size: 1.5em;
     display: inline-block;

@@ -25,7 +25,7 @@
 <div class="wrapper">
  {% for p in posted %}
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
-  <span class="date">{{p.created_at | date:"Y/m/d"}} </span><span class="StrEnphOpa" >{{ p.post_title }}</span>
+  <div class="date">{{p.created_at | date:"Y/m/d"}} </div><span class="StrEnphOpa" >{{ p.post_title }}</span>
 </a>
 <br>
 {% endfor %}
