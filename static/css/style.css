@@ -1,6 +1,59 @@
 @import url("https://fonts.googleapis.com/css?family=DotGothic16");
+@import url("https://fonts.googleapis.com/css?family=Dela Gothic One");
 body {
   background-image: linear-gradient(94deg, rgba(200, 200, 200, 0.7) 80%, #7a7a7a); }
+
+footer#rm_footer2 {
+  opacity: 1 !important;
+  text-align: center;
+  width: 100%;
+  background-color: #323333;
+  color: #c8c8c8;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em !important;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  font-family: "Dela Gothic One", "Kiwi Maru", "DotGothic16", "serif"; }
+  footer#rm_footer2 ul#rm_linklist {
+    margin-top: 1em;
+    padding-left: 0px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer#rm_footer2 ul#rm_linklist a {
+      padding-top: 0em !important;
+      padding-bottom: 0em !important;
+      padding-left: 0.1em !important;
+      padding-right: 0.1em !important;
+      display: inline-block;
+      text-decoration: none;
+      color: #c8c8c8; }
+      footer#rm_footer2 ul#rm_linklist a:visited {
+        text-decoration: none;
+        color: #c8c8c8; }
+  footer#rm_footer2 ul#rm_iconlist {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer#rm_footer2 ul#rm_iconlist a {
+      padding: 1em !important;
+      margin: 0.2em !important;
+      border-radius: 20px;
+      width: 1.5em;
+      height: 1.5em;
+      display: inline-block;
+      text-decoration: none;
+      vertical-align: top;
+      background-size: cover; }
+      footer#rm_footer2 ul#rm_iconlist a:visited {
+        text-decoration: none;
+        color: #c8c8c8; }
 
 div#RomNavi {
   opacity: 1 !important; }

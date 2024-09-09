@@ -11,8 +11,12 @@
 <body >
 <style>
 body{
- overflow-x:hidden;
- margin:0;padding:0;font-size:"0.1em";
+ font-size:"0.1em";
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 </style>
 
@@ -34,20 +38,23 @@ body{
 
 {% block content %}
 {% endblock %}
-     <footer id="rm_footer" data-sitestring="rom">
+<footer style="opacity:0;" id="rm_footer2" data-sitestring="rom">
      Copyright © rom 2024-2024 All Rights Reserved.
-<style>
-body{opacity:0}
-</style>
 
 
-     <ul>
+     <ul id="rm_linklist">
       <a data-href="/contact.html"
          data-title="Contact"
-         href="/contact.html"><li>.</li></a>
-      <a data-href="/"
-         data-title=""
-       href="/"><li ></li></a>
+         href="/contact.html"><li>Contact</li></a>
+     </ul>
+     <ul id="rm_iconlist">
+      <a 
+         style="background-image: url('/static/pic/twitter_ico.png');"
+         href="https://twitter.com/share?url=https://{{host}}&text=デモサイト稼働中!"></a>
+
+      <a 
+         style="background-image: url('/static/pic/line_ico.png');"
+         href="https://twitter.com/share?url=https://{{host}}&text=デモサイト稼働中!"></a>
      </ul>
      </footer>
 
