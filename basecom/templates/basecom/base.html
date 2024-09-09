@@ -5,6 +5,7 @@
     <title id="navTitle" data-title="タイトル">rommet</title>
 <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}?p={{fileparam2}}">
 <link href='https://fonts.googleapis.com/css?family=Dela Gothic One' rel='stylesheet' type='text/css'>
 <link rel="icon" href="{% static 'favicon.png' %}">
     </head>
@@ -65,6 +66,5 @@ html, body {
 </body>
 
      <script type="text/javascript" crossorigin  src="{% static 'js/umd_main.js' %}?p={{fileparam_js}}"  ></script> 
-     <link rel="stylesheet" href="{% static 'css/style.css' %}?p={{fileparam2}}">
 
 </html>
