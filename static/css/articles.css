@@ -24,8 +24,7 @@ div#rom_content:has(div#rom_content_content) {
     margin: 0em !important; }
 
   > img {
-    height: 5em !important;
-    max-width: 90%; } }
+    height: 5em !important; } }
 @media screen and (min-width: 600px) {
   #rom_content_title {
     font-size: 1.7em; }
@@ -43,7 +42,8 @@ div#rom_content:has(div#rom_content_content) {
     height: 10em;
     padding: 0.1em;
     box-sizing: border-box;
-    background-color: #010101; }
+    background-color: #010101;
+    max-width: 90%; }
   #rom_content_content img.left {
     margin-left: 1em !important; }
   #rom_content_content img.right {
