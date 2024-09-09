@@ -60,7 +60,7 @@ div#RomNavi {
 
 @media screen and (max-width: 1000px) {
   div.rmdmin {
-    height: 11vh; } }
+    height: 9vh; } }
 @media screen and (min-width: 1000px) {
   div.rmdmin {
     height: 25vh; } }
