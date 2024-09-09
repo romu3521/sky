@@ -30,7 +30,8 @@ class HomeView(TemplateView):
         context = dict()
         posted = FoPosts.objects.filter().order_by("-created_at")
         context.update({
-            "posted":posted[0:6]
+            "posted":posted[0:6],
+            "descript":"デモサイト公開中：トップ"
             })
 
         return render(request, self.template_name, context)
@@ -114,7 +115,8 @@ class PostsView(TemplateView):
         context = dict()
         context.update({
             "content":posted,
-            "content_post_content":posted.post_content.replace('\n', '<br>')
+            "content_post_content":posted.post_content.replace('\n', '<br>'),
+            "descript":posted.post_title
             })
 
         return render(request, self.template_name, context)
