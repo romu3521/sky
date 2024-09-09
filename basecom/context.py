@@ -22,7 +22,6 @@ def get_context(request):
     context['descript'] ="デモサイト稼働！"
     context['host'] =request.get_host()
     context['path'] =request.get_full_path()
-    print(request.get_full_path())
 
 
 

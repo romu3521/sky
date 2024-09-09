@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=DotGothic16");
 @import url("https://fonts.googleapis.com/css?family=Dela Gothic One");
+div#RomNavi div.rm_icon {
+  transition: opacity 0.5s ease; }
+  div#RomNavi div.rm_icon:hover {
+    opacity: 0.5; }
+
 body {
   background-image: linear-gradient(94deg, rgba(200, 200, 200, 0.7) 80%, #7a7a7a); }
 
@@ -44,6 +49,7 @@ footer#rm_footer2 {
     footer#rm_footer2 ul#rm_iconlist a {
       padding: 1em !important;
       margin: 0.2em !important;
+      transition: opacity 0.5s ease;
       border-radius: 20px;
       width: 1.5em;
       height: 1.5em;
@@ -51,6 +57,8 @@ footer#rm_footer2 {
       text-decoration: none;
       vertical-align: top;
       background-size: cover; }
+      footer#rm_footer2 ul#rm_iconlist a:hover {
+        opacity: 0.5; }
       footer#rm_footer2 ul#rm_iconlist a:visited {
         text-decoration: none;
         color: #c8c8c8; }
