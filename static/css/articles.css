@@ -24,7 +24,8 @@ div#rom_content:has(div#rom_content_content) {
     margin: 0em !important; }
 
   > img {
-    height: 5em !important; } }
+    height: 5em !important;
+    max-width: 90%; } }
 @media screen and (min-width: 600px) {
   #rom_content_title {
     font-size: 1.7em; }
