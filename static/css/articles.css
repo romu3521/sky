@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=DotGothic16");
+div#rom_content > div {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+
 div#rom_content:has(div#rom_content_content) {
   text-align: center; }
   @media screen and (max-width: 1000px) {
@@ -10,14 +14,17 @@ div#rom_content:has(div#rom_content_content) {
   display: block;
   color: #969664; }
 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 600px) {
   #rom_content_title {
-    font-size: 1.7em; }
+    font-size: 1.9em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em; }
 
   #rom_content_content {
     width: 100%;
     color: #969664;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1), -2px 2px 0px rgba(0, 0, 0, 0), 2px -2px 0px rgba(0, 0, 0, 0), -2px -2px 0px rgba(0, 0, 0, 0); }
 
   .code {
     width: 100%;
@@ -25,14 +32,18 @@ div#rom_content:has(div#rom_content_content) {
 
   > img {
     height: 5em !important; } }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   #rom_content_title {
-    font-size: 1.7em; }
+    font-size: 1.9em;
+    padding-left: 0.3em;
+    padding-bottom: 0.7em; }
 
   #rom_content_content {
+    width: 100%;
     color: #969664;
     font-size: 1.8em;
-    line-height: 1.1em; } }
+    line-height: 1.2em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1), -2px 2px 0px rgba(0, 0, 0, 0), 2px -2px 0px rgba(0, 0, 0, 0), -2px -2px 0px rgba(0, 0, 0, 0); } }
 #rom_content_content {
   display: inline-block; }
   #rom_content_content img {
