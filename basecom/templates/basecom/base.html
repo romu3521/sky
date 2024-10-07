@@ -13,7 +13,8 @@
 <style>
 body{
  font-size:"0.1em";
- opacity:0;
+// opacity:0;
+ opacity:1;
 }
 html, body {
   margin: 0;
@@ -21,7 +22,6 @@ html, body {
   height: 100%;
 }
 </style>
-
 <div 
  style="opacity:0;"
  data-movieurl="/static/pic/opening.mp4" 
@@ -41,7 +41,7 @@ html, body {
 {% block content %}
 {% endblock %}
 <footer style="opacity:0;" id="rm_footer2" data-sitestring="rom">
-     Copyright © rom 2024-2024 All Rights Reserved.
+ <div onclick="window.location='/'">Copyright © rom 2024-2024 All Rights Reserved.</a>
 
 
      <ul id="rm_linklist">
