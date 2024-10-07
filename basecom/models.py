@@ -27,6 +27,7 @@ class FoContact(models.Model):
 class FoPosts(models.Model):
     id = models.AutoField(primary_key=True)
     url_name = models.CharField(max_length=100, blank=True, null=True)
+    redirect_url = models.CharField(max_length=50, blank=True, null=True)
     post_title = models.TextField(default="", blank=True, null=True)
     post_content = models.TextField(default="", blank=True, null=True)
     author_name = models.CharField(max_length=100, blank=True, null=True)

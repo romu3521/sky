@@ -119,6 +119,9 @@ class PostsView(TemplateView):
             "descript":posted.post_title
             })
 
+        if not posted.redirect_url is None:
+            return redirect(posted.redirect_url)
+
         return render(request, self.template_name, context)
 
 
