@@ -12,9 +12,15 @@
 </div>
 </div>
 
+
+
 <link rel="stylesheet" href="{% static 'css/articles.css' %}?p={{fileparam2}}">
 
 
-
+{% if blogparts %}
+{% include 'basecom/parts/blogparts.html' with blogparts=blogparts %}
+{% else %}
+    <p>変数 XXX は渡されていません。</p>
+{% endif %}
 
 {% endblock %}

@@ -1,0 +1,12 @@
+{% load static %}
+<div id="blogparts1">
+{% for item in blogparts %}
+<a 
+ class="rmblogparts"
+ style="background-image:url('/{{item.post_pic|default:"static/pic/nophoto.jpg"}}')"
+ href="/post/{{item.url_name}}.html">
+    <p>{{ item.post_title }}</p>
+</a>
+{% endfor %}
+</div>
+<link rel="stylesheet" href="{% static 'css/blogparts1.css' %}?p={{fileparam2}}">

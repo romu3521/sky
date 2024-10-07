@@ -16,6 +16,7 @@ from .models import FoContact
 import re
 from django.core.validators import EmailValidator
 from django.core.exceptions import ValidationError
+from django.db.models.functions import Random
 
 
 class HomeView(TemplateView):
@@ -111,12 +112,17 @@ class PostsView(TemplateView):
 
     def get(self, request, **kwargs):
 
+        #posted = FoPosts.objects.get(url_name=kwargs["urlstr"])
         posted = FoPosts.objects.filter(url_name=kwargs["urlstr"])[0]
+
+        blogparts = FoPosts.objects.filter().exclude(id=posted.id).order_by(Random())[0:3]
+
         context = dict()
         context.update({
             "content":posted,
             "content_post_content":posted.post_content.replace('\n', '<br>'),
-            "descript":posted.post_title
+            "descript":posted.post_title,
+            "blogparts":blogparts
             })
 
         if not posted.redirect_url is None:

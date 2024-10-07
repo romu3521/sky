@@ -1,0 +1,29 @@
+div#blogparts1 {
+  text-align: center;
+  height: 220px;
+  overflow-x: scroll;
+  white-space: nowrap; }
+  div#blogparts1 a.rmblogparts {
+    filter: grayscale(20%);
+    transform: scale(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    background-size: cover;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: relative; }
+    div#blogparts1 a.rmblogparts:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1, 1.1); }
+    div#blogparts1 a.rmblogparts p {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: black;
+      color: white;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1em; }
+
+/*# sourceMappingURL=blogparts1.css.map */
