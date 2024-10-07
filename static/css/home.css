@@ -1,43 +1,51 @@
+@charset "UTF-8";
 #rom_urllist2 {
   font-family: DotGothic16;
   position: relative;
   background-color: rgba(0, 0, 0, 0.8);
-  padding-top: 10vh;
-  padding-bottom: 10vh;
   text-align: right;
   overflow: hidden;
   display: flex !important;
   align-items: stretch;
   justify-content: center; }
-  @media screen and (min-width: 0px) {
+  @media screen and (max-width: 600px) {
     #rom_urllist2 {
       margin: 1vh;
+      height: 600px;
       padding-left: 0vw;
       padding-right: 1vw;
       border-bottom: white solid 5px;
-      border-top: white solid 5px; } }
+      border-top: white solid 5px;
+      padding-top: 2vh;
+      padding-bottom: 10vh; } }
   @media screen and (min-width: 600px) {
     #rom_urllist2 {
       margin: 4vh;
-      padding-left: 10vw;
-      padding-right: 10vw; } }
+      padding-left: 7vw;
+      padding-right: 7vw;
+      padding-top: 10vh;
+      padding-bottom: 10vh; } }
   #rom_urllist2 > .next {
     position: absolute;
-    right: -1em;
+    right: 0em;
     bottom: 0;
     font-size: 2em;
     opacity: 0.7; }
-  #rom_urllist2 > img {
-    object-fit: contain;
+  #rom_urllist2 > div.rmset {
     padding: 10px;
-    box-sizing: border-box;
-    background-color: rgba(255, 100, 100, 0.2); }
-    @media screen and (min-width: 0px) {
-      #rom_urllist2 > img {
-        width: 40%; } }
+    box-sizing: border-box; }
+    @media screen and (max-width: 600px) {
+      #rom_urllist2 > div.rmset {
+        width: 8%;
+        background-color: rgba(225, 220, 220, 0.8);
+        background-image: none !important; } }
     @media screen and (min-width: 600px) {
-      #rom_urllist2 > img {
-        width: 30%; } }
+      #rom_urllist2 > div.rmset {
+        width: 30%;
+        background-color: rgba(255, 100, 100, 0.2);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center; } }
   #rom_urllist2 a {
     font-size: 1.5em;
     display: inline-block;
@@ -57,14 +65,29 @@
     border-left: 2px solid white;
     text-align: left;
     display: inline-block;
-    width: 60%; }
-    @media screen and (min-width: 0px) {
+    text-align: center; }
+    @media screen and (max-width: 600px) {
       #rom_urllist2 div.wrapper {
-        margin-left: 0.25em; } }
+        margin-left: 0.25em;
+        width: 1200px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        /* 300pxの幅で2列 */
+        grid-auto-rows: 300px;
+        /* 300pxの高さ */
+        width: 700px;
+        /* 親要素の幅を800pxに固定 */ } }
     @media screen and (min-width: 600px) {
       #rom_urllist2 div.wrapper {
         margin-left: 3em; } }
-    #rom_urllist2 div.wrapper a {
+    #rom_urllist2 div.wrapper a.rmlinksimg {
+      width: 300px;
+      height: 300px;
+      background-color: rgba(200, 0, 0, 0.5);
+      margin: 5px;
+      position: relative;
       transition: transform 0.3s ease;
       font-size: 1.5em;
       display: inline-block;
@@ -72,26 +95,29 @@
       color: white;
       white-space: nowrap;
       padding-top: 0.1em; }
-      #rom_urllist2 div.wrapper a:hover {
-        transform: scale(1.05) rotate(1deg); }
-      @media screen and (min-width: 0px) {
-        #rom_urllist2 div.wrapper a {
-          margin-left: 0.25em; } }
-      @media screen and (min-width: 600px) {
-        #rom_urllist2 div.wrapper a {
-          margin-left: 3em; } }
-      #rom_urllist2 div.wrapper a:visited {
+      #rom_urllist2 div.wrapper a.rmlinksimg > .rmlinktitle {
+        position: absolute;
+        bottom: 0px;
+        color: black;
+        display: block;
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: bold;
+        background-color: rgba(222, 222, 222, 0.8);
+        padding: 0.3em;
+        box-sizing: border-box; }
+      #rom_urllist2 div.wrapper a.rmlinksimg > div.rmlinkdate {
+        background-color: rgba(222, 222, 222, 0.8);
+        color: black !important;
+        font-size: 1em !important;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0.3em; }
+      #rom_urllist2 div.wrapper a.rmlinksimg:hover {
+        transform: scale(1.05) rotate(4deg); }
+      #rom_urllist2 div.wrapper a.rmlinksimg:visited {
         color: white; }
-    @media screen and (max-width: 1000px) {
-      #rom_urllist2 div.wrapper div.date {
-        font-size: 0.4em !important;
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-        display: block !important; } }
-    @media screen and (min-width: 1000px) {
-      #rom_urllist2 div.wrapper div.date {
-        display: inline-block !important;
-        margin-right: 1em !important; } }
 
 #romMidashi {
   background-color: #467a47;

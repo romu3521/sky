@@ -18,16 +18,30 @@
 <div id="rom_urllist2" style="display:none;"  data-baseurl="" 
  data-linksurl="/loglist.html"
  data-picurl="/static/pic">
- <a class="next" href="/loglist.html"><span  class="StrEnphOpa" >read more...</span></a>
+ <a class="next" href="/loglist.html"><span  class="StrEnphOpa readmore" >read more...</span></a>
 
 
- <img src="/static/pic/juwel.jpg">
-<div class="wrapper">
+<div class="rmset"
+  onclick="
+  const wrapper = document.getElementById('rmwrapper');
+  var newScrollPosition = wrapper.scrollLeft + 100; // 相対的に100加算
+  wrapper.scrollTo({
+    behavior: 'smooth',
+    left: newScrollPosition,
+  });
+
+"
+ style="background-image:url('/static/pic/juwel.jpg')"></div>
+<div id="rmwrapper" class="wrapper">
  {% for p in posted %}
- <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
-  <div class="date">{{p.created_at | date:"Y/m/d"}} </div><span class="StrEnphOpa" >{{ p.post_title }}</span>
+
+ <a 
+  class="rmlinksimg"
+  style="background-image:url('{{p.post_pic|default:"/static/pic/nophoto.jpg"}}')"
+  data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
+  <div class="rmlinkdate">{{p.created_at | date:"Y/m/d"}} </div>
+  <span class="StrEnphOpa rmlinktitle" >{{ p.post_title }}</span>
 </a>
-<br>
 {% endfor %}
 </div>
 
