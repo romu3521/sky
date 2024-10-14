@@ -1,4 +1,6 @@
-@charset "UTF-8";
+.romyajirushi {
+  box-shadow: none !important; }
+
 #rom_urllist2 {
   font-family: DotGothic16;
   position: relative;
@@ -7,10 +9,15 @@
   overflow: hidden;
   display: flex !important;
   align-items: stretch;
-  justify-content: center; }
+  justify-content: center;
+  border-top: double rgba(252, 252, 252, 0.9) 6px;
+  border-bottom: double rgba(252, 252, 252, 0.9) 6px; }
   @media screen and (max-width: 600px) {
     #rom_urllist2 {
-      margin: 1vh;
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      margin-left: 1vh;
+      margin-left: 0.1vh;
       height: 600px;
       padding-left: 0vw;
       padding-right: 1vw;
@@ -42,7 +49,7 @@
     @media screen and (min-width: 600px) {
       #rom_urllist2 > div.rmset {
         width: 30%;
-        background-color: rgba(255, 100, 100, 0.2);
+        background-color: rgba(100, 100, 100, 0.2);
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center; } }
@@ -74,11 +81,12 @@
         overflow-y: hidden;
         display: grid;
         grid-template-columns: repeat(2, 300px);
-        /* 300pxの幅で2列 */
         grid-auto-rows: 300px;
-        /* 300pxの高さ */
-        width: 700px;
-        /* 親要素の幅を800pxに固定 */ } }
+        width: 700px; }
+        #rom_urllist2 div.wrapper::-webkit-scrollbar {
+          display: none; }
+        #rom_urllist2 div.wrapperhtml {
+          scrollbar-width: none; } }
     @media screen and (min-width: 600px) {
       #rom_urllist2 div.wrapper {
         margin-left: 3em; } }
@@ -92,6 +100,7 @@
       background-size: contain;
       background-position: 25% 25%;
       transition: transform 0.3s ease;
+      z-index: 9;
       font-size: 1.5em;
       display: inline-block;
       text-decoration: none;
@@ -108,7 +117,8 @@
         font-weight: bold;
         background-color: rgba(222, 222, 222, 0.8);
         padding: 0.3em;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        overflow: hidden; }
       #rom_urllist2 div.wrapper a.rmlinksimg > div.rmlinkdate {
         background-color: rgba(222, 222, 222, 0.8);
         color: black !important;
@@ -118,7 +128,8 @@
         right: 0px;
         padding: 0.3em; }
       #rom_urllist2 div.wrapper a.rmlinksimg:hover {
-        transform: scale(1.05) rotate(4deg); }
+        transform: scale(1.05) rotate(4deg);
+        z-index: 10 !important; }
       #rom_urllist2 div.wrapper a.rmlinksimg:visited {
         color: white; }
 

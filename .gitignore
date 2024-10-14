@@ -1,5 +1,6 @@
 static/css/*.css.map
 react
+react_game
 db.sqlite3
 skyopen/__pycache__
 basecom/__pycache__
