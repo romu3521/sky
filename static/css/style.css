@@ -23,6 +23,7 @@ div#RomNavi2 {
       width: 100vw;
       height: 100%; }
       div#RomNavi2 > .navi > .naviwrap div#batsu {
+        opacity: 1 !important;
         margin: 0px !important;
         position: absolute !important;
         right: 1px;
