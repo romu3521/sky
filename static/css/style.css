@@ -1,9 +1,61 @@
 @import url("https://fonts.googleapis.com/css?family=DotGothic16");
 @import url("https://fonts.googleapis.com/css?family=Dela Gothic One");
-div#RomNavi div.rm_icon {
-  transition: opacity 0.5s ease; }
-  div#RomNavi div.rm_icon:hover {
-    opacity: 0.5; }
+div#RomNavi2 {
+  opacity: 1 !important; }
+  div#RomNavi2 > .navi {
+    position: fixed;
+    top: 0px;
+    pointer-events: none;
+    width: 100vw;
+    text-align: center;
+    background-color: #f0f0f0;
+    box-shadow: rgba(5, 5, 5, 0.2) 0px 10px 30px 1px;
+    z-index: 1502; }
+    @media screen and (max-width: 600px) {
+      div#RomNavi2 > .navi {
+        height: 10vh; } }
+    @media screen and (min-width: 600px) {
+      div#RomNavi2 > .navi {
+        height: 7vh; } }
+    div#RomNavi2 > .navi > .naviwrap {
+      text-align: center;
+      position: relative;
+      width: 100vw;
+      height: 100%; }
+      div#RomNavi2 > .navi > .naviwrap div#batsu {
+        margin: 0px !important;
+        position: absolute !important;
+        right: 1px;
+        border: double 2px rgba(1, 1, 1, 0.1);
+        background-color: #f0f0f0 !important;
+        bottom: 5px !important;
+        top: auto !important;
+        width: 8vh !important;
+        height: 8vh !important; }
+        @media screen and (min-width: 600px) {
+          div#RomNavi2 > .navi > .naviwrap div#batsu {
+            display: none !important; } }
+      div#RomNavi2 > .navi > .naviwrap div.rm_icon {
+        pointer-events: auto;
+        position: relative;
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        vertical-align: top;
+        background-size: cover;
+        transition: opacity 0.5s ease; }
+        @media screen and (max-width: 600px) {
+          div#RomNavi2 > .navi > .naviwrap div.rm_icon {
+            width: 5vh;
+            height: 5vh;
+            top: 3vh; } }
+        @media screen and (min-width: 600px) {
+          div#RomNavi2 > .navi > .naviwrap div.rm_icon {
+            width: 4vh;
+            height: 4vh;
+            top: 1.5vh; } }
+      div#RomNavi2 > .navi > .naviwrap .icon:hover {
+        opacity: 0.5; }
 
 body {
   background-color: white !important; }
