@@ -16,26 +16,24 @@ div#RomNavi2 {
         height: 10vh; } }
     @media screen and (min-width: 600px) {
       div#RomNavi2 > .navi {
-        height: 7vh; } }
+        height: 9vh; } }
     div#RomNavi2 > .navi > .naviwrap {
       text-align: center;
       position: relative;
       width: 100vw;
       height: 100%; }
       div#RomNavi2 > .navi > .naviwrap div#batsu {
-        opacity: 1 !important;
         margin: 0px !important;
         position: absolute !important;
         right: 1px;
-        border: double 2px rgba(1, 1, 1, 0.1);
         background-color: #f0f0f0 !important;
         bottom: 5px !important;
         top: auto !important;
         width: 8vh !important;
         height: 8vh !important; }
         @media screen and (min-width: 600px) {
-          div#RomNavi2 > .navi > .naviwrap div#batsu {
-            display: none !important; } }
+          div#RomNavi2 > .navi > .naviwrap div#batsu .burg {
+            display: none; } }
       div#RomNavi2 > .navi > .naviwrap div.rm_icon {
         pointer-events: auto;
         position: relative;
@@ -52,8 +50,8 @@ div#RomNavi2 {
             top: 3vh; } }
         @media screen and (min-width: 600px) {
           div#RomNavi2 > .navi > .naviwrap div.rm_icon {
-            width: 4vh;
-            height: 4vh;
+            width: 6vh;
+            height: 6vh;
             top: 1.5vh; } }
       div#RomNavi2 > .navi > .naviwrap .icon:hover {
         opacity: 0.5; }
