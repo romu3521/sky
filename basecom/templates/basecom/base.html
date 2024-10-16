@@ -100,7 +100,7 @@ html, body {
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1; /* 背景として後ろに配置 */
+      z-index: -1;
 
     }
 </style>
@@ -115,26 +115,24 @@ const interval = 1000 / fps;
   canvas.height = window.innerHeight;
 
   let balls = [];
-  const ballCount = 20;  // ボールの数
+  const ballCount = 20;
   const colors = ['#FF6347', '#1E90FF', '#32CD32', '#FFD700', '#FF69B4', '#8A2BE2', '#00CED1'];
 
-  // ランダムな色を取得する関数
   function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
-  // ボールを生成する関数
   function createBall() {
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      radius: Math.random() * 50 + 30,  // 10pxから30pxのランダムな大きさ
-      dx: (Math.random() - 0.5) * 8,    // ランダムなx速度
-      dy: (Math.random() - 0.5) * 8,    // ランダムなy速度
-      gravity: 0.2,  // 重力
-      friction: 1.0,  // 反発力
-      color: getRandomColor(),  // ランダムな色
-      lifespan: Math.random() * 3000 + 3000  // ボールの寿命（3秒から6秒）
+      radius: Math.random() * 50 + 30, 
+      dx: (Math.random() - 0.5) * 8,
+      dy: (Math.random() - 0.5) * 8,
+      gravity: 0.2,
+      friction: 1.0,
+      color: getRandomColor(),
+      lifespan: Math.random() * 3000 + 3000
     };
   }
 

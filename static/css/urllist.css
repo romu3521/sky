@@ -75,7 +75,7 @@ div.rm_realurllist {
     position: relative;
     z-index: 2; }
   div.rm_realurllist div.rm_postblock {
-    background-color: #ebe6e6;
+    background-color: rgba(235, 230, 230, 0.7);
     display: inline-block;
     text-align: center;
     padding: 0.0em;
