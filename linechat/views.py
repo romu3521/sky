@@ -13,9 +13,10 @@ def line_webhook(request):
         user_id="xxxxxx"
 
         if 'events' in body and len(body['events']) > 0:
-            print("aa")
-
-            #user_id = body['events'][0]['source']['userId']
+            try:
+                user_id = body['events'][0]['source']['userId']
+            except e:
+                logger.error('エラーが発生しました: %s', request.body)
         else:
             logger.error('エラーが発生しました: %s', request.body)
 
@@ -23,7 +24,8 @@ def line_webhook(request):
 
             return JsonResponse({'user_id': user_id}, status=200)
     
-    logger.error('エラーが発生しました: %s', "get Access")
+    logger.error('GETです: %s', request.body)
+
     return JsonResponse({'error': 'Invalid request'}, status=400)
 
 
