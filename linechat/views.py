@@ -10,11 +10,11 @@ logger = logging.getLogger(__name__)
 def line_webhook(request):
     if request.method == 'POST':
         body = json.loads(request.body)
+        user_id="xxxxxx"
         
         if 'events' in body and len(body['events']) > 0:
 
             #user_id = body['events'][0]['source']['userId']
-            user_id="xxxxxx"
         else:
             logger.error('エラーが発生しました: %s', request.body)
 
