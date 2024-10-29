@@ -21,7 +21,7 @@ def line_webhook(request):
         if 'events' in body and len(body['events']) > 0:
             try:
                 user_id = body['events'][0]['source']['userId']
-                send_push_message(CHANNEL_ACCESS_TOKEN,user_id)
+                send_push_message(CHANNEL_ACCESS_TOKEN,user_id,"aaaaa")
                 return jsonresponse({'user_id': user_id}, status=200)
             except e:
                 logger.error('エラーが発生しました: %s', request.body)
@@ -53,7 +53,7 @@ def send_push_message(token,userid,message):
         'messages': [
             {
                 'type': 'text',
-                'text': f'user id をどうぞ「{message}」'
+                'text': f'user id をどうぞ「{userid}」'
             }
         ]
     }
