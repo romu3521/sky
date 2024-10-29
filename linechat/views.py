@@ -43,7 +43,7 @@ def line_webhook(request):
 def send_push_message(token):
     url = 'https://api.line.me/v2/bot/message/push'
     headers = {
-        'Authorization': f'Bearer {CHANNEL_ACCESS_TOKEN}',
+        'Authorization': f'Bearer {token}',
         'Content-Type': 'application/json'
     }
     data = {
