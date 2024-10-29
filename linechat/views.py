@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 def line_webhook(request):
     
     CHANNEL_ACCESS_TOKEN = 'oYoxn4ytHWiGRWdVUXx8jPZG14cErc3At4O97tttDHEQDMUe5PdqBPkpbtjNHgSIHx0y0DDNs/VlPCRH23y1kROrNJNhik37k8yHHvj6A/URrhgu4KrjNnyHrhkC4yffsuc2aDFidf0SLAXsfyffewdB04t89/1O/w1cDnyilFU='  # 取得したチャネルアクセストークンに置き換え
-    if True:
+    try:
         body = json.loads(request.body)
         user_id="xxxxxx"
 
@@ -29,13 +29,15 @@ def line_webhook(request):
 
         else:
             logger.error('エラーが発生しました: %s', request.body)
+    except Exception as e:
+            logger.error('エラーが発生しました: %s')
+
 
             
 
     #GETです: b'{"destination":"U45e7e1d768298950e9599f5ab2277095","events":[{"type":"message","message":{"type":"text","id":"532461546153705994","quoteToken":"YFpDcAavfmWF9YFJWwjY27KHclGowKvSNT5rpN3Zplt7O1rD0vye5eqRY2jSBg4YpQOk99Ec6Qx8DHKVfaMlxj8ov9Hxf3yCzCmdEid7YFyL1t-vngRVW_GhXyfKmhdRCpyvYNgcX2kU7s-KL81itw","text":"\xe3\x81\x82\xe3\x81\x8b"},"webhookEventId":"01JBC28SZH5N1HC6RSNE7K8KYC","deliveryContext":{"isRedelivery":false},"timestamp":1730203117332,"source":{"type":"user","userId":"U6381a22590f3cac80158b0e045ea98d4"},"replyToken":"d79ea739a4664c6183456fa65dc1d739","mode":"active"}]}'
 
     
-    logger.error('GETです: %s', request.body)
 
 
     return JsonResponse({'error': 'Invalid request'}, status=400)
