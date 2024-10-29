@@ -42,7 +42,7 @@ def line_webhook(request):
 
 
 
-def send_push_message(token,userid):
+def send_push_message(token,userid,message):
     url = 'https://api.line.me/v2/bot/message/push'
     headers = {
         'Authorization': f'Bearer {token}',
@@ -53,7 +53,7 @@ def send_push_message(token,userid):
         'messages': [
             {
                 'type': 'text',
-                'text': 'こんにちは！Pythonからメッセージを送信しています。'
+                'text': f'user id をどうぞ「{message}」'
             }
         ]
     }
