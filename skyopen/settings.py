@@ -47,6 +47,7 @@ ALLOWED_HOSTS = DOMAIN_NAME.split(",")
 
 INSTALLED_APPS = [
     "basecom.apps.BasecomConfig",
+    "linechat.apps.LinechatConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
