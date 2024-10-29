@@ -19,7 +19,7 @@ def line_webhook(request):
         if 'events' in body and len(body['events']) > 0:
             try:
                 user_id = body['events'][0]['source']['userId']
-                send_push_message(CHANNEL_ACCESS_TOKEN)
+                send_push_message(CHANNEL_ACCESS_TOKEN,user_id)
                 return jsonresponse({'user_id': user_id}, status=200)
             except e:
                 logger.error('エラーが発生しました: %s', request.body)
@@ -40,14 +40,14 @@ def line_webhook(request):
 
 
 
-def send_push_message(token):
+def send_push_message(token,userid):
     url = 'https://api.line.me/v2/bot/message/push'
     headers = {
         'Authorization': f'Bearer {token}',
         'Content-Type': 'application/json'
     }
     data = {
-        'to': USER_ID,
+        'to': userid,
         'messages': [
             {
                 'type': 'text',
