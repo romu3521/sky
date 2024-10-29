@@ -11,8 +11,9 @@ def line_webhook(request):
     if request.method == 'POST':
         body = json.loads(request.body)
         user_id="xxxxxx"
-        
+
         if 'events' in body and len(body['events']) > 0:
+            print("aa")
 
             #user_id = body['events'][0]['source']['userId']
         else:
