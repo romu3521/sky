@@ -19,15 +19,17 @@ def line_webhook(request):
         if 'events' in body and len(body['events']) > 0:
             try:
                 user_id = body['events'][0]['source']['userId']
+                send_push_message(CHANNEL_ACCESS_TOKEN)
+                return jsonresponse({'user_id': user_id}, status=200)
             except e:
                 logger.error('エラーが発生しました: %s', request.body)
+
+
         else:
             logger.error('エラーが発生しました: %s', request.body)
 
             
 
-            send_push_message(CHANNEL_ACCESS_TOKEN)
-            return jsonresponse({'user_id': user_id}, status=200)
     #GETです: b'{"destination":"U45e7e1d768298950e9599f5ab2277095","events":[{"type":"message","message":{"type":"text","id":"532461546153705994","quoteToken":"YFpDcAavfmWF9YFJWwjY27KHclGowKvSNT5rpN3Zplt7O1rD0vye5eqRY2jSBg4YpQOk99Ec6Qx8DHKVfaMlxj8ov9Hxf3yCzCmdEid7YFyL1t-vngRVW_GhXyfKmhdRCpyvYNgcX2kU7s-KL81itw","text":"\xe3\x81\x82\xe3\x81\x8b"},"webhookEventId":"01JBC28SZH5N1HC6RSNE7K8KYC","deliveryContext":{"isRedelivery":false},"timestamp":1730203117332,"source":{"type":"user","userId":"U6381a22590f3cac80158b0e045ea98d4"},"replyToken":"d79ea739a4664c6183456fa65dc1d739","mode":"active"}]}'
 
     
