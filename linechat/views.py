@@ -18,7 +18,7 @@ def line_webhook(request):
 
         if 'events' in body and len(body['events']) > 0:
             try:
-                user_id = body['events']['source']['userid']
+                user_id = body['events'][0]['source']['userId']
             except e:
                 logger.error('エラーが発生しました: %s', request.body)
         else:
