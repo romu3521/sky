@@ -1,0 +1,74 @@
+<style>
+div#rmcover{
+position:fixed;
+top:0;left:0;
+width:100vw;
+height:100vh;
+background-color: #333;
+z-index:9999;
+transition: opacity 0.5s ease;
+opacity:1;
+pointer-events:none;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+#rmcover.hidden {
+  opacity: 0 !important;
+}
+
+.rmlogo {
+  font-size: 48px;
+  font-weight: bold;
+  color: #f5dd1c;
+  text-transform: uppercase;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 20%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+</style>
+
+
+
+<div id="rmcover"><div class="rmlogo">Loading...</div></div>
+<script defer>
+
+ setTimeout(()=>{
+console.log(window.location.hostname);
+ },1);
+
+ const delay=(ms)=>{
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+(async () => {
+ for(;;){
+ if(window.location.hostname!=="skyopener2.shop"){
+
+  await delay(1000);
+  document.getElementById("rmcover").classList.add("hidden");
+  break;
+
+ }else{
+
+  if(document.getElementById("vdbanner")){
+  await delay(100);
+  document.getElementById("rmcover").classList.add("hidden");
+  break;
+  }
+  await delay(100);
+
+ }
+ }
+ 
+
+})();
+
+</script>

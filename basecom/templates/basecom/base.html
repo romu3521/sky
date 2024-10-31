@@ -21,59 +21,10 @@ html, body {
   height: 100%;
 }
 
-div#rmcover{
-position:fixed;
-top:0;left:0;
-width:100vw;
-height:100vh;
-background-color:white;
-z-index:9999;
-transition: opacity 0.5s ease;
-opacity:1;
-pointer-events:none;
-
-}
-#rmcover.hidden {
-  opacity: 0 !important;
-}
 </style>
 
+{% include 'basecom/parts/loading.html' %}
 
-
-<div id="rmcover"></div>
-<script defer>
-
- setTimeout(()=>{
-console.log(window.location.hostname);
-    //skyopener2.shop
- },1);
-
- const delay=(ms)=>{
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-(async () => {
- for(;;){
- if(window.location.hostname!=="skyopener2.shop"){
-
-  document.getElementById("rmcover").classList.add("hidden");
-  break;
-
- }else{
-
-  if(document.getElementById("vdbanner")){
-  await delay(100);
-  document.getElementById("rmcover").classList.add("hidden");
-  break;
-  }
-  await delay(100);
-
- }
- }
- 
-
-})();
-
-</script>
 <div 
  style="opacity:0;"
  data-movieurl="/static/pic/opening.mp4" 
