@@ -49,6 +49,7 @@ class SecView(TemplateView):
         context = dict()
 
 
+        """
         import requests
         url = "https://example.com"
         response = requests.get(url)
@@ -56,6 +57,7 @@ class SecView(TemplateView):
         context.update({
             "a":html
             })
+        """
 
 
 
@@ -102,6 +104,9 @@ class ProfileView(TemplateView):
         return render(request, self.template_name, context)
 
 
+
+
+
 class PostsView(TemplateView):
     model = None
     template_name="basecom/post.html"
@@ -117,10 +122,20 @@ class PostsView(TemplateView):
 
         blogparts = FoPosts.objects.filter().exclude(id=posted.id).order_by(Random())[0:3]
 
+        text=posted.post_content.replace('\n', '<br>')
+        for size in ['large', 'medium', 'small']:
+            text = text.replace(f':{{pic1:{size}}}', f'<img class="{size}" src="/{posted.post_pic}" />')
+
+        for size in ['large', 'medium', 'small']:
+            text = text.replace(f':{{pic2:{size}}}', f'<img class="{size}" src="/{posted.post_pic2}" />')
+
+        for size in ['large', 'medium', 'small']:
+            text = text.replace(f':{{pic3:{size}}}', f'<img class="{size}" src="/{posted.post_pic3}" />')
+
         context = dict()
         context.update({
             "content":posted,
-            "content_post_content":posted.post_content.replace('\n', '<br>'),
+            "content_post_content":text,
             "descript":posted.post_title,
             "blogparts":blogparts
             })
