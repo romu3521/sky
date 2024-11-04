@@ -37,11 +37,16 @@ class FoPosts(models.Model):
     post_pic = models.ImageField(upload_to=imgpath, null=True,blank=True)
     post_pic2 = models.ImageField(upload_to=imgpath, null=True,blank=True)
     post_pic3 = models.ImageField(upload_to=imgpath, null=True,blank=True)
+    post_pic4 = models.ImageField(upload_to=imgpath, null=True,blank=True)
+    post_pic5 = models.ImageField(upload_to=imgpath, null=True,blank=True)
+
     def __str__(self):
         return str(self.created_at)+"　　"+self.post_title
     def get_description_summary(self):
         clean = re.compile('<.*?>')
         cleaned = re.sub(clean, '', self.post_content)
+        clean = re.compile(':{.*?}')
+        cleaned = re.sub(clean, '', cleaned)
         return cleaned[:160]
     class Meta:
         verbose_name_plural = "投稿"

@@ -22,3 +22,4 @@ static/css/style.css.map
 
 linechat/__pycache__/
 log
+static/*.jpeg
