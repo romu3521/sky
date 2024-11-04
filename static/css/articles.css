@@ -17,7 +17,11 @@ div#rom_content {
   opacity: 1 !important; }
   div#rom_content .romdesign {
     display: inline-block;
+    box-sizing: border-box;
     background-color: rgba(240, 240, 240, 0.8) !important; }
+    @media screen and (max-width: 600px) {
+      div#rom_content .romdesign {
+        width: 100vw; } }
     @media screen and (min-width: 600px) {
       div#rom_content .romdesign {
         width: 55vw;
