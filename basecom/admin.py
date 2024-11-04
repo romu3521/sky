@@ -36,6 +36,9 @@ class FoPostsAdmin(admin.ModelAdmin):
         ("タイトル", {
             'fields': ['post_title'],
         }),
+        ("著者", {
+            'fields': ['author_name'],
+        }),
         ("内容", {
             'fields': ['post_content'],
             'description': '画像は:{picX:medium} と記述してください(サイズはsmall,medium,large)',  # 説明文を追加

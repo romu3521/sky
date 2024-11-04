@@ -45,6 +45,7 @@ div#rom_content:has(div#rom_content_content) {
     width: 100%;
     color: #969664;
     font-size: 1.5em;
+    line-height: 1.9em;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1), -2px 2px 0px rgba(0, 0, 0, 0), 2px -2px 0px rgba(0, 0, 0, 0), -2px -2px 0px rgba(0, 0, 0, 0); }
 
   .code {

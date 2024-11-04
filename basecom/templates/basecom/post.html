@@ -3,7 +3,11 @@
 
 {% block content %}
 
-<div id="rom_content" style="opacity:0;" data-title="{{content.post_title}}" data-title="{{content.created_at}}">
+<div id="rom_content" style="opacity:0;" data-title="{{content.post_title}}" data-date="{{content.created_at}}">
+ <div id="detail">
+<div>{{content.author_name|default:""}}</div>
+<div>{{content.created_at|date:"Y-m-d H:i"}}</div>
+ </div>
 <div id="rom_content_title"> {{content.post_title}}</div>
 <style>
 </style>
@@ -15,6 +19,9 @@
 
 
 <link rel="stylesheet" href="{% static 'css/articles.css' %}?p={{fileparam2}}">
+
+
+
 <script>
     const overlay = document.createElement('div');
     overlay.style.position = 'fixed';

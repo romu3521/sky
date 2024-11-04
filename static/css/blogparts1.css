@@ -1,8 +1,10 @@
 div#blogparts1 {
   text-align: center;
   height: 220px;
-  overflow-x: scroll;
   white-space: nowrap; }
+  @media screen and (max-width: 600px) {
+    div#blogparts1 {
+      overflow-x: scroll; } }
   div#blogparts1 a.rmblogparts {
     filter: grayscale(20%);
     transform: scale(1);
