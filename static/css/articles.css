@@ -1,26 +1,31 @@
 @import url("https://fonts.googleapis.com/css?family=DotGothic16");
-div.rm_describe0 {
-  position: relative; }
-
 div.rm_describe1 {
+  text-align: left;
   position: relative;
   padding-top: 8vh !important;
   padding-bottom: 8vh !important; }
+  div.rm_describe1 #detail {
+    color: #6e6ec8; }
 
 div#rom_content {
+  font-weight: bold;
+  text-align: center;
   padding-top: 5em;
   padding-bottom: 5em;
   overflow-x: hidden;
   overflow-y: hidden;
   opacity: 1 !important; }
   div#rom_content .romdesign {
+    display: inline-block;
     background-color: rgba(240, 240, 240, 0.8) !important; }
     @media screen and (min-width: 600px) {
       div#rom_content .romdesign {
+        width: 55vw;
         padding-left: 3em !important;
         padding-right: 3em !important; } }
 
 div#rom_content > div {
+  border: 4px solid #c8c864;
   padding-top: 3em;
   padding-bottom: 3em; }
 
@@ -43,6 +48,7 @@ div#rom_content:has(div#rom_content_content) {
 
   #rom_content_content {
     width: 100%;
+    text-align: left;
     color: #969664;
     font-size: 1.5em;
     line-height: 1.9em;
