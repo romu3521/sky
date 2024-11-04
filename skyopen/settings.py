@@ -69,7 +69,7 @@ DEBUG = True if DEBUG_TF == "True" else False
 ALLOWED_HOSTS = DOMAIN_NAME.split(",")
 
 
-# Application definition
+# App
 
 INSTALLED_APPS = [
     "basecom.apps.BasecomConfig",
