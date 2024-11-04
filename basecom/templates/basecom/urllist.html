@@ -10,8 +10,9 @@
  <div class="rm_postblock">
   <div class="rmdsn"></div>
  <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
+<img  style="display:none;"src="{{p.post_pic|default:"/static/pic/nophoto.jpg"}}"/>
+<div class="text-wrap">
 <div class="title">
- <img  style="display:none;"src="{{p.post_pic|default:"/static/pic/nophoto.jpg"}}"/>
  <span class="StrEnphOpa">{{ p.post_title }}</span>
 </div>
 <div class="content_mini">
@@ -19,6 +20,7 @@
 </div>
 <div class="desc">
 {{p.created_at | date:"Y/m/d"}}
+</div>
 </div>
 
 </a>
