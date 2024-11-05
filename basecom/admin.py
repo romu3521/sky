@@ -44,7 +44,7 @@ class FoPostsAdmin(admin.ModelAdmin):
             'description': '画像は:{picX:medium} と記述してください(サイズはsmall,medium,large)',  # 説明文を追加
         }),
         ('画像設定', {
-            'fields': ('post_pic', 'post_pic2',"post_pic3"),
+            'fields': ('post_pic', 'post_pic2',"post_pic3","post_pic4","post_pic5"),
         }),
     )
 
