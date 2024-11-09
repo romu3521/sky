@@ -11,10 +11,14 @@ def drfcmt(request):
     if request.method=="POST" or True:
         
         data = json.loads(request.body.decode('utf-8'))
+        try:
+            pt=FoPosts.objects.get(id=data["article"],is_public_cmt=True)
+        except Exception as e:
+            print(e)
+            raise NotFound("指定されたリソースは存在しません。")
+
         p=FoComments.objects.filter(parent_post__id=data["article"],parent_post__is_public_cmt=True).order_by('-created_at')[:5]
 
-        if len(p)==0:
-            raise NotFound("指定されたリソースは存在しません。")
         serializer=(FoCommentsSerializer(p,many=True))
 
         if (not data["comment"]=="") and (not data["name"]==""):
