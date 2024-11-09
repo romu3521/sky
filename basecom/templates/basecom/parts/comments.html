@@ -1,0 +1,101 @@
+{% load static %}
+<div id="rm_comments">
+ <h3>メッセージ</h3>
+ <div id="comments">
+ </div>
+
+ <div id="forms">
+  <div class="cmtblck">
+  <label for="authername">名前</label>
+  <input id="authername" placeholder="必須" class="rmform"></input>
+  <br/>
+  <br/>
+  <label for="authermail">メール</label>
+  <input id="authermail" placeholder="公開されません" class="rmform"></input>
+  </div>
+  <div class="cmtblck">
+  <label for="commentcontent">本文</label>
+  <textarea id="commentcontent" class="rmform"></textarea>
+  </div>
+{% csrf_token %}
+<br/>
+  <button class="cbutton" onclick="const inputd2 = document.querySelectorAll('textarea.rmform');a(inputd2[0].value);" >送信</button>
+
+  <button class="cbutton" onclick="a('');" >更新</button>
+ </div>
+
+</div>
+
+<link rel="stylesheet" href="{% static 'css/comments.css' %}?p={{fileparam2}}">
+
+<script>
+  const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+  const inputd = document.querySelectorAll('input.rmform')
+  
+  
+
+ const a=(text)=>{
+  url='/cmt.json'
+const data = {
+ article: {{aid}},
+ name:inputd[0].value,
+ mail:inputd[1].value,
+ comment:text
+};
+
+// POSTリクエスト
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-CSRFToken': csrftoken
+  },
+  body: JSON.stringify(data)
+})
+  .then(response => response.json())
+  .then(result => {
+
+   if(text==""){
+   var comments = document.querySelector('#comments');
+   comments.innerHTML="";
+   result.map((x)=>{
+
+const newComment = document.createElement("div");
+newComment.className = "rmcmt";
+newComment.textContent = `${x.display_authorname}: ${x.comment_content}`;
+comments.appendChild(newComment);
+
+const newElements = document.querySelectorAll('.rmcmt');
+
+if (newElements.length > 0) {
+    const lastElement = newElements[newElements.length - 1];
+    lastElement.classList.add('fade-in');
+}
+
+   })
+
+   }else{
+
+    if (inputd[0].value==""){
+     alert("名前を入力してください")
+     return
+    }
+   var comments = document.querySelector('#comments');
+const newComment = document.createElement("div");
+newComment.className = "rmcmt";
+newComment.classList.add('fade-in');
+newComment.textContent = `${inputd[0].value}: ${text}`;
+comments.appendChild(newComment);
+
+
+}
+
+  })
+  .catch(error => {
+    console.error('エラーが発生しました:', error);
+  });
+
+ }
+a('');
+
+</script>

@@ -18,6 +18,13 @@
 
 
 
+{% if content.is_public_cmt %}
+{% include 'basecom/parts/comments.html' with aid=content.id %}
+{% endif %}
+
+
+
+
 <link rel="stylesheet" href="{% static 'css/articles.css' %}?p={{fileparam2}}">
 
 

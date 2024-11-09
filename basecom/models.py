@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.conf import settings
 import re
+import uuid
 
 if settings.DEBUG:
     imgpath="static/"
@@ -39,6 +40,7 @@ class FoPosts(models.Model):
     post_pic3 = models.ImageField(upload_to=imgpath, null=True,blank=True)
     post_pic4 = models.ImageField(upload_to=imgpath, null=True,blank=True)
     post_pic5 = models.ImageField(upload_to=imgpath, null=True,blank=True)
+    is_public_cmt = models.BooleanField(verbose_name="コメント公開する",default=False)
 
     def __str__(self):
         return str(self.created_at)+"　　"+self.post_title
@@ -50,4 +52,23 @@ class FoPosts(models.Model):
         return cleaned[:160]
     class Meta:
         verbose_name_plural = "投稿"
+
+
+
+class FoComments(models.Model):
+    comment_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    comment_content = models.TextField(default="", blank=True, null=True)
+    display_authorname = models.TextField(default=None, blank=True, null=True)
+    contact_mail = models.CharField(max_length=100, blank=True, null=True)
+    parent_post = models.ForeignKey(FoPosts, on_delete=models.CASCADE, blank=True, null=True)
+    ip_adress = models.CharField(max_length=50,default="", blank=True, null=True)
+    created_at = models.DateTimeField(default=timezone.now,blank=True, null=True)
+
+    def __str__(self):
+        return str(self.created_at)+"　　"+self.comment_content[0:20]
+    class Meta:
+        verbose_name_plural = "投稿コメント"
+
+
+
 

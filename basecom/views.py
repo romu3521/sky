@@ -117,8 +117,12 @@ class PostsView(TemplateView):
 
     def get(self, request, **kwargs):
 
-        #posted = FoPosts.objects.get(url_name=kwargs["urlstr"])
-        posted = FoPosts.objects.filter(url_name=kwargs["urlstr"])[0]
+        try:
+            posted = FoPosts.objects.filter(url_name=kwargs["urlstr"])[0]
+        except:
+            return redirect("/")
+
+
 
         blogparts = FoPosts.objects.filter().exclude(id=posted.id).order_by(Random())[0:3]
 
@@ -131,6 +135,7 @@ class PostsView(TemplateView):
 
         for size in ['large', 'medium', 'small']:
             text = text.replace(f':{{pic3:{size}}}', f'<img class="{size}" src="/{posted.post_pic3}" />')
+
 
         context = dict()
         context.update({

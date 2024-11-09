@@ -1,0 +1,102 @@
+div#rm_comments {
+  text-align: center;
+  margin-bottom: 5vh; }
+  div#rm_comments .cmtblck {
+    position: relative; }
+    div#rm_comments .cmtblck label {
+      position: absolute;
+      transform: translateY(-100%);
+      color: #888;
+      font-size: 16px;
+      transition: all 0.3s ease; }
+    div#rm_comments .cmtblck input, div#rm_comments .cmtblck textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      font-size: 16px;
+      border: 2px solid #0078ff;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #333;
+      outline: none;
+      transition: border-color 0.3s ease; }
+    div#rm_comments .cmtblck input:focus {
+      border-color: #005dc1; }
+    div#rm_comments .cmtblck input:focus + .input-label,
+    div#rm_comments .cmtblck input:not(:placeholder-shown) + .input-label {
+      top: 5px;
+      font-size: 12px;
+      color: #005dc1; }
+  div#rm_comments .cbutton {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    padding: 0.1em 0.2em;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #0078ff, #00d4ff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 120, 255, 0.4); }
+  div#rm_comments .cbutton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 120, 255, 0.6);
+    background: linear-gradient(45deg, #005dc1, #00b1d9); }
+  div#rm_comments .cbutton:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 120, 255, 0.3); }
+  div#rm_comments div#forms {
+    text-align: center; }
+    div#rm_comments div#forms div.cmtblck {
+      padding-top: 2em;
+      display: inline-block; }
+      @media screen and (max-width: 600px) {
+        div#rm_comments div#forms div.cmtblck {
+          width: 90%; } }
+      @media screen and (min-width: 600px) {
+        div#rm_comments div#forms div.cmtblck {
+          width: 50%; } }
+  div#rm_comments > div#comments {
+    text-align: center; }
+    div#rm_comments > div#comments .fade-in {
+      animation: slideIn 0.5s ease-out; }
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+    div#rm_comments > div#comments .rmcmt {
+      display: inline-block;
+      font-size: 1.2em;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0.1em;
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 3px 3px 2px 1px rgba(200, 200, 255, 0.5); }
+      @media screen and (max-width: 600px) {
+        div#rm_comments > div#comments .rmcmt {
+          width: 95vw; } }
+      @media screen and (min-width: 600px) {
+        div#rm_comments > div#comments .rmcmt {
+          width: 52vw; } }
+  div#rm_comments > div#forms {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 4px solid rgba(20, 20, 10, 0.3);
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px 1px rgba(200, 200, 255, 0.5);
+    display: inline-block;
+    box-sizing: border-box; }
+    @media screen and (max-width: 600px) {
+      div#rm_comments > div#forms {
+        width: 100vw; } }
+    @media screen and (min-width: 600px) {
+      div#rm_comments > div#forms {
+        width: 55vw; } }
+
+/*# sourceMappingURL=comments.css.map */
