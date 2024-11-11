@@ -12,10 +12,19 @@
 
 
 </div>
-
+<div id="parallax">
 <div id="romMidashi" style="display:none;"><div><span class="StrEnphOpa" >Update Log</span></div></div>
+<div class="rmblock" ></div>
 
-<div id="rom_urllist2" style="display:none;"  data-baseurl="" 
+<script>
+window.addEventListener('scroll', function() {
+  const parallax = document.getElementById('parallax');
+  const scrollPosition = window.scrollY;
+  
+  parallax.style.backgroundPositionY = `${-scrollPosition * 0.8}px`;
+});
+</script>
+<div id="rom_urllist2" class="parallax" style="display:none;"  data-baseurl="" 
  data-linksurl="/loglist.html"
  data-picurl="/static/pic">
  <a class="next" href="/loglist.html"><span  class="StrEnphOpa readmore" >read more...</span></a>
@@ -47,6 +56,7 @@
 
 </div>
 
+</div>
 <br>
 <br>
 <br>
