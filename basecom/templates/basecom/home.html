@@ -41,9 +41,9 @@ window.addEventListener('scroll', function() {
 
 "
  style="background-image:url('/static/pic/juwel.jpg')"></div>
-<div id="rmwrapper" class="wrapper">
+<div id="rmwrapper"
+ class="wrapper">
  {% for p in posted %}
-
  <a 
   class="rmlinksimg"
   style="background-image:url('{{p.post_pic|default:"/static/pic/nophoto.jpg"}}')"
