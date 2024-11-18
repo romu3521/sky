@@ -1,9 +1,47 @@
 {% extends "basecom/base.html" %}
 
 {% block content %}
+{% load static %}
 <div data-baseurl="" 
  style="overflow:hidden"
- data-picurl="/static/pic" id="RomProf"></div>
+ data-picurl="/static/pic" id="RomProf2">
+
+<div id="rm_profile_t" style=""></div>
+<div id="rm_profile0">
+ <div>
+  <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >代表：Rom</span>
+ </div>
+ <div>
+  <span  data-basedelay="400" class="StrEnphOpa rmlinktitle" >屋号 : Rommet Company</span>
+ </div>
+ <div>
+  <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >従業員 : 1人</span>
+ </div>
+ <div>
+  <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >創業 : 2024年</span>
+ </div>
+ <div>
+  <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >活動地域 :関西近傍</span>
+ </div>
+ <a href="https://www.lancers.jp/profile/yoshihon?ref=header_menu">
+  <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >連絡先 : ランサーズ</span>
+ </a>
+ <div>
+  <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >メールアドレス: ☆☆</span>
+ </div>
+</div>
+
+<div id="rm_profile" style=""></div>
+
+
+
+
+
+
+</div>
+
+<link rel="stylesheet" href="{% static 'css/prof.css' %}?p={{fileparam}}">
 
 
 {% endblock %}
+
