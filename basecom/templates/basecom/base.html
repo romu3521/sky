@@ -39,8 +39,28 @@ html, body {
 <a href="profile.html" style="opacity:1;" data-linkurl="profile.html"  data-titlename="プロフィール">プロフィール</a>
 <a href="contact.html" style="opacity:1;" data-linkurl="contact.html"  data-titlename="Contact">Contact</a>
  <div id="rmnavi2" class="rmnavi2" style="width:100vw;height:100px;background-color:rgba(211,211,211,0.4);color:white;text-align:center;">
-
  </div>
+ <script>
+let lastScrollTop = 0;
+
+const rmnavi2 = document.getElementById('rmnavi2');
+const originalHeight = rmnavi2.offsetHeight;
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop < lastScrollTop) {
+    rmnavi2.style.height = `${originalHeight}px`;
+    rmnavi2.style.transition = 'height 0.3s ease';
+  } 
+  else {
+    rmnavi2.style.height = '0';
+    rmnavi2.style.transition = 'height 0.3s ease';
+  }
+
+  lastScrollTop = scrollTop;
+});
+ </script>
  </div>
 
  </div>
