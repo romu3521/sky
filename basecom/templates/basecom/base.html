@@ -43,6 +43,17 @@ html, body {
 
  </div>
  </div>
+
+ </div>
+
+
+
+ </div>
+</div>
+
+
+{% if host != "skyopener2.shop" %}
+<div class="rmdmin"></div>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
 const rmnavi = document.querySelector('.rmnavi');
@@ -54,19 +65,32 @@ if (rmnavi && rmdmin) {
 }
   });
 </script>
-
- </div>
-
-
-
- </div>
-</div>
-
-
-{% if host == "skyopener2.shop" %}
-<div class="rmdmin"></div>
 {% else %}
 <div class="rmdmin_ad"></div>
+<script>
+ const delay=(ms)=>{
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+(async () => {
+ for(;;){
+  let rmnavi = document.getElementById('rmnavi');
+  let vd = document.getElementById("vdbanner");
+  if(vd){
+  await delay(100);
+  let rmdmin = document.querySelector('.rmdmin_ad');
+    if (rmnavi && rmdmin) {
+      let rmnaviHeight = rmnavi.offsetHeight;
+      let vdHeight = vd.offsetHeight;
+      rmdmin.style.height = `${rmnaviHeight-vdHeight}px`;
+    }
+
+  break;
+  }
+  await delay(100);
+ }
+ })();
+</script>
+
 {% endif %}
 
 {% block content %}
