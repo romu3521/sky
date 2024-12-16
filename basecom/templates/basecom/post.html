@@ -67,6 +67,7 @@
         }
     });
 </script>
+<script type="text/javascript" crossorigin src="{% static 'js/article.js' %}?p={{fileparam_js}}"  ></script> 
 
 {% if blogparts %}
 {% include 'basecom/parts/blogparts.html' with blogparts=blogparts %}
