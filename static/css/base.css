@@ -15,6 +15,7 @@
       text-align: center;
       font-size: 1.6em; } }
   .rmnavi a {
+    font-family: "DotGothic16", "serif";
     padding: 5px 0.5em;
     display: inline-block;
     color: white;
