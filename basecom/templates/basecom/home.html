@@ -33,7 +33,7 @@ window.addEventListener('scroll', function() {
 <div class="rmset"
   onclick="
   const wrapper = document.getElementById('rmwrapper');
-  var newScrollPosition = wrapper.scrollLeft + 100; // 相対的に100加算
+  var newScrollPosition = wrapper.scrollLeft + 100;
   wrapper.scrollTo({
     behavior: 'smooth',
     left: newScrollPosition,
@@ -92,6 +92,9 @@ window.addEventListener('scroll', function() {
   data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
   <div class="rmlinkdate">{{p.created_at | date:"Y/m/d"}} </div>
   <span class="StrEnphOpa rmlinktitle" >{{ p.post_title }}</span>
+  <span class="rmlinktitle" style="right:-100%" >{{ p.post_title }}</span>
+  <span class="rmlinktitle" style="right:-200%" >{{ p.post_title }}</span>
+
 </a>
 {% endfor %}
 </div>

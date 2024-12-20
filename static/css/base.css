@@ -4,6 +4,7 @@
   position: fixed;
   z-index: 99999;
   top: 0px;
+  padding-right: 1em;
   width: 100vw;
   background-color: black; }
   @media screen and (min-width: 768px) {
@@ -20,10 +21,12 @@
     display: inline-block;
     color: white;
     text-decoration: none;
-    opacity: 1; }
+    opacity: 1;
+    background-color: black; }
     .rmnavi a:hover {
       opacity: 0.5 !important;
-      transition: opacity 0.5s ease; }
+      background-color: #646464;
+      transition: opacity,background-color 0.5s ease; }
     .rmnavi a:visited {
       color: white; }
 
