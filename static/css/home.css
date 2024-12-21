@@ -6,8 +6,15 @@
   background-position: center;
   overflow: hidden;
   background-image: url("/static/pic/para.png");
-  background-size: 100% 300%;
   background-position: bottom; }
+  @media screen and (min-width: 600px) {
+    #parallax {
+      background-size: 100% 300%; } }
+  @media screen and (max-width: 600px) {
+    #parallax {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 300%; } }
 
 @media screen and (min-width: 600px) {
   div.rmblock {
