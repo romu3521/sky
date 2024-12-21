@@ -95,26 +95,28 @@
   #rom_urllist2 div.wrapper {
     border-left: 2px solid white;
     text-align: left;
-    display: inline-block;
-    text-align: center; }
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-auto-rows: 300px;
+    grid-gap: 25px; }
+    @media screen and (min-width: 600px) {
+      #rom_urllist2 div.wrapper {
+        margin-left: 3em;
+        justify-content: start;
+        align-content: start; } }
     @media screen and (max-width: 600px) {
       #rom_urllist2 div.wrapper {
         margin-left: 0.25em;
         width: 1200px;
         overflow-x: scroll;
         overflow-y: hidden;
-        padding-right: 70vw;
-        display: grid;
-        grid-template-columns: repeat(2, 300px);
-        grid-auto-rows: 300px;
-        width: 700px; }
+        height: 700px;
+        padding-right: 70vw; }
         #rom_urllist2 div.wrapper::-webkit-scrollbar {
           display: none; }
         #rom_urllist2 div.wrapperhtml {
           scrollbar-width: none; } }
-    @media screen and (min-width: 600px) {
-      #rom_urllist2 div.wrapper {
-        margin-left: 3em; } }
     #rom_urllist2 div.wrapper a.rmlinksimg {
       width: 300px;
       height: 300px;
