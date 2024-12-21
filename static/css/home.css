@@ -35,7 +35,7 @@
       border-bottom: white solid 5px;
       border-top: white solid 5px;
       padding-top: 2vh;
-      padding-bottom: 10vh; } }
+      padding-bottom: 20vh; } }
   @media screen and (min-width: 600px) {
     #rom_urllist2 {
       padding-left: 7vw;
@@ -55,7 +55,21 @@
       #rom_urllist2 > div.rmset {
         width: 8%;
         background-color: rgba(225, 220, 220, 0.8);
-        background-image: none !important; } }
+        background-image: none !important;
+        position: relative; }
+        #rom_urllist2 > div.rmset::before {
+          content: "";
+          overflow: hidden;
+          color: white;
+          width: 0;
+          height: 0;
+          top: 50%;
+          left: 0;
+          transform: rotate(90deg);
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 7px solid rgba(0, 0, 0, 0.4);
+          position: absolute; } }
     @media screen and (min-width: 600px) {
       #rom_urllist2 > div.rmset {
         width: 30%;
