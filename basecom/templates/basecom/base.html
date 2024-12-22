@@ -83,6 +83,7 @@ if (rmnavi && rmdmin) {
   });
 </script>
 {% else %}
+{% include 'basecom/parts/loading2.html'%}
 <div class="rmdmin_ad"></div>
 <script>
  const delay=(ms)=>{
@@ -149,97 +150,8 @@ if (rmnavi && rmdmin) {
 
     }
 </style>
-<script>
- /*
-  const canvas = document.getElementById('rmcanvas');
-  const ctx = canvas.getContext('2d');
 
-let lastTime = 0;
-const fps = 20;
-const interval = 1000 / fps;
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
 
-  let balls = [];
-  const ballCount = 20;
-  const colors = ['#FF6347', '#1E90FF', '#32CD32', '#FFD700', '#FF69B4', '#8A2BE2', '#00CED1'];
-
-  function getRandomColor() {
-    return colors[Math.floor(Math.random() * colors.length)];
-  }
-
-  function createBall() {
-    return {
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 50 + 30, 
-      dx: (Math.random() - 0.5) * 8,
-      dy: (Math.random() - 0.5) * 8,
-      gravity: 0.2,
-      friction: 1.0,
-      color: getRandomColor(),
-      lifespan: Math.random() * 3000 + 3000
-    };
-  }
-
-  // ランダムにボールを追加
-  for (let i = 0; i < ballCount; i++) {
-    balls.push(createBall());
-  }
-
-  // ボールを描画する関数
-  function drawBall(ball) {
-    ctx.beginPath();
-    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-    ctx.fillStyle = ball.color;
-    ctx.fill();
-    ctx.closePath();
-  }
-
-  // ボールの位置を更新する関数
-  function updateBalls(timestamp) {
-     if (timestamp - lastTime >= interval) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);  // キャンバスをクリア
-
-    // 各ボールの動作を更新
-    for (let i = balls.length - 1; i >= 0; i--) {
-      const ball = balls[i];
-
-      // ボールの描画
-      drawBall(ball);
-
-      // ボールが左右の壁にぶつかったら反転
-      if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
-        ball.dx = -ball.dx;
-      }
-
-      // ボールが下にぶつかったら反発力を適用
-      if (ball.y + ball.radius > canvas.height) {
-        ball.dy = -ball.dy * ball.friction;
-        ball.y = canvas.height - ball.radius;
-      } else {
-        ball.dy += ball.gravity;  // 重力を適用
-      }
-
-      // ボールの位置を更新
-      ball.x += ball.dx;
-      ball.y += ball.dy;
-
-      // 寿命が切れたらボールを削除し、新しいボールを追加
-      ball.lifespan -= 16;
-      if (ball.lifespan <= 0) {
-        balls.splice(i, 1);
-        balls.push(createBall());
-      }
-    }
-     }
-    requestAnimationFrame(updateBalls);  // 次のフレームをリクエスト
-  }
-
-  // アニメーションを開始
-  updateBalls();
- */
-</script>
 
 </body>
 

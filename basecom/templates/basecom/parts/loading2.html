@@ -1,0 +1,28 @@
+<script>
+const whiteBackground = document.createElement("div");
+whiteBackground.style.position = "fixed";
+whiteBackground.style.top = "0";
+whiteBackground.style.left = "0";
+whiteBackground.style.width = "100vw";
+whiteBackground.style.height = "100vh";
+whiteBackground.style.backgroundColor = "white";
+whiteBackground.style.zIndex = "999999"; // 他の要素より前面に表示
+document.body.appendChild(whiteBackground);
+
+// 500msごとにvdbanner要素を探す関数
+const checkElement = setInterval(() => {
+    const vdbanner = document.getElementById("vdbanner");
+    if (vdbanner) {
+        clearInterval(checkElement); // 要素が見つかったらループを停止
+
+        // 見つかったら背景を500msのdurationでopacity0にする
+        whiteBackground.style.transition = "opacity 0.5s";
+        whiteBackground.style.opacity = "0";
+
+        // 500ms後に背景を削除する場合
+        setTimeout(() => {
+            whiteBackground.remove();
+        }, 500);
+    }
+}, 500);
+</script>
