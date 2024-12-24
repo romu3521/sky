@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
 
 <div id="basefix"></div>
 
-{% if host != "skyopener2.shop" %}
+{% if host == "127.0.0.1:8000" %}
 <div class="rmdmin"></div>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
@@ -156,5 +156,6 @@ if (rmnavi && rmdmin) {
 </body>
 
      <script type="text/javascript" crossorigin  src="{% static 'js/umd_main.js' %}?p={{fileparam_js}}"  ></script> 
+     <script type="text/javascript" crossorigin  src="{% static 'js/fade.js' %}?p={{fileparam_js}}"  ></script> 
 
 </html>

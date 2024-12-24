@@ -1,0 +1,1 @@
+(function(e){typeof define=="function"&&define.amd?define(e):e()})(function(){"use strict";const e=new IntersectionObserver(t=>{t.forEach(n=>{n.isIntersecting&&n.target.classList.add("fade-in")})},{threshold:.1});document.querySelectorAll(".element").forEach(t=>{e.observe(t)})});

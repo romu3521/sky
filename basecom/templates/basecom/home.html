@@ -39,7 +39,19 @@ window.addEventListener('scroll', function() {
     left: newScrollPosition,
   });
 "></div>
-<div class="rmset pc"
+<style>
+.element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.element.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+ </style>
+<div class="rmset pc element"
      style="
 color:white;font-size:1.2em;white-space:normal;overflow:hidden;"
 >
