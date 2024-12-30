@@ -9,14 +9,20 @@
  {% for p in posted %}
  <div class="rm_postblock">
   <div class="rmdsn"></div>
- <a data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
-<img  style="display:none;"src="{{p.post_pic|default:"/static/pic/nophoto.jpg"}}"/>
+ <a class="rmlinks"
+  title="{{ p.post_title }}"
+  data-urlname="/post/{{p.url_name}}.html" 
+  data-titlename="{{ p.post_title }}"
+  data-created_at="{{p.created_at | date:"Y/m/d"}}"
+  href="/post/{{p.url_name}}.html">
+<img style="display:none;"
+src="{{p.post_pic|default:"/static/pic/nophoto.jpg"}}"/>
 <div class="text-wrap">
 <div class="title">
  <span class="StrEnphOpa">{{ p.post_title }}</span>
 </div>
 <div class="content_mini">
- {{ p.get_description_summary }}
+{{ p.get_description_summary|truncatechars:50}}
 </div>
 <div class="desc">
 {{p.created_at | date:"Y/m/d"}}
