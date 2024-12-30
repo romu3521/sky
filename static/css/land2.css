@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap");
+.land2 {
+  font-family: "Hina Mincho", serif;
+  font-weight: 600;
+  text-align: left; }
+  .land2 .hero1 .button-wrapper {
+    text-align: center;
+    margin-bottom: 20px; }
+  .land2 .hero1 .cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #3c4ce7;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease,filter 0.3s ease, transform 0.3s ease; }
+  .land2 .hero1 .cta-button:hover {
+    background-color: #2b39c0;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(43, 57, 192, 0.8);
+    filter: brightness(0.8); }
+  @media screen and (min-width: 768px) {
+    .land2 .hero1 > h1 {
+      margin-top: 150px !important;
+      margin-left: 20px !important;
+      margin-bottom: 0px !important; } }
+  @media screen and (max-width: 768px) {
+    .land2 .hero1 > h1 {
+      margin-top: 6px !important;
+      margin-left: 6px !important; } }
+  @media screen and (min-width: 768px) {
+    .land2 .hero1 > p {
+      margin-top: 10px !important;
+      margin-left: 40px !important; } }
+  @media screen and (max-width: 768px) {
+    .land2 .hero1 > p {
+      margin-top: 3px !important;
+      margin-left: 10px !important; } }
+  .land2 .hero1 > h1 {
+    font-size: 2.9em;
+    color: #ccc;
+    display: inline-block;
+    transform: scaleX(0.9);
+    letter-spacing: -2px; }
+  .land2 .hero1 > p {
+    font-size: 1.2em;
+    display: inline-block;
+    color: #ccc;
+    transform: scaleX(0.9);
+    letter-spacing: -2px; }
+  .land2 .hero1 .container_1a2b3c {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 0px; }
+    @media screen and (max-width: 768px) {
+      .land2 .hero1 .container_1a2b3c {
+        margin-top: 50px;
+        margin-bottom: 50px; } }
+    @media screen and (min-width: 768px) {
+      .land2 .hero1 .container_1a2b3c {
+        margin-top: 100px;
+        margin-bottom: 100px; } }
+    .land2 .hero1 .container_1a2b3c .box_rom {
+      padding: 5px;
+      margin: 0px 5px;
+      overflow: hidden;
+      background-color: #2084c7;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+      @media screen and (max-width: 768px) {
+        .land2 .hero1 .container_1a2b3c .box_rom {
+          width: 95vw; } }
+      @media screen and (min-width: 768px) {
+        .land2 .hero1 .container_1a2b3c .box_rom {
+          flex: 0 0 380px; } }
+      .land2 .hero1 .container_1a2b3c .box_rom > h2 {
+        font-size: 1.2em;
+        white-space: nowrap;
+        transform: scale(0.95, 1); }
+      .land2 .hero1 .container_1a2b3c .box_rom > p {
+        font-size: 0.9em !important;
+        line-height: 1.5 !important;
+        color: white !important;
+        text-align: left;
+        padding: 20px 10px;
+        min-height: 110px;
+        box-sizing: border-box; }
+
+.hero2 {
+  background-color: rgba(222, 222, 222, 0.5);
+  padding: 10px;
+  text-align: center; }
+  .hero2 > h2 {
+    color: #dedede; }
+  .hero2 > p {
+    display: inline-block;
+    width: 600px; }
+
+.graphicalstep > li {
+  list-style: none;
+  display: block;
+  width: 500px;
+  height: 200px;
+  background-color: grey;
+  margin: auto; }
+.graphicalstep img {
+  width: 100px;
+  height: 100px;
+  object-fit: fill; }
+
+.hero h1 {
+  font-size: 2.9em;
+  color: #ccc;
+  display: inline-block;
+  margin: 0.2em; }
+
+.hero p {
+  font-size: 1.2em;
+  display: inline-block;
+  color: #ccc;
+  margin: 0.0em 1em; }
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px; }
+
+.cta-button:hover {
+  background: #0056b3; }
+
+.features, .testimonials, .faq {
+  padding: 50px 20px;
+  background: #fff; }
+
+.features h2, .testimonials h2, .faq h2 {
+  text-align: center;
+  color: #333; }
+
+.features .feature {
+  margin: 20px 0;
+  text-align: center; }
+
+.testimonials .testimonial {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px; }
+
+.faq dt {
+  font-weight: bold;
+  margin-top: 20px; }
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff; }
+
+.footer .cta-button {
+  background: #ff6600; }
+
+/*# sourceMappingURL=land2.css.map */
