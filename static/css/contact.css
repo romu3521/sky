@@ -1,71 +1,172 @@
-div#rm_contactform2 {
+#rm_contactform2 {
   font-family: DotGothic16;
   opacity: 1 !important;
-  display: block;
-  min-height: 80vh;
-  text-align: center; }
+  transition: opacity 0.5s ease-in-out;
+  box-sizing: border-box;
+  max-width: 450px;
+  background: #333;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: white; }
   @media screen and (max-width: 1000px) {
-    div#rm_contactform2 {
-      margin-top: 4em; } }
+    #rm_contactform2 {
+      width: 96vw;
+      font-size: 1.2em;
+      padding-left: 0.1em;
+      padding-right: 0.1em;
+      margin: 50px 2vw; } }
   @media screen and (min-width: 1000px) {
-    div#rm_contactform2 {
-      margin-top: 10em; } }
-  div#rm_contactform2 form {
-    font-size: 1.2em;
-    box-shadow: 5px 1px 75px rgba(222, 222, 222, 0.6);
+    #rm_contactform2 {
+      width: 500px;
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+      margin: 50px auto; } }
+  #rm_contactform2 .StrEnphOpa {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    display: block; }
+  #rm_contactform2 .rm_inputpost {
+    width: 90%;
+    padding: 1px 5px;
+    margin: auto;
+    display: block;
     border-radius: 5px;
-    background-color: #414141;
-    box-sizing: border-box;
-    display: inline-block;
-    color: honeydew;
-    text-align: center;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em; }
-    @media screen and (max-width: 1000px) {
-      div#rm_contactform2 form {
-        width: 100vw;
-        font-size: 1.2em;
-        padding-left: 0.1em;
-        padding-right: 0.1em; } }
-    @media screen and (min-width: 1000px) {
-      div#rm_contactform2 form {
-        width: 30vw;
-        padding-left: 2.5em;
-        padding-right: 2.5em; } }
-    div#rm_contactform2 form label {
-      margin-top: 0.3em;
-      display: block;
-      text-align: left; }
-      @media screen and (max-width: 1000px) {
-        div#rm_contactform2 form label {
-          padding-left: 0.3em; } }
-    div#rm_contactform2 form input {
-      display: block;
-      width: 50%; }
-      @media screen and (max-width: 1000px) {
-        div#rm_contactform2 form input {
-          font-size: 1.1em;
-          padding: 0.3em;
-          box-sizing: border-box; } }
-    div#rm_contactform2 form input#sbm {
-      width: 6em !important;
-      display: inline-block;
-      margin: 1em; }
-      @media screen and (min-width: 1000px) {
-        div#rm_contactform2 form input#sbm {
-          font-size: 1.3em; } }
-      @media screen and (max-width: 1000px) {
-        div#rm_contactform2 form input#sbm {
-          padding-left: 0.3em; } }
-    div#rm_contactform2 form textarea {
-      display: block;
-      width: 100%;
-      box-sizing: border-box; }
-      @media screen and (max-width: 1000px) {
-        div#rm_contactform2 form textarea {
-          height: 15em !important; } }
-      @media screen and (min-width: 1000px) {
-        div#rm_contactform2 form textarea {
-          height: 7em  !important; } }
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s; }
+    #rm_contactform2 .rm_inputpost:focus {
+      background-color: #444;
+      border-color: #b90e33;
+      outline: none; }
+    #rm_contactform2 .rm_inputpost[type="text"], #rm_contactform2 .rm_inputpost[type="email"] {
+      height: 40px; }
+    #rm_contactform2 .rm_inputpost[type="submit"] {
+      font-family: DotGothic16;
+      background-color: #b90e33;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s; }
+      #rm_contactform2 .rm_inputpost[type="submit"]:hover {
+        background-color: #c2185b; }
+  #rm_contactform2 textarea.rm_inputpost {
+    height: 120px;
+    resize: vertical; }
+  #rm_contactform2 input[type="submit"] {
+    padding: 15px;
+    width: 80%;
+    background-color: #b90e33;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px auto;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+  #rm_contactform2 input[type="submit"]:hover {
+    background-color: #c2185b; }
+
+/*
+div#rm_contactform2{
+ font-family:DotGothic16;
+ opacity:1 !important;
+
+display:block;
+
+ @media screen and (max-width:1000px) {
+margin-top:4em;
+ }
+ @media screen and (min-width:1000px) {
+margin-top:10em;
+ }
+min-height:80vh;
+text-align:center;
+form{
+font-size:1.2em;
+box-shadow: 5px 1px 75px rgba(222,222,222,0.6);
+border-radius:5px;
+background-color:rgba(65,65,65,1);
+box-sizing:border-box;
+display:inline-block;
+color:rgba(240,255,240,1);
+text-align:center;
+padding-top:1.5em;
+padding-bottom:1.5em;
+ @media screen and (max-width:1000px) {
+width:100vw;
+font-size:1.2em;
+padding-left:0.1em;
+padding-right:0.1em;
+ }
+ @media screen and (min-width:1000px) {
+width:30vw;
+padding-left:2.5em;
+padding-right:2.5em;
+ }
+
+
+
+
+
+
+
+
+
+label{
+ display:block;
+ text-align:left;
+ @media screen and (max-width:1000px) {
+ padding-left:0.3em;
+ }
+}
+input{
+ display:block;
+ width:50%;
+ @media screen and (max-width:1000px) {
+font-size:1.1em;
+padding:0.3em;
+box-sizing:border-box;
+ }
+ @media screen and (min-width:1000px) {
+ }
+
+}
+input#sbm{
+width:6em !important;
+
+display:inline-block;
+margin:1em;
+ @media screen and (min-width:1000px) {
+  font-size:1.3em;
+ }
+ @media screen and (max-width:1000px) {
+ padding-left:0.3em;
+ }
+
+}
+textarea{
+ display:block;
+ box-sizing:border-box;
+
+ @media screen and (max-width:1000px) {
+ height:15em !important;
+ }
+ @media screen and (min-width:1000px) {
+ height:7em  !important;
+ }
+
+
+}
+
+}
+
+}
+*/
 
 /*# sourceMappingURL=contact.css.map */
