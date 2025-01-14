@@ -58,6 +58,7 @@
     height: 120px;
     resize: vertical; }
   #rm_contactform2 input[type="submit"] {
+    font-family: DotGothic16;
     padding: 15px;
     width: 80%;
     background-color: #b90e33;

@@ -7,7 +7,7 @@ div#RomProf2 div#rm_profile_t {
   margin-left: 1em;
   margin-top: 50px;
   margin-bottom: 10px;
-  border: 2px yellow solid;
+  border: 2px grey solid;
   background-image: url("https://img2.lancers.jp/userprofile/677791/1154374/6df9de8090acc9117abd6189c95e89213582e768f459abb5f4b5989f87fdd022/32905180_130_0.png?20240508082503");
   background-size: 90% 90%;
   background-position: 50% 50%;
@@ -33,8 +33,7 @@ div#RomProf2 div#rm_profile0 {
   margin-top: 50px; }
   @media screen and (min-width: 600px) {
     div#RomProf2 div#rm_profile0 {
-      width: 40vw;
-      height: 40vw; } }
+      width: 40vw; } }
   @media screen and (max-width: 600px) {
     div#RomProf2 div#rm_profile0 {
       width: 90vw;
@@ -43,6 +42,7 @@ div#RomProf2 div#rm_profile0 {
   div#RomProf2 div#rm_profile0 > div, div#RomProf2 div#rm_profile0 > a {
     text-decoration: none;
     display: block;
+    white-space: nowrap;
     transition: filter opacity 0.3s ease;
     border-bottom: 2px solid black;
     padding-top: 1em;
