@@ -17,7 +17,7 @@ env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, "../.env"))
 
 
-DEBUG = env("DEBUG", default=None)
+DEBUG = env.bool("DEBUG", default=None)  
 if DEBUG is None:
     raise ImproperlyConfigured("環境変数 'DEBUG' が設定されていません。")
 
