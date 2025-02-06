@@ -21,6 +21,13 @@ DEBUG = env.bool("DEBUG", default=None)
 if DEBUG is None:
     raise ImproperlyConfigured("環境変数 'DEBUG' が設定されていません。")
 
+MAINTENANCE_MODE = env.bool("MAINTENANCE_MODE", default=None)  
+if MAINTENANCE_MODE is None:
+    raise ImproperlyConfigured("環境変数 'MAINTENANCE_MODE' が設定されていません。")
+
+
+
+
 DOMAIN_NAME = env("DOMAIN_NAME", default=None)
 if DOMAIN_NAME is None:
     raise ImproperlyConfigured("環境変数 'DOMAIN_NAME' が設定されていません。")
@@ -95,6 +102,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'skyopen.middleware.middleware.MaintenanceModeMiddleware',
 ]
 
 
