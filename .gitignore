@@ -1,4 +1,5 @@
 static/css/*.css.map
+linechat/migrations/__pycache__/*
 react
 react_game
 db.sqlite3
