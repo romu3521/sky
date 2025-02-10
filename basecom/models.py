@@ -7,7 +7,8 @@ import uuid
 if settings.DEBUG:
     imgpath="static/"
 else:
-    imgpath="media/"
+    #ここが参照ディレクトリ
+    imgpath="static/media"
 
 
 class FoContact(models.Model):

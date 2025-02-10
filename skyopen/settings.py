@@ -25,8 +25,9 @@ MAINTENANCE_MODE = env.bool("MAINTENANCE_MODE", default=None)
 if MAINTENANCE_MODE is None:
     raise ImproperlyConfigured("環境変数 'MAINTENANCE_MODE' が設定されていません。")
 
-
-
+FSROOT = env("FSROOT", default="")  
+if FSROOT is None:
+    raise ImproperlyConfigured("環境変数 'FSROOT' が設定されていません。")
 
 DOMAIN_NAME = env("DOMAIN_NAME", default=None)
 if DOMAIN_NAME is None:
@@ -95,7 +96,6 @@ if "*" in ALLOWED_HOSTS:
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -173,11 +173,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-if not DEBUG:
-    MEDIA_ROOT = os.path.join(BASE_DIR, MEDROO)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static',]
+#本番環境
+if not DEBUG:
+    MEDIA_ROOT = os.path.join(FSROOT, MEDROO)
+    MEDIA_URL=""
+    #公開ファイルはFSROOT+"/public_html/"へ
+    STATIC_ROOT = os.path.join(FSROOT+"/public_html/", 'static')
+else:
+    #ローカル環境
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

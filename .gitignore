@@ -1,4 +1,5 @@
 static/css/*.css.map
+skyopen/middleware/__pycache__/
 linechat/migrations/__pycache__/*
 react
 react_game
