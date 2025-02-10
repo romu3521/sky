@@ -31,6 +31,7 @@ class HomeView(TemplateView):
         context = dict()
         posted = FoPosts.objects.filter().order_by("-created_at")
         context.update({
+            "subtitle":"| ホーム",
             "posted":posted[0:6],
             "descript":"デモサイト公開中：トップ"
             })
@@ -78,6 +79,7 @@ class UrllistView(TemplateView):
 
 
         context.update({
+            "subtitle":"| 活動紹介",
             "posted":posted
             })
 
@@ -99,6 +101,7 @@ class ProfileView(TemplateView):
     def get(self, request, **kwargs):
         context = dict()
         context.update({
+            "subtitle":f'| プロフィール',
             })
 
         return render(request, self.template_name, context)
@@ -139,6 +142,7 @@ class PostsView(TemplateView):
 
         context = dict()
         context.update({
+            "subtitle":f'| {posted.post_title}',
             "content":posted,
             "content_post_content":text,
             "descript":posted.post_title,
@@ -188,7 +192,8 @@ class ContactView(TemplateView):
     def get(self, request, **kwargs):
         context = dict()
         context.update({
-            "title":"contact"
+            "title":"contact",
+            "subtitle":f'| コンタクト',
             })
 
 
