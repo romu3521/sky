@@ -3,12 +3,20 @@ from django.utils import timezone
 from django.conf import settings
 import re
 import uuid
+import os
+import hashlib
 
 if settings.DEBUG:
     imgpath="static/"
 else:
     #ここが参照ディレクトリ
     imgpath="static/media"
+
+def get_upload_to(instance, filename):
+    # ファイル名をハッシュ化
+    hash_name = hashlib.sha1(filename.encode('utf-8')).hexdigest()[:20]
+    ext = os.path.splitext(filename)[1]
+    return f'{imgpath}/{hash_name}{ext}'
 
 
 class FoContact(models.Model):
@@ -36,11 +44,11 @@ class FoPosts(models.Model):
     created_at = models.DateTimeField(default=timezone.now,blank=True, null=True)
     updated_at = models.DateTimeField(default=timezone.now,blank=True, null=True)
     access_count = models.PositiveBigIntegerField(default=0, blank=True, null=True)
-    post_pic = models.ImageField(upload_to=imgpath, null=True,blank=True)
-    post_pic2 = models.ImageField(upload_to=imgpath, null=True,blank=True)
-    post_pic3 = models.ImageField(upload_to=imgpath, null=True,blank=True)
-    post_pic4 = models.ImageField(upload_to=imgpath, null=True,blank=True)
-    post_pic5 = models.ImageField(upload_to=imgpath, null=True,blank=True)
+    post_pic = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
+    post_pic2 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
+    post_pic3 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
+    post_pic4 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
+    post_pic5 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
     is_public_cmt = models.BooleanField(verbose_name="コメント公開する",default=False)
 
     def __str__(self):
