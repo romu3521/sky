@@ -1,0 +1,40 @@
+  <button id="scrollToTop">▲ TOP</button>
+<style>
+    #scrollToTop {
+position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px 20px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease-out, box-shadow 0.2s;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+      z-index:999999;
+      background: #b22;
+    }
+
+    #scrollToTop:hover {
+      transform: scale(1.15);
+    }
+</style>
+
+  <script>
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+    let lastScrollY = window.scrollY;
+    let velocity = 0;
+
+    window.addEventListener("scroll", () => {
+      let deltaY = window.scrollY - lastScrollY;
+     if(deltaY<0){deltaY=deltaY/10}
+      velocity = deltaY * 0.2;
+      lastScrollY = window.scrollY;
+
+      scrollToTopBtn.style.transform = `translateY(${velocity}px)`;
+    });
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
