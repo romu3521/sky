@@ -84,8 +84,8 @@ const rmnavi = document.querySelector('.rmnavi');
 const rmdmin = document.querySelector('.rmdmin');
 
 if (rmnavi && rmdmin) {
-  const rmnaviHeight = rmnavi.offsetHeight; // .rmnavi の高さを取得
-  rmdmin.style.height = `${rmnaviHeight}px`; // .rmdmin に同じ高さを設定
+  const rmnaviHeight = rmnavi.offsetHeight;
+  rmdmin.style.height = `${rmnaviHeight}px`;
 }
   });
 </script>
@@ -116,13 +116,14 @@ if (rmnavi && rmdmin) {
  }
  })();
 </script>
-
 {% endif %}
+<div style="width:100vw;height:100px;"></div>
 
 {% block content %}
 {% endblock %}
 <style>
 footer{
+margin-top:100px;
 border-radius: 3px 3px 0 0;
 linear-gradient(to top, #222, #444);
 border-top: 1px solid #555;
