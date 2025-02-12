@@ -21,9 +21,20 @@ DEBUG = env.bool("DEBUG", default=None)
 if DEBUG is None:
     raise ImproperlyConfigured("環境変数 'DEBUG' が設定されていません。")
 
+MAIL_ENV = env.bool("MAIL_ENV", default=None)  
+if MAIL_ENV is None:
+    raise ImproperlyConfigured("環境変数 'MAIL_ENV' が設定されていません。")
+
+
+FROM_EMAIL = env("FROM_EMAIL", default="")  
+if FROM_EMAIL is None:
+    raise ImproperlyConfigured("環境変数 'FROM_EMAIL' が設定されていません。")
+
+
 MAINTENANCE_MODE = env.bool("MAINTENANCE_MODE", default=None)  
 if MAINTENANCE_MODE is None:
     raise ImproperlyConfigured("環境変数 'MAINTENANCE_MODE' が設定されていません。")
+
 
 FSROOT = env("FSROOT", default="")  
 if FSROOT is None:

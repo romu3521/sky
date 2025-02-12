@@ -26,7 +26,6 @@ class FoContact(models.Model):
     created_at = models.DateTimeField(default=timezone.now,blank=True, null=True)
     updated_at = models.DateTimeField(default=timezone.now,blank=True, null=True)
     ip_adress = models.CharField(max_length=50,default="", blank=True, null=True)
-    post_user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name="account", on_delete=models.SET_NULL, null=True,blank=True)
     def __str__(self):
         return str(self.created_at)+"　　"+str(self.contact_mail)
     class Meta:
