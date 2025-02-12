@@ -5,10 +5,13 @@
 <style>
 </style>
 <div 
- style="opacity:0;"
+ style="opacity:0;text-align:center;margin:0px auto;"
  id="rm_contactform2">
-<form  method="post">
+<form  method="post" style="text-align:left;">
     {% csrf_token %}
+    <div 
+      style="padding:0px 20px;display:inline-block;font-size:0.8em;color:#c55;width:100%;">
+     フォームを入力すると、弊社にメールが行きます。<br/>(日本語でお願いします)</div>
 
     <label class="StrEnphOpa" for="name">名前: </label>
     <input data-display="名前" class="rm_inputpost"  type="text" name="name" id="name"  />
