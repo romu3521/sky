@@ -175,7 +175,6 @@ class ContactView(TemplateView):
                 contact_name=request.POST["name"]
                 ,contact_mail=request.POST["mail"]
                 ,contact_content=request.POST["contact"]
-                ,post_user=request.user if not request.user.is_anonymous else None
                 ,ip_adress=request.META.get('REMOTE_ADDR')
                 )
             np.save()
