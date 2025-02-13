@@ -119,6 +119,7 @@
     grid-gap: 25px; }
     @media screen and (min-width: 600px) {
       #rom_urllist2 div.wrapper {
+        padding: 30px 10px;
         justify-content: start;
         align-content: start;
         width: 60vw;
