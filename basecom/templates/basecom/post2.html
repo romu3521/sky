@@ -1,0 +1,98 @@
+{% extends "basecom/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<div id="rom_content" class="rmcontent" style="opacity:0;" data-title="{{content.post_title}}" data-date="{{content.created_at}}">
+ <div class="articleheader">
+ <div class="articleheader__detail">
+<time><i>🗓️{{content.created_at|date:"Y-m-d "}}</i></time>
+ {% if content.parent_genre%}
+<a class="rmgenre" href="/g/{{content.parent_genre.url_name}}">{{content.parent_genre}}</a>
+{% else %}
+{% endif %}
+<div class="rmtags">
+</div>
+ </div>
+ <div class="articleheader__detail">
+  <a class="rmicon" href="https://twitter.com/home" ><img src="{% static 'pic/twitter_btn.png' %}"></a>
+  <a class="rmicon" href="https://b.hatena.ne.jp/"><img src="{% static 'pic/hatena_btn.png' %}"></a>
+ </div>
+<div id="rom_content_title" class="articleheader__title"> {{content.post_title}}</div>
+</div>
+
+<div id="rom_content_content" class="rmincontent">
+{{content_post_content|safe}}
+</div>
+ <div class="articlefooter">
+
+ <div class="articleheader__detail">
+  <a class="rmicon" href="https://twitter.com/home" ><img src="{% static 'pic/twitter_btn.png' %}"></a>
+  <a class="rmicon" href="https://b.hatena.ne.jp/"><img src="{% static 'pic/hatena_btn.png' %}"></a>
+ </div>
+  <a href="{{content.cite|default:""}}" class="articlefooter__cite">{{content.cite|default:""}}</a>
+  
+</div>
+</div>
+
+
+
+{% if content.is_public_cmt %}
+{% include 'basecom/parts/comments.html' with aid=content.id %}
+{% endif %}
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/articles.css' %}?p={{fileparam2}}">
+
+
+
+<script>
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
+    overlay.style.background = 'rgba(0, 0, 0, 0.8)';
+    overlay.style.opacity = '0';
+    overlay.style.transition ="opacity 0.5s ease";
+    overlay.style.display = 'flex';
+    overlay.style.pointerEvents = 'none';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = '10000';
+    document.body.appendChild(overlay);
+
+    const overlayImg = document.createElement('img');
+    overlayImg.style.maxHeight = '80%';
+    overlayImg.style.maxWidth = '80%';
+    overlay.appendChild(overlayImg);
+
+    document.addEventListener('click', (e) => {
+        const imgElement = e.target.closest('img');
+
+        if (imgElement) {
+            overlayImg.src = imgElement.src;
+
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+
+            overlay.onclick = () => {
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+            };
+        }
+    });
+</script>
+
+{% if blogparts %}
+{% include 'basecom/parts/blogparts.html' with blogparts=blogparts %}
+{% else %}
+{% endif %}
+
+{% endblock %}

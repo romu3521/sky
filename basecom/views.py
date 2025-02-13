@@ -29,7 +29,7 @@ class HomeView(TemplateView):
 
     def get(self, request, **kwargs):
         context = dict()
-        posted = FoPosts.objects.filter().order_by("-created_at")
+        posted = FoPosts.objects.filter(is_public_article=True).order_by("-created_at")
         context.update({
             "subtitle":"| ホーム",
             "posted":posted[0:6],
@@ -75,7 +75,7 @@ class UrllistView(TemplateView):
 
     def get(self, request, **kwargs):
         context = dict()
-        posted = FoPosts.objects.filter().order_by("-created_at")
+        posted = FoPosts.objects.filter(is_public_article=True).order_by("-created_at")
 
 
         context.update({
@@ -112,22 +112,25 @@ class ProfileView(TemplateView):
 
 class PostsView(TemplateView):
     model = None
-    template_name="basecom/post.html"
+    template_name="basecom/post2.html"
 
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         return context
 
     def get(self, request, **kwargs):
+        posted = FoPosts.objects.filter(is_public_article=True,url_name=kwargs["urlstr"])[0]
 
-        try:
-            posted = FoPosts.objects.filter(url_name=kwargs["urlstr"])[0]
-        except:
+        context = dict()
+        if not posted.is_public_article and not request.user.is_authenticated:
+
             return redirect("/")
 
+        if not request.session.get(f'viewed_post_{posted.id}', False):
+            posted.access_count += 1
+            posted.save()
+            request.session[f'viewed_post_{posted.id}']=True
 
-
-        blogparts = FoPosts.objects.filter().exclude(id=posted.id).order_by(Random())[0:3]
 
         text=posted.post_content.replace('\n', '<br>')
         for size in ['large', 'medium', 'small']:
@@ -140,17 +143,11 @@ class PostsView(TemplateView):
             text = text.replace(f':{{pic3:{size}}}', f'<img class="{size}" src="/{posted.post_pic3}" />')
 
 
-        context = dict()
         context.update({
-            "subtitle":f'| {posted.post_title}',
             "content":posted,
             "content_post_content":text,
-            "descript":posted.post_title,
-            "blogparts":blogparts
+            "descript":posted.post_title
             })
-
-        if not posted.redirect_url is None:
-            return redirect(posted.redirect_url)
 
         return render(request, self.template_name, context)
 

@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
+from django.db.models import Sum
 
 # Register your models here.
 from django import forms
@@ -28,29 +30,66 @@ class PostAdminForm(forms.ModelForm):
 
 class FoPostsAdmin(admin.ModelAdmin):
     form = PostAdminForm
+    #change_list_template = "admin/basecom/foposts/model_stats.html"
+    list_display=["post_title","access_count"]
+
+    def changelist_view(self, request, extra_context=None):
+        stat =  FoPosts.objects.aggregate(Sum('access_count'))["access_count__sum"]
+
+        extra_context = extra_context or {}
+        extra_context['stat'] = stat
+
+        return super().changelist_view(request, extra_context=extra_context)
+
+    def g_url_name(self, obj):
+        return obj.url_name
+
     fieldsets = (
 
-        ("URL", {
-            'fields': ['url_name'],
-            'description': '必ず記述',
-        }),
         ("タイトル", {
             'fields': ['post_title'],
         }),
         ("著者", {
             'fields': ['author_name'],
         }),
-        ("コメント受付", {
-            'fields': ['is_public_cmt'],
+        ("許可", {
+            'fields': ['is_public_article','is_public_cmt'],
+        }),
+        ("引用", {
+            'fields': ['cite'],
         }),
         ("内容", {
             'fields': ['post_content'],
-            'description': '画像は:{picX:medium} と記述してください(サイズはsmall,medium,large)',  # 説明文を追加
+            'description': f'''
+画像は:{{picX:medium}} と記述してください(サイズはsmall,medium,large)<br/>
+div タグが利用できます。<br/>
+class="rmmidasi1"で見出しになります！
+class="attention"で補足章になります！
+class="cite"で引用になります！
+''',
         }),
         ('画像設定', {
             'fields': ('post_pic', 'post_pic2',"post_pic3","post_pic4","post_pic5"),
         }),
+        ("URL", {
+            'fields': ['url_name'],
+            'description': '空白ならば日付+ランダム文字列',
+        }),
     )
+    def get_fieldsets(self, request, obj=None):
+        fieldsets = super().get_fieldsets(request, obj)
+        
+        if obj:
+            # モデルの値を動的に挿入
+            custom_description = mark_safe(
+                f' <a href="/post/{obj.url_name}.html" target="_blank">確認</a> '
+            )
+            fieldsets += (('確認', {
+                'fields': (),
+                'description': custom_description,
+            }),)
+
+        return fieldsets
 
 admin.site.register(FoPosts, FoPostsAdmin)
 admin.site.register(FoComments)
