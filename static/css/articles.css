@@ -84,7 +84,7 @@ a {
 
 .rmincontent {
   padding-top: 4em !important;
-  padding-bottom: 5em !important;
+  padding-bottom: 4em !important;
   text-align: left;
   overflow-wrap: break-word !important;
   display: inline-block;
@@ -143,8 +143,9 @@ a {
     padding-bottom: 0.7em; } }
 #rom_content_content {
   padding-top: 1em;
-  display: inline-block;
-  background-color: white;
+  display: block;
+  margin: 0 auto;
+  background-color: gainsboro;
   min-height: 50vh; }
   #rom_content_content iframe {
     display: block;
@@ -208,7 +209,7 @@ div.attention {
   overflow-wrap: break-word !important;
   border: black 1px solid;
   font-style: italic;
-  background-color: rgba(100, 100, 100, 0.1);
+  background-color: gainsboro;
   box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.1); }
   .cite::before {
     content: '“';
@@ -217,6 +218,7 @@ div.attention {
     top: 0.2em;
     left: 0.2em;
     background-color: rgba(1, 1, 1, 0);
+    pointer-events: none;
     width: 2em;
     height: 2em;
     background-size: cover;
