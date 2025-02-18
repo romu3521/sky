@@ -31,18 +31,25 @@ html, body {
  data-baseurl=""  data-picurl="/static/pic" id="RomNavi3">
  <div id="rmnavi" class="navi">
  <div class="naviwrap">
- <div class="rmnavi" >
+ <div class="rmnavi"  style="background-color:rgba(1,1,1,0)">
+<div style="background-color:black;width:100vw;">
 <a href="/index.html" style="opacity:1;" data-linkurl="index.html" data-titlename="案内">案内</a>
 <a href="/loglist.html" style="opacity:1;" data-linkurl="loglist.html"  data-titlename="活動紹介">活動紹介</a>
 <a href="/profile.html" style="opacity:1;" data-linkurl="profile.html"  data-titlename="プロフィール">プロフィール</a>
 <a href="/contact.html" style="opacity:1;" data-linkurl="contact.html"  data-titlename="Contact">Contact</a>
+</div>
 <style>
 .rmnavi2 {
   text-align: center;
+  background-color:grey !important;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 1s ease-out,height 0.3s ease;
+}
+.rmnavi2:hover{
+ opacity: 0.3;
 }
 </style>
- <div id="rmnavi2" class="rmnavi2" style="width:100vw;height:100px;background-color:rgba(211,211,211,0.4);color:white;text-align:center;">
+ <div id="rmnavi2" class="rmnavi2" style="width:100vw;height:100px;color:white;text-align:center;">
  </div>
 
  <script>
@@ -54,11 +61,9 @@ window.addEventListener('scroll', () => {
 
   if (scrollTop < lastScrollTop) {
     rmnavi2.style.height = `${originalHeight}px`;
-    rmnavi2.style.transition = 'height 0.3s ease';
   } 
   else {
     rmnavi2.style.height = '0';
-    rmnavi2.style.transition = 'height 0.3s ease';
   }
 
   lastScrollTop = scrollTop;
