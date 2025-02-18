@@ -60,22 +60,22 @@
     padding: 0px; }
     @media screen and (max-width: 768px) {
       .land2 .hero1 .container_1a2b3c {
-        margin-top: 50px;
-        margin-bottom: 50px; } }
+        margin-top: 30px;
+        margin-bottom: 30px; } }
     @media screen and (min-width: 768px) {
       .land2 .hero1 .container_1a2b3c {
-        margin-top: 100px;
-        margin-bottom: 100px; } }
+        margin-top: 30px;
+        margin-bottom: 30px; } }
     .land2 .hero1 .container_1a2b3c .box_rom {
-      padding: 5px;
-      margin: 0px 5px;
+      padding: 10px;
+      margin: 15px 15px;
       overflow: hidden;
       background-color: #2084c7;
       color: white;
       text-align: center;
       border-radius: 8px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); }
       @media screen and (max-width: 768px) {
         .land2 .hero1 .container_1a2b3c .box_rom {
           width: 95vw; } }
