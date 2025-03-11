@@ -40,15 +40,12 @@ html, body {
 </div>
 {% include 'basecom/parts/hiddenparts.html'%}
  </div>
-
  </div>
-
-
-
  </div>
 </div>
 
-<div id="basefix"></div>
+<div class="basefix"></div>
+{% include 'basecom/parts/loading2.html'%}
 {% include 'basecom/parts/back2home.html'%}
 
 {% if host == "127.0.0.1:8000" %}
@@ -65,7 +62,6 @@ if (rmnavi && rmdmin) {
   });
 </script>
 {% else %}
-{% include 'basecom/parts/loading2.html'%}
 <div class="rmdmin_ad"></div>
 <script>
  const delay=(ms)=>{

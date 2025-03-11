@@ -1,28 +1,27 @@
+{% load static %}
+
+{% if host == "127.0.0.1:8000" %}
+{% else %}
+<div 
+style="background-color:#555;width:100vw;height:100vh;position:fixed;top:0;left:0;"
+class="basefix" id="loading" >
+ </div>
+<style>#loading{z-index:999999 !important;}</style>
 <script>
 const whiteBackground = document.createElement("div");
-whiteBackground.style.position = "fixed";
-whiteBackground.style.top = "0";
-whiteBackground.style.left = "0";
-whiteBackground.style.width = "100vw";
-whiteBackground.style.height = "100vh";
-whiteBackground.style.backgroundColor = "white";
-whiteBackground.style.zIndex = "999999"; // 他の要素より前面に表示
-document.body.appendChild(whiteBackground);
+var loading=document.getElementById("loading")
+//loading.style.backgroundColor = "#555";
 
-// 500msごとにvdbanner要素を探す関数
 const checkElement = setInterval(() => {
-    const vdbanner = document.getElementById("vdbanner");
+    var vdbanner = document.getElementById("vdbanner");
     if (vdbanner) {
-        clearInterval(checkElement); // 要素が見つかったらループを停止
-
-        // 見つかったら背景を500msのdurationでopacity0にする
+        clearInterval(checkElement); 
         whiteBackground.style.transition = "opacity 0.5s";
         whiteBackground.style.opacity = "0";
-
-        // 500ms後に背景を削除する場合
         setTimeout(() => {
             whiteBackground.remove();
         }, 500);
     }
 }, 500);
 </script>
+{% endif %}
