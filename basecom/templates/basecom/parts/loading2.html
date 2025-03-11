@@ -6,20 +6,18 @@
 style="background-color:#555;width:100vw;height:100vh;position:fixed;top:0;left:0;"
 class="basefix" id="loading" >
  </div>
-<style>#loading{z-index:999999 !important;}</style>
+<style>#loading{z-index:99999999 !important;}</style>
 <script>
-const whiteBackground = document.createElement("div");
 var loading=document.getElementById("loading")
-//loading.style.backgroundColor = "#555";
 
 const checkElement = setInterval(() => {
     var vdbanner = document.getElementById("vdbanner");
     if (vdbanner) {
         clearInterval(checkElement); 
-        whiteBackground.style.transition = "opacity 0.5s";
-        whiteBackground.style.opacity = "0";
+        loading.style.transition = "opacity 0.5s";
+        loading.style.opacity = "0";
         setTimeout(() => {
-            whiteBackground.remove();
+            loading.remove();
         }, 500);
     }
 }, 500);
