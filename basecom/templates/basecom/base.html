@@ -38,37 +38,7 @@ html, body {
 <a href="/profile.html" style="opacity:1;" data-linkurl="profile.html"  data-titlename="プロフィール">プロフィール</a>
 <a href="/contact.html" style="opacity:1;" data-linkurl="contact.html"  data-titlename="Contact">Contact</a>
 </div>
-<style>
-.rmnavi2 {
-  text-align: center;
-  background-color:grey !important;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: opacity 1s ease-out 2s,height 0.3s ease;
-}
-.rmnavi2:hover{
- opacity: 0.3;
-}
-</style>
- <div id="rmnavi2" class="rmnavi2" style="width:100vw;height:100px;color:white;text-align:center;">
- </div>
-
- <script>
-let lastScrollTop = 0;
-const rmnavi2 = document.getElementById('rmnavi2');
-const originalHeight = rmnavi2.offsetHeight;
-window.addEventListener('scroll', () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (scrollTop < lastScrollTop) {
-    rmnavi2.style.height = `${originalHeight}px`;
-  } 
-  else {
-    rmnavi2.style.height = '0';
-  }
-
-  lastScrollTop = scrollTop;
-});
- </script>
+{% include 'basecom/parts/hiddenparts.html'%}
  </div>
 
  </div>
@@ -192,5 +162,6 @@ footer a:hover {
 
      <script type="text/javascript" crossorigin  src="{% static 'js/umd_main.js' %}?p={{fileparam_js}}"  ></script> 
      <script type="text/javascript" crossorigin  src="{% static 'js/fade.js' %}?p={{fileparam_js}}"  ></script> 
+     <script type="text/javascript" crossorigin  src="{% static 'js/baseback.js' %}?p={{fileparam_js}}"  ></script> 
 
 </html>
