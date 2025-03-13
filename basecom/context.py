@@ -18,7 +18,7 @@ def get_context(request):
 
     context['fileparam'] =param_t
     context['fileparam2'] =param_t
-    context['fileparamjs'] =param_js
+    context['fileparam_js'] =param_js
     context['descript'] ="デモサイト稼働！"
     context['host'] =request.get_host()
     context['path'] =request.get_full_path()
