@@ -2,8 +2,13 @@
 .hiddenpart {
   text-align: center;
   background-color:#444 !important;
+  background-image:url("/static/pic/kiban.png");
+  background-size:10%;
+  position:relative;
   box-shadow: 0px 5px 10px rgba(100, 255, 100, 0.3);
-  transition: opacity 1s ease-out 2s,height 0.3s ease;
+  transition: opacity 1s ease-out 2s,top 0.3s ease;
+  z-index:-1;
+  top:0;
 }
 .hiddenpart:hover{
  opacity: 0.3;
@@ -20,10 +25,12 @@ window.addEventListener('scroll', () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop < lastScrollTop) {
-    hiddenpart.style.height = `${originalHeight}px`;
+    //hiddenpart.style.height = `${originalHeight}px`;
+    hiddenpart.style.top = `0px`;
   } 
   else {
-    hiddenpart.style.height = '0';
+    //hiddenpart.style.height = '0';
+    hiddenpart.style.top = `-${originalHeight}px`;
   }
 
   lastScrollTop = scrollTop;
