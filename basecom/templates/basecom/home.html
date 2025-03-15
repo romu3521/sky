@@ -59,7 +59,6 @@ z-index:100;
 .element.fade-in {
   opacity: 1 !important;
   transform: translateY(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .elem2 {
   opacity: 0.1 !important;
@@ -68,7 +67,6 @@ z-index:100;
 .elem2.fade-in {
   opacity: 1 !important;
   transform:scale(1);
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
  </style>
@@ -183,14 +181,16 @@ color:white;font-size:1.2em;white-space:normal;overflow:hidden;"
 </script>
 
 
-<div class="land2" style="background-color:rgba(2,2,2,0.4);min-height:100vh">
+<div class="land2" style="min-height:100vh">
 <section class="hero1" style="min-height:100vh">
+ <div class="toptext">
     <h1 class="StrEnphOpa"
         data-baseduration=1500
      >デザインも機能も。あなたの理想を超えるウェブサイトを。</h1> 
     <p  class="element fadeelem"
 data-threshold="0.8"
     >フロントエンドからバックエンドまで、プロフェッショナルが一貫対応！</p>
+    </div>
 
 <div class="container_1a2b3c">
   <div class="box_rom element fadeelem" data-threshold="0.8"
@@ -291,14 +291,17 @@ style="transition: opacity 0.8s 0.9s ease-out, transform 0.8s 0.9s ease-out;"
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease !important;
         }
         .card:hover {
             transform: translateY(-5px);
+        }
+
+        .box_rom {
             transition: transform 0.3s ease !important;
         }
         .box_rom:hover {
             transform: translateY(-5px);
-            transition: transform 0.3s ease !important;
         }
         .card img {
             background-color:red;

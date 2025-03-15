@@ -6,16 +6,17 @@
   text-align: left; }
   .land2 .hero1 .button-wrapper {
     text-align: center;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: rgba(10, 10, 10, 0.5) !important; }
   .land2 .hero1 .cta-button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0px;
-    background-color: rgba(220, 220, 220, 0);
     color: white;
     font-size: 36px;
     text-decoration: none;
@@ -42,35 +43,52 @@
   .land2 .hero1 .cta-button:hover::after {
     filter: brightness(10);
     opacity: 1; }
-  @media screen and (min-width: 768px) {
-    .land2 .hero1 > h1 {
-      margin-top: 150px !important;
-      margin-left: 20px !important;
-      margin-bottom: 0px !important; } }
-  @media screen and (max-width: 768px) {
-    .land2 .hero1 > h1 {
-      margin-top: 6px !important;
-      margin-left: 6px !important; } }
-  @media screen and (min-width: 768px) {
-    .land2 .hero1 > p {
-      margin-top: 10px !important;
-      margin-left: 40px !important; } }
-  @media screen and (max-width: 768px) {
-    .land2 .hero1 > p {
-      margin-top: 3px !important;
-      margin-left: 10px !important; } }
-  .land2 .hero1 > h1 {
-    font-size: 2.9em;
-    color: #ccc;
-    display: inline-block;
-    transform: scaleX(0.9);
-    letter-spacing: -2px; }
-  .land2 .hero1 > p {
-    font-size: 1.2em;
-    display: inline-block;
-    color: #ccc;
-    transform: scaleX(0.9);
-    letter-spacing: -2px; }
+  .land2 .hero1 div.toptext {
+    background-color: #64a4cf;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); }
+    @media screen and (min-width: 768px) {
+      .land2 .hero1 div.toptext {
+        margin-top: 100px !important;
+        margin-left: 20px;
+        margin-right: 20px; } }
+    @media screen and (max-width: 768px) {
+      .land2 .hero1 div.toptext {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px !important; } }
+    .land2 .hero1 div.toptext > h1 {
+      font-size: 2.9em;
+      color: #ccc;
+      display: inline-block;
+      transform: scaleX(0.9);
+      letter-spacing: -2px;
+      color: white; }
+      @media screen and (min-width: 768px) {
+        .land2 .hero1 div.toptext > h1 {
+          margin-top: 10px !important;
+          margin-left: 20px !important;
+          margin-bottom: 0px !important; } }
+      @media screen and (max-width: 768px) {
+        .land2 .hero1 div.toptext > h1 {
+          margin-top: 0px !important;
+          margin-left: 6px !important;
+          margin-bottom: 10px !important; } }
+    .land2 .hero1 div.toptext > p {
+      color: white !important;
+      font-size: 1.2em;
+      display: inline-block;
+      color: #ccc;
+      transform: scaleX(0.9);
+      letter-spacing: -2px; }
+      @media screen and (min-width: 768px) {
+        .land2 .hero1 div.toptext > p {
+          margin-top: 10px !important;
+          margin-left: 40px !important; } }
+      @media screen and (max-width: 768px) {
+        .land2 .hero1 div.toptext > p {
+          margin-top: 0px !important;
+          margin-left: 10px !important; } }
   .land2 .hero1 .container_1a2b3c {
     text-align: center;
     display: flex;
@@ -92,7 +110,7 @@
       padding: 10px;
       margin: 15px 15px;
       overflow: hidden;
-      background-color: #2084c7;
+      background-color: #64a4cf;
       color: white;
       text-align: center;
       border-radius: 8px;
@@ -159,9 +177,6 @@
   color: #fff;
   text-decoration: none;
   border-radius: 5px; }
-
-.cta-button:hover {
-  background: #0056b3; }
 
 .features, .testimonials, .faq {
   padding: 50px 20px;
