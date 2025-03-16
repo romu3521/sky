@@ -29,16 +29,16 @@ div#RomProf2 div#rm_profile0 {
   box-sizing: border-box;
   display: inline-block;
   font-family: DotGothic16;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 50px; }
   @media screen and (min-width: 600px) {
     div#RomProf2 div#rm_profile0 {
-      width: 40vw; } }
+      width: 40vw;
+      height: 55vh; } }
   @media screen and (max-width: 600px) {
     div#RomProf2 div#rm_profile0 {
       width: 90vw;
-      margin-left: 4vw;
-      margin-right: 4vw; } }
+      height: 60vw; } }
   div#RomProf2 div#rm_profile0 > div, div#RomProf2 div#rm_profile0 > a {
     text-decoration: none;
     display: block;
@@ -71,9 +71,14 @@ div#RomProf2 div#rm_profile {
   height: 40vw; }
   @media screen and (min-width: 600px) {
     div#RomProf2 div#rm_profile {
-      display: inline-block; } }
+      display: inline-block;
+      height: 55vh; } }
   @media screen and (max-width: 600px) {
     div#RomProf2 div#rm_profile {
-      display: none; } }
+      display: none !important; } }
+
+@media screen and (min-width: 600px) {
+  div.paper {
+    background-color: white; } }
 
 /*# sourceMappingURL=prof.css.map */

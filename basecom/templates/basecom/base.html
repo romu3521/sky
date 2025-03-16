@@ -48,7 +48,7 @@ html, body {
 {% include 'basecom/parts/loading2.html'%}
 {% include 'basecom/parts/back2home.html'%}
 
-{% if host == "127.0.0.1:8000" %}
+{% if host == "127.0.0.1:8000" or "192.168.1." in host %}
 <div class="rmdmin"></div>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
