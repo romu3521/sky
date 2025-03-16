@@ -1,6 +1,6 @@
 {% load static %}
 
-{% if host == "127.0.0.1:8000" %}
+{% if host == "127.0.0.1:8000" or "192.168.1." in host %}
 {% else %}
 <div 
 style="background-color:#555;background-image:url('/static/bk.svg'),url('/static/bk.svg');background-size:70px 70px,30px 30px;background-position:0 0, 35px 35px"
