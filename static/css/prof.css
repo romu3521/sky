@@ -24,21 +24,20 @@ div#RomProf2 div#rm_profile_t {
       display: inline-block; } }
 div#RomProf2 div#rm_profile0 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 1em 0.5em;
+  padding: 1em 2em;
   box-sizing: border-box;
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   font-family: DotGothic16;
   margin-bottom: 50px;
   margin-top: 50px; }
   @media screen and (min-width: 600px) {
     div#RomProf2 div#rm_profile0 {
-      width: 40vw;
       height: 55vh; } }
   @media screen and (max-width: 600px) {
     div#RomProf2 div#rm_profile0 {
-      width: 90vw;
-      height: 60vw; } }
+      width: 90vw; } }
   div#RomProf2 div#rm_profile0 > div, div#RomProf2 div#rm_profile0 > a {
     text-decoration: none;
     display: block;
@@ -49,9 +48,6 @@ div#RomProf2 div#rm_profile0 {
     padding-bottom: 1em; }
     div#RomProf2 div#rm_profile0 > div:hover, div#RomProf2 div#rm_profile0 > a:hover {
       opacity: 0.4; }
-    @media screen and (min-width: 600px) {
-      div#RomProf2 div#rm_profile0 > div, div#RomProf2 div#rm_profile0 > a {
-        padding-left: 5em; } }
     @media screen and (max-width: 600px) {
       div#RomProf2 div#rm_profile0 > div, div#RomProf2 div#rm_profile0 > a {
         padding-left: 1em; } }
@@ -79,6 +75,24 @@ div#RomProf2 div#rm_profile {
 
 @media screen and (min-width: 600px) {
   div.paper {
-    background-color: white; } }
+    background-color: white;
+    align-items: flex-start;
+    padding: 0 !important;
+    display: flex;
+    gap: 10px; } }
+@media screen and (max-width: 600px) {
+  div.paper {
+    padding: 0 !important;
+    display: flex;
+    justify-content: center; } }
+
+.introduce {
+  padding: 40px 20px; }
+  .introduce p, .introduce ul {
+    background-color: #f0f0f0;
+    box-shadow: 3px 3px 2px 1px rgba(200, 200, 255, 0.5);
+    font-size: 1.1em;
+    padding: 5px;
+    list-style: none; }
 
 /*# sourceMappingURL=prof.css.map */
