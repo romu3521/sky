@@ -21,16 +21,24 @@ a {
   text-decoration: none; }
 
 .articlefooter {
+  display: inline-block;
+  box-sizing: border-box;
   background-color: #787878;
-  color: #e6e6e6;
+  color: #1e1e1e;
   height: auto;
   font-size: 1.3em;
   position: relative; }
+  @media screen and (max-width: 600px) {
+    .articlefooter {
+      width: 90vw; } }
+  @media screen and (min-width: 600px) {
+    .articlefooter {
+      width: 100%; } }
   .articlefooter__cite {
     font-size: 0.8em;
     display: block;
     text-decoration: none;
-    color: #e6e6e6; }
+    color: #1e1e1e; }
     @media screen and (max-width: 600px) {
       .articlefooter__cite {
         text-align: right; } }
@@ -40,7 +48,7 @@ a {
         right: 1em;
         bottom: 0.1em; } }
     .articlefooter__cite:visited {
-      color: #e6e6e6; }
+      color: #1e1e1e; }
   @media screen and (max-width: 600px) {
     .articlefooter {
       padding: 1vw 0; } }
@@ -49,10 +57,18 @@ a {
       padding: 1em; } }
 
 .articleheader {
+  box-sizing: border-box;
+  display: inline-block;
   margin-bottom: 0em;
   background-color: #787878;
   padding: 1em;
-  color: #e6e6e6; }
+  color: #1e1e1e !important; }
+  @media screen and (max-width: 600px) {
+    .articleheader {
+      width: 90vw; } }
+  @media screen and (min-width: 600px) {
+    .articleheader {
+      width: 100%; } }
   .articleheader__title {
     font-size: 1.4em;
     padding-left: 0.1em;
@@ -105,13 +121,13 @@ a {
 .rmcontent {
   opacity: 1 !important;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   padding-top: 3em;
   padding-bottom: 5em;
-  overflow: hidden; }
+  overflow: hidden !important; }
   @media screen and (max-width: 600px) {
     .rmcontent {
-      width: 100vw; } }
+      width: 100%; } }
   @media screen and (min-width: 600px) {
     .rmcontent {
       width: 55vw;
@@ -126,9 +142,7 @@ a {
 
 @media screen and (min-width: 600px) {
   #rom_content_content {
-    width: 100%;
-    text-align: left;
-    color: #96968c; }
+    text-align: left; }
 
   .code {
     width: 100%;
@@ -146,7 +160,14 @@ a {
   display: block;
   margin: 0 auto;
   background-color: gainsboro;
+  color: #323232 !important;
   min-height: 50vh; }
+  @media screen and (max-width: 600px) {
+    #rom_content_content {
+      width: 90vw; } }
+  @media screen and (min-width: 600px) {
+    #rom_content_content {
+      width: 100%; } }
   #rom_content_content iframe {
     display: block;
     margin: auto; }
@@ -205,6 +226,7 @@ div.attention {
   border-color: grey; }
 
 .cite {
+  width: 90% !important;
   position: relative;
   overflow-wrap: break-word !important;
   border: black 1px solid;
