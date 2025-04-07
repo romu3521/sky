@@ -49,11 +49,13 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); }
     @media screen and (min-width: 768px) {
       .land2 .hero1 div.toptext {
+        width: 70vw;
         margin-top: 100px !important;
         margin-left: 20px;
         margin-right: 20px; } }
     @media screen and (max-width: 768px) {
       .land2 .hero1 div.toptext {
+        width: 95%;
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 50px !important; } }
