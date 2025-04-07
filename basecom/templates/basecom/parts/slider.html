@@ -1,0 +1,63 @@
+<style>
+.slider{{id}} {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .slide-track{{id}} {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll{{id}} 30s linear infinite;
+    }
+    .slide{{id}} {
+      display: inline-block;
+      width: 60px;
+      height: 40px;
+      line-height: 1;
+vertical-align: middle; 
+      margin: 0 5px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 6px;
+    }
+
+    @keyframes scroll{{id}} {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+  <div class="slider{{id}}" style="background-color:black;transform:rotate({{deg}}deg) translateY({{y}}px);">
+    <div class="slide-track{{id}}" id="slide-track{{id}}" style="padding:5px 0;"></div>
+  </div>
+
+
+  <script>
+    const imageUrls{{id}} = [
+      '/static/graphic/44298fc.jpeg',
+      '/static/graphic/44298fc1.jpeg',
+      '/static/graphic/44298fc2.jpeg',
+      '/static/graphic/44298fc3.jpeg',
+      '/static/graphic/44298fc4.jpeg',
+      '/static/graphic/44298fc5.jpeg',
+      '/static/graphic/44298fc6.jpeg',
+    ];
+
+    const track{{id}} = document.getElementById('slide-track{{id}}');
+
+    function createSlide(url) {
+      const slide = document.createElement('div');
+     slide.className = 'slide{{id}}';
+      slide.style.backgroundImage = `url(${url})`;
+      return slide;
+    }
+
+    const baseSlides{{id}} = imageUrls{{id}}.map(url => createSlide(url));
+    const trackWidthNeeded{{id}} = window.innerWidth * 2;
+    const slideWidth{{id}} = 60 + 10;
+    const repeatCount{{id}} = Math.ceil(trackWidthNeeded{{id}} / (slideWidth{{id}} * imageUrls{{id}}.length)) + 1;
+
+    for (let i = 0; i < repeatCount{{id}}; i++) {
+      baseSlides{{id}}.forEach(slide => {
+        track{{id}}.appendChild(slide.cloneNode(true));
+      });
+    }
+  </script>
