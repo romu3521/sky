@@ -24,7 +24,7 @@ window.addEventListener('scroll', function() {
   parallax.style.backgroundPositionY = `${-scrollPosition * 0.8}px`;
 });
 </script>
-<div id="rom_urllist2" class="parallax" style="display:none;"  data-baseurl="" 
+<div id="rom_urllist2" class="parallax" style="display:none;padding-bottom:300px"  data-baseurl="" 
  data-linksurl="/loglist.html"
  data-picurl="/static/pic">
 
@@ -34,11 +34,10 @@ background-color:rgba(0,0,0,0.1);
 right:0;top:0;
 position:absolute;
 z-index:100;
+"></div>
 
-  "></div>
 
-
- <a class="next" href="/loglist.html"><span  class="StrEnphOpa readmore" >read more...</span></a>
+ <a class="next" href="/loglist.html" style="margin-bottom:60px" ><span  class="StrEnphOpa readmore" >read more...</span></a>
 
 
 <div class="rmset sp"
@@ -110,7 +109,6 @@ color:white;font-size:1.2em;white-space:normal;overflow:hidden;"
 
 <style>
   .tooltip {
-    
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -183,7 +181,9 @@ color:white;font-size:1.2em;white-space:normal;overflow:hidden;"
 
 <div class="land2" style="min-height:100vh">
 <section class="hero1" style="min-height:100vh">
- <div class="toptext">
+{% include 'basecom/parts/slider.html' with y="-30" deg="-2" id="abc" %}
+
+ <div class="toptext" style="padding-bottom:50px;padding-top:50px;border-radius:10px;">
     <h1 class="StrEnphOpa"
         data-baseduration=1500
      >デザインも機能も。あなたの理想を超えるウェブサイトを。</h1> 

@@ -68,8 +68,13 @@ footer#rm_footer2 {
   padding-top: 1.5em;
   padding-bottom: 5em !important;
   box-sizing: border-box;
-  font-size: 1.1em;
   font-family: "Dela Gothic One", "Kiwi Maru", "DotGothic16", "serif"; }
+  @media screen and (max-width: 768px) {
+    footer#rm_footer2 a.copyright {
+      font-size: 0.9em; } }
+  @media screen and (min-width: 768px) {
+    footer#rm_footer2 a.copyright {
+      font-size: 1.1em; } }
   footer#rm_footer2 ul#rm_linklist {
     margin-top: 1em;
     padding-left: 0px;
