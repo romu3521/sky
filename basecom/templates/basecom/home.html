@@ -217,7 +217,13 @@ style="transition: opacity 0.8s 0.6s ease-out, transform 0.8s 0.2s ease-out;">
 </div>
 
 
-<div class="wrapper-wrpper" style="box-sizing:border-box;;height:200px;overflow:hidden;">
+<style>
+.wrapper-wrpper.fade-in{
+  transform:translateX(0%) !important;
+}
+</style>
+<div class="fadeelem wrapper-wrpper" style="transform:translateX(-40%);box-sizing:border-box;transition:0.4s transform ease;height:200px;overflow:hidden;">
+
 <div class="button-wrapper" style=" 
 
  transform:rotate(1deg) translateY(100px);
@@ -232,12 +238,11 @@ left:-5vw;
  ">
  <a href="/contact.html" class="cta-button" style="
 display:inline-block;
+transform:rotate(-1deg); 
 width:10vw;position:relative;left:-15vw;
- transform:rotate(-1deg) translate(0%,0.0em);
 position:relateve;
 left:-5vw;
-      white-space: nowrap;
-
+white-space: nowrap;
   ">Contact →</a>
 </div>
 </div>

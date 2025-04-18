@@ -20,8 +20,7 @@
     font-size: 36px;
     text-decoration: none;
     border-radius: 1px !important;
-    position: relative;
-    transition: filter 0.3s ease; }
+    position: relative; }
   .land2 .hero1 .cta-button:hover::after {
     filter: brightness(10);
     opacity: 1; }
