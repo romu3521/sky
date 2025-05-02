@@ -1,14 +1,46 @@
 {% extends "basecom/base.html" %}
 {% load static %}
 {% block content %}
+<style>
+@media screen and (max-width: 768px) {
+  .mlider_app {
+    width: 95vw !important;
+    height: 85vw !important;
+  }
+}
 
-<div data-baseurl="" data-picurl="/static/pic" id="mlider" style="overflow:hidden;text-align:center;opacity:0;">
+@media screen and (min-width: 769px) {
+  .mlider_app {
+    width: 70vw !important;
+    height: 50vw !important;
+  }
+}
+
+.mlider_app button{
+ background-color:yellow !important;
+ transform:scale(1);
+}
+
+
+</style>
+
+<div data-baseurl="" data-picurl="/static/pic" id="mlider" style="margin-bottom:10px;overflow:hidden;text-align:center;opacity:0;transition:opacity 0.1s ease;display:flex;justify-content:center;align-itemscenter">
  <a href="https://wordpress.com/ja/"
   data-href="https://wordpress.com/ja/"
   data-title="Wordpress"
+data-href="https://ja.legacy.reactjs.org/"
+  data-videourl="/static/graphic/douga1.mp4"
   data-picname="wordpress-icon.png">気楽に扱えるWordPressを用いたシステムを開発いたします</a>
- <a href="https://docs.djangoproject.com/ja" data-href="https://docs.djangoproject.com/ja" data-title="django開発" data-picname="logo-django.svg">サーバーサイドの開発に、セキュリティを意識した「django」を採用可能です</a>
- <a href="https://ja.legacy.reactjs.org/" data-href="https://ja.legacy.reactjs.org/" data-title="React開発" data-picname="react-icon.png">Reactにてウェブデザインを担当いたします</a>
+ <a href="https://docs.djangoproject.com/ja" data-href="https://docs.djangoproject.com/ja" data-title="django開発" 
+
+data-href="https://ja.legacy.reactjs.org/"
+  data-videourl="/static/graphic/douga2.mp4"
+  data-picname="logo-django.svg">サーバーサイドの開発に、セキュリティを意識した「django」を採用可能です</a>
+ <a href="https://ja.legacy.reactjs.org/" data-href="https://ja.legacy.reactjs.org/" data-title="React開発" 
+
+data-href="https://ja.legacy.reactjs.org/"
+  data-videourl="/static/graphic/douga3.mov"
+  data-picname="react-icon.png">Reactにてウェブデザインを担当いたします</a>
 
 
 </div>
@@ -405,7 +437,7 @@ style="transition: opacity 0.8s 0.9s ease-out, transform 0.8s 0.9s ease-out;"
 }
 </style>
 <link rel="stylesheet" href="{% static 'css/home.css' %}?p={{fileparam2}}">
-<script type="text/javascript" crossorigin  src="{% static 'js/mlide.js' %}?p={{fileparam_js}}"  ></script> 
+<script type="text/javascript" crossorigin  src="{% static 'js/mlide_mk2.js' %}?p={{fileparam_js}}"  ></script> 
 
 
 {% endblock %}
