@@ -2,10 +2,15 @@
 {% load static %}
 {% block content %}
 <style>
+  .mlider_app {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  }
+
 @media screen and (max-width: 768px) {
   .mlider_app {
     width: 95vw !important;
     height: 85vw !important;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -24,7 +29,8 @@
 
 </style>
 
-<div data-baseurl="" data-picurl="/static/pic" id="mlider" style="margin-bottom:10px;overflow:hidden;text-align:center;opacity:0;transition:opacity 0.1s ease;display:flex;justify-content:center;align-itemscenter">
+<div data-baseurl="" data-picurl="/static/pic" id="mlider" style="margin-bottom:15px;overflow:hidden;text-align:center;opacity:0;transition:opacity 0.1s ease;display:flex;justify-content:center;align-itemscenter;">
+
  <a href="https://wordpress.com/ja/"
   data-href="https://wordpress.com/ja/"
   data-title="Wordpress"
