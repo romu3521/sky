@@ -6,8 +6,21 @@
 
 
 
-<div id="rom_content" class="rmcontent" style="opacity:0;" data-title="{{content.post_title}}" data-date="{{content.created_at}}">
- <div class="articleheader">
+<div id="rom_content" class="rmcontent" 
+ style="opacity:0;
+"
+ data-title="{{content.post_title}}" data-date="{{content.created_at}}">
+ <div 
+  style="border-radius:15px 15px 0px 0px;
+  border-bottom: 4px solid #888;
+  box-shadow:
+    -4px -4px 8px rgba(0, 0, 0, 0.2),
+     4px -4px 8px rgba(0, 0, 0, 0.2),
+    -4px  0px 8px rgba(0, 0, 0, 0.1),
+     4px  0px 8px rgba(0, 0, 0, 0.1);
+"
+
+  class="articleheader">
  <div class="articleheader__detail">
 <time><i>🗓️{{content.created_at|date:"Y-m-d "}}</i></time>
  {% if content.parent_genre%}
@@ -21,13 +34,23 @@
   <a class="rmicon" href="https://twitter.com/home" ><img src="{% static 'pic/twitter_btn.png' %}"></a>
   <a class="rmicon" href="https://b.hatena.ne.jp/"><img src="{% static 'pic/hatena_btn.png' %}"></a>
  </div>
-<div id="rom_content_title" class="articleheader__title"> {{content.post_title}}</div>
+<div id="rom_content_title" style="text-align:left;" class="articleheader__title"> {{content.post_title}}</div>
 </div>
 
 <div id="rom_content_content" class="rmincontent">
 {{content_post_content|safe}}
 </div>
- <div class="articlefooter">
+ <div
+
+  style="border-radius:0px 0px 15px 15px;
+  border-top: 4px solid #888;
+  box-shadow:
+    -4px 4px 10px rgba(0, 0, 0, 0.2),
+     4px 4px 10px rgba(0, 0, 0, 0.2),
+    -4px 0px 6px rgba(0, 0, 0, 0.1), 
+     4px 0px 6px rgba(0, 0, 0, 0.1); 
+"
+  class="articlefooter">
 
  <div class="articleheader__detail">
   <a class="rmicon" href="https://twitter.com/home" ><img src="{% static 'pic/twitter_btn.png' %}"></a>
