@@ -37,6 +37,37 @@
 <div id="rom_content_title" style="text-align:left;" class="articleheader__title"> {{content.post_title}}</div>
 </div>
 
+<style>
+
+@keyframes dimGlow {
+  0%, 100% {
+    color: #fff;
+  }
+  50% {
+    color: #b0b0b0 ;
+  }
+}
+
+
+div.rmmidasi1{
+background-color:black;
+letter-spacing:0.05em !important;
+padding:10px 0px 10px 10px !important;
+
+animation: dimGlow 6s ease-in-out infinite;
+
+
+
+}
+
+
+
+
+
+div#rom_content_content{
+letter-spacing:0.03em !important;
+}
+</style>
 <div id="rom_content_content" class="rmincontent">
 {{content_post_content|safe}}
 </div>
