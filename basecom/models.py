@@ -53,10 +53,8 @@ class FoPosts(models.Model):
     post_pic3 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
     post_pic4 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
     post_pic5 = models.ImageField(upload_to=get_upload_to, null=True,blank=True)
-    #parent_genre = models.ForeignKey(FoGenres, on_delete=models.SET_DEFAULT,default=None, null=False)
     is_public_article = models.BooleanField(verbose_name="記事を公開する",default=False)
     is_public_cmt = models.BooleanField(verbose_name="コメント公開する",default=False)
-    #tags = models.ManyToManyField("FoTags", related_name='posts',blank=True)
     cite = models.CharField(max_length=100, blank=True, null=True)
 
     def save(self, *args, **kwargs):
@@ -68,6 +66,8 @@ class FoPosts(models.Model):
         return str(self.post_title[:20])+"..."
     def get_tags(self):
         return self.tags.all()
+    def get_days(self):
+        return (timezone.now() - self.created_at).days
     def get_description_summary(self):
         clean = re.compile('<.*?>')
         cleaned = re.sub(clean, '', self.post_content)

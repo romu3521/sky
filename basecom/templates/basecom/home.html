@@ -191,7 +191,25 @@ color:white;font-size:1.2em;white-space:normal;overflow:hidden;"
 transition: opacity 0.5s ease, background-size 0.3s ease;
   background-image:url('{{p.post_pic|default:"/static/pic/nophoto.jpg"}}')"
   data-urlname="/post/{{p.url_name}}.html" data-titlename="{{ p.post_title }}" data-created_at="{{p.created_at | date:"Y/m/d"}}" href="/post/{{p.url_name}}.html">
-  <div class="rmlinkdate">{{p.created_at | date:"Y/m/d"}} </div>
+<style>
+@keyframes blink {
+  0%, 100% {
+    background-color:rgba(255,0,0,1);
+  }
+  50% {
+    background-color:rgba(255,150,150,1);
+  }
+}
+</style>
+{% if p.get_days <= 6 %}
+  <span class="newtopic"style="
+   border-radius:5px;
+   font-weight:bold;
+  animation: blink 3s infinite;
+  position:absolute;top:0.3em;left:0.3em;font-size:0.7em;padding:2px 7px;" >new!</span>
+{% endif %}
+  <div class="rmlinkdate">{{p.created_at | date:"Y/m/d"}}</div>
+
   <span class="StrEnphOpa rmlinktitle" >{{ p.post_title }}</span>
   <span class="rmlinktitle" style="right:-100%" >{{ p.post_title }}</span>
   <span class="rmlinktitle" style="right:-200%" >{{ p.post_title }}</span>
