@@ -264,6 +264,15 @@ section h2::after {
   <script>
     window.addEventListener('load', () => {
       alert("これはサンプルのサイトです。記載されていることは全て架空の内容です。")
+ setTimeout(() => {
+    const banner = document.getElementById('vdbanner');
+    if (banner) {
+      banner.style.display = 'none';
+    }
+  }, 3000);
+
+
+
       const wall = document.getElementById('white-wall');
       wall.classList.add('fade-out');
 
