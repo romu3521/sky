@@ -1,3 +1,12 @@
+
+demosite/.urls.py.swp
+demosite/.views.py.swp
+demosite/__init__.py
+demosite/__pycache__/
+demosite/migrations/
+
+
+
 static/css/*.css.map
 skyopen/middleware/__pycache__/
 linechat/migrations/__pycache__/*

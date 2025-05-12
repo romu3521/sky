@@ -89,6 +89,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "basecom.apps.BasecomConfig",
     #"sqapp",
+    "demosite",
     "linechat.apps.LinechatConfig",
     'django.contrib.admin',
     'django.contrib.auth',

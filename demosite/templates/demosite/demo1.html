@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美容院hidamari | 安心のサロン体験</title>
+  <style>
+@font-face {
+  font-family: 'Hannari';
+  src: url('/static/demo/fonts/hannari.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{ 
+ scroll-behavior: smooth;} 
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      width: 24px;
+      height: 20px;
+      justify-content: space-between;
+    }
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      background: #333;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        transform:translateY(-100%);
+        z-index:-100;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      }
+
+
+      .nav{
+        transition:transform 0.5s ease 0s;
+        width:100vw;
+        box-sizing:border-box;
+        pointer-events:none;
+      }
+      .nav.show {
+        display: flex;
+        transform:translateY(0%);
+        pointer-events:default;
+        
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-link{
+       text-align:center;
+      }
+    }
+
+
+
+
+    body {
+
+      font-family: 'Hannari', sans-serif;
+      background-image: url('/static/demo/kabegami.jpg');
+      background-size:100% 100%;
+      //background: #f8f8f8;
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #f8f9fa;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header nav a {
+      margin-left: 1em;
+      text-decoration: none;
+      color: #333;
+    }
+.hero {
+  background: url('/static/demo/biyou.png') center/cover no-repeat;
+  color: #fff;
+  height: 60vh;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin: 0.5em 0 0 0;
+}
+    .section {
+      padding: 2em 1em;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+section h2 {
+
+  background: #f2f2f2;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  padding: 0.5em 0;
+}
+
+section h2::before,
+section h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30%;
+  background: #ccc;
+  top: 50%;
+}
+
+section h2::before {
+  left: 0;
+}
+
+section h2::after {
+  right: 0;
+}
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+    footer {
+      margin-top: 2em;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+   <style>
+.logo {
+  background:#f8f9fa;
+  font-family: 'hannari', serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+.logo span {
+  font-weight: bold;
+  color: #a1897a; /* アース系のナチュラルカラー */
+}
+
+
+
+
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+
+    @media (min-width: 768px) {
+    .nav-link {
+      position: relative;
+      font-size: 18px;
+      text-decoration: none;
+      color: #333;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d59ca4; /* ピンクベージュ系で美容院っぽく */
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #b85c72;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    }
+
+
+
+
+
+
+   </style>
+  <div class="logo">美容院<span>hidamari</span></div>
+  <div style="width:100%;height:100%;background-color:white;position:absolute;left:0px;z-index:-1;"></div>
+
+    <div class="menu-toggle" onclick="document.querySelector('.nav').classList.toggle('show')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+
+    <nav class="nav">
+      <a  class="nav-link" href="#menu">メニュー</a>
+      <a  class="nav-link" href="#staff">スタッフ</a>
+      <a  class="nav-link" href="#access">アクセス</a>
+    </nav>
+  </header>
+
+  <style>
+    #white-wall {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      z-index: 9999;
+      transition: opacity 1.5s ease;
+    }
+
+    #white-wall.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+  <div id="white-wall"></div>
+
+  <script>
+    window.addEventListener('load', () => {
+      alert("これはサンプルのサイトです。記載されていることは全て架空の内容です。")
+      const wall = document.getElementById('white-wall');
+      wall.classList.add('fade-out');
+
+      wall.addEventListener('transitionend', () => {
+        wall.remove();
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>「髪に、素敵な時間を。」</h1>
+    <p>あなたの毎日に、癒しと輝きを。</p>
+  </div>
+</div>
+<style>
+.card2 {
+  background: #f2f2f2;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card_header2 {
+  background-color: #444;
+  color: white;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.card_body2 {
+  padding: 1em;
+  font-size: 1em;
+  color: #333;
+}
+</style>
+
+  <section id="menu" class="section">
+    <h2>メニュー</h2>
+<div class="menu">
+  <div class="card2">
+    <div class="card_header2">カット</div>
+    <div class="card_body2">¥4,000</div>
+  </div>
+  <div class="card2">
+    <div class="card_header2">カラー</div>
+    <div class="card_body2">¥6,000〜</div>
+  </div>
+  <div class="card2">
+    <div class="card_header2">パーマ</div>
+    <div class="card_body2">¥7,000〜</div>
+  </div>
+</div>
+  </section>
+
+  <section id="staff" class="section">
+    <h2>スタッフ</h2>
+    <style>
+    .menu, .staff {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+    }
+    .staff-photo {
+      width: 150px;
+      height: 200px;
+      border-radius: 20%;
+      object-fit: cover;
+      margin: 0.5em 0.5em;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+      display:flex;
+    }
+
+
+    .card {
+      padding: 1em;
+
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 12px;
+    }
+    .card_header{
+    background-image:url("/static/demo/prof.jpeg");
+    background-size:100% 100%;
+    display:flex;
+    align-items: center;
+    justify-items:left;
+    }
+
+.card strong {
+  display: block;
+  margin-top: 3em; /* 画像との距離をあける（画像が絶対配置なら必要） */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card p {
+  margin-top: 1em;
+  line-height: 1.6;
+  color: #444;
+}
+  </style>
+    <div class="staff">
+      <div class="card">
+       <div class="card_header">
+        <img src="/static/demo/stylist1.jpeg" alt="スタッフ1" class="staff-photo">
+        </div>
+        <strong>高月 こはる（たかつき こはる）</strong><br>ショートが得意
+        <p>
+毎日のヘアスタイルに、ちょっとした「心のゆとり」を。
+お客様の気分やライフスタイルに寄り添ったナチュラルな提案を大切にしています。
+
+やわらかいカットラインと、空気をまとったような自然な動きのあるスタイルが得意。
+お話しするのが苦手な方にも、安心して過ごしていただけるような空気感を大事にしています。
+
+美容室が「整える場所」ではなく、「癒される場所」になれたら嬉しいです。
+</p>
+      </div>
+      <div class="card">
+
+       <div class="card_header">
+        <img src="/static/demo/stylist2.jpeg" alt="スタッフ2" class="staff-photo">
+        </div>
+        <strong>麻倉 誠司（あさくら せいじ）</strong><br>骨格にフィットするメンズカット
+        <p>
+“シンプルだけど、どこか品がある”——そんな大人のスタイルを提案しています。
+
+20年以上のキャリアを通じて培った技術と、
+トレンドを自然に取り入れる感性で、年齢を問わず幅広いお客様から支持をいただいています。
+
+髪質や骨格を見極めたカット、さりげなく雰囲気を引き出すカラーやパーマが得意。
+静かな物腰と丁寧な所作も「話しやすい」と評判です。
+
+忙しい日常の中で、ふと力が抜けるような、そんな時間をお過ごしください。
+</p>
+      </div>
+    </div>
+  </section>
+
+<section id="access" class="section" style="background: rgba(255, 255, 255, 0.8); padding: 2em; border-radius: 8px; max-width: 800px; margin: auto;" >
+  <h2>アクセス</h2>
+  <p>〒604-8031 京都府京都市中京区河原町通三条下る大黒町３９</p>
+
+  <div style="width: 100%; height: 400px; margin-top: 1em;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d816.9827024301018!2d135.76811426963138!3d35.0084370967563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDAwJzMwLjQiTiAxMzXCsDQ2JzA3LjUiRQ!5e0!3m2!1sja!2sjp!4v1746810126166!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+  
+
+  <footer>
+    &copy; 2025 美容院hidamari. All rights reserved.
+  </footer>
+
+</body>
+</html>
