@@ -156,24 +156,28 @@
       color: white;
       white-space: nowrap;
       padding-top: 0.1em; }
-      #rom_urllist2 div.wrapper a.rmlinksimg:hover .rmlinktitle {
-        animation: slide 8s infinite linear; }
+      #rom_urllist2 div.wrapper a.rmlinksimg:hover div.title {
+        animation: slide 10s infinite linear; }
 @keyframes slide {
   0% {
     transform: translate(0%, 0%); }
   50% {
-    transform: translate(-100%, 0%); }
+    transform: translate(-25%, 0%); }
   100% {
-    transform: translate(-200%, 0%); } }
-      #rom_urllist2 div.wrapper a.rmlinksimg > .rmlinktitle {
+    transform: translate(-50%, 0%); } }
+      #rom_urllist2 div.wrapper a.rmlinksimg > div.title {
         position: absolute;
+        bottom: 0px; }
+      #rom_urllist2 div.wrapper a.rmlinksimg > div .rmlinktitle {
+        vertical-align: top;
+        position: relative;
         bottom: 0px;
         color: black;
-        display: block;
-        width: 100%;
+        display: inline-block;
+        text-align: center;
+        min-width: 300px;
         font-size: 1.1em;
         font-weight: bold;
-        background-color: rgba(222, 222, 222, 0.8);
         padding: 0.3em;
         box-sizing: border-box;
         overflow: hidden; }

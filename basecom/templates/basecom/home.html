@@ -210,9 +210,10 @@ transition: opacity 0.5s ease, background-size 0.3s ease;
 {% endif %}
   <div class="rmlinkdate">{{p.created_at | date:"Y/m/d"}}</div>
 
-  <span class="StrEnphOpa rmlinktitle" >{{ p.post_title }}</span>
-  <span class="rmlinktitle" style="right:-100%" >{{ p.post_title }}</span>
-  <span class="rmlinktitle" style="right:-200%" >{{ p.post_title }}</span>
+  <div class="title" style="background-color:white">
+  <span class="rmlinktitle" style="">{{ p.post_title }}</span>
+  <span class="rmlinktitle" style="" >{{ p.post_title }}</span>
+  </div>
 
 </a>
 {% endfor %}
