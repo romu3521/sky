@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 @csrf_exempt
 def line_webhook(request):
     
-    CHANNEL_ACCESS_TOKEN = 'oYoxn4ytHWiGRWdVUXx8jPZG14cErc3At4O97tttDHEQDMUe5PdqBPkpbtjNHgSIHx0y0DDNs/VlPCRH23y1kROrNJNhik37k8yHHvj6A/URrhgu4KrjNnyHrhkC4yffsuc2aDFidf0SLAXsfyffewdB04t89/1O/w1cDnyilFU='  # 取得したチャネルアクセストークンに置き換え
+    CHANNEL_ACCESS_TOKEN = 'oYoxn4ytHWiGRWdVUXx8jPZG14cErc3At4O97tttDHEQDMUe5PdqBPkpbtjNHgSIHx0y0DDNs/VlPCRH23y1kROrNJNhik37k8yHHvj6A/URrhgu4KrjNnyHrhkC4yffsuc2aDFidf0SLAXsfyffewdB04t89/1O/w1cDnyilFU='  #
     try:
         body = json.loads(request.body)
         user_id="xxxxxx"
@@ -50,6 +50,19 @@ def send_push_message(token,userid,message):
         'Authorization': f'Bearer {token}',
         'Content-Type': 'application/json'
     }
+
+    data = {
+        'to': userid,
+        'messages': [
+            {
+                'type': 'text',
+                'text': f'お友達登録ありがとうございます！'
+            }
+        ]
+    }
+
+
+    """
     data = {
         'to': userid,
         'messages': [
@@ -59,7 +72,7 @@ def send_push_message(token,userid,message):
             }
         ]
     }
-    
+    """
     # POSTリクエストを送信
     response = requests.post(url, headers=headers, json=data)
     
