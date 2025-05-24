@@ -20,8 +20,10 @@ def line_webhook(request):
 
         if 'events' in body and len(body['events']) > 0:
             try:
-                user_id = body['events'][0]['source']['userId']
-                send_push_message(CHANNEL_ACCESS_TOKEN,user_id,"aaaaa")
+                #user_id = body['events'][0]['source']['userId']
+                user_id = "aaaaa"
+                message = body['events'][0]['message']['text']
+                send_push_message(CHANNEL_ACCESS_TOKEN,user_id,message)
                 return jsonresponse({'user_id': user_id}, status=200)
             except e:
                 logger.error('エラーが発生しました: %s', request.body)
