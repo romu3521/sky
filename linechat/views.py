@@ -56,7 +56,7 @@ def send_push_message(token,userid,message):
         'messages': [
             {
                 'type': 'text',
-                'text': f'お友達登録ありがとうございます！'
+                'text': f'message をどうぞ「{message}」'
             }
         ]
     }
