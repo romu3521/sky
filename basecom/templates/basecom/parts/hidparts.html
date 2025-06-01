@@ -1,0 +1,79 @@
+{% load static %}
+<div class="advert">
+ <div style="margin:5px;white-space:nowrap;color:green;text-align:center;">LINEからでも！</div>
+ <img src="{% static 'pic/line_fr.png' %}" />
+</div>
+<style>
+.advert {
+  flex-direction: column;
+  border-radius:2px;
+  position: fixed;
+  right: 5px;
+  box-sizing:border-box;
+  top: 50%;
+  background: #cfc;
+  padding: 10px;
+  border: 1px solid #ccc;
+  opacity:0;
+  z-index:9999;
+  transition:opacity 0.5s ease;
+  width:120px;height:120px;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+ .advert img{
+
+  width:80%;
+  height:80%;
+ }
+
+@media (min-width: 768px) {
+  .advert {
+  }
+}
+</style>
+
+
+<script>
+  let advert = document.querySelector('.advert');
+  let scrollTimeout;
+
+  function shouldShowAdvert() {
+    return window.innerWidth >= 768;
+  }
+
+  function showAdvert() {
+    if (shouldShowAdvert()) {
+    advert.style.opacity = 1;
+    }
+  }
+
+  function hideAdvert() {
+    advert.style.opacity = 0;
+  }
+
+    setTimeout(() => {
+      showAdvert();
+    }, 1000);
+
+  window.addEventListener('scroll', () => {
+    if (!shouldShowAdvert()) return;
+
+    hideAdvert(); // スクロールで即非表示
+
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      showAdvert();
+    }, 10000);
+  });
+
+  window.addEventListener('resize', () => {
+    if (shouldShowAdvert()) {
+      showAdvert();
+    } else {
+      hideAdvert();
+    }
+  });
+</script>
