@@ -284,9 +284,8 @@ background: radial-gradient(circle at 30% 30%, #ffffff88, #ffffff00 40%),radial-
              display:inline-block;text-align:left;
   padding-bottom:50px;padding-top:50px;border-radius:10px;">
   <div class="namepin"></div>
-    <h1 class="StrEnphOpa"
-        data-baseduration=1500
-     >デザインも機能も。あなたの理想を超えるウェブサイトを。</h1> 
+    <h1 class="StrEnphOpa"  data-baseduration=1500 >
+        デザインも機能も。あなたの理想を超えるウェブサイトを。</h1> 
     <p  class="element fadeelem"
 data-threshold="0.8"
     >フロントエンドからバックエンドまで、プロフェッショナルが一貫対応！</p>
@@ -321,6 +320,169 @@ style="position:relative;transition: opacity 0.8s 0.6s ease-out, transform 0.8s 
   transform:translateX(0%) !important;
 }
 </style>
+
+<link rel="stylesheet" href="{% static 'css/land2.css' %}?p={{fileparam2}}">
+<style>
+</style>
+
+<div style="position:relative;width:100vw;padding:100px 0px; ">
+<div style="max-width: 1000px; margin: 0 auto;line-height: 1.6; padding: 10px;">
+
+  <h1 class="aaaa element fadeelem" style="font-size: 28px; color: #ddd;">かんたんウェブサイト制作パッケージ</h1>
+
+<style>
+
+.aaaa.fade-in {
+
+  transition:transform 0.5s ease 0.1s;
+  transform:scale(1.2);
+}
+
+
+
+.lp-container {
+  font-family: Hina Mincho, serif; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lp-container > div {
+  flex: 1;
+  width:300px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (max-width: 768px) {
+  .lp-container > div {
+  padding: 50px 0px;
+  max-width:95vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .lp-container > div {
+  padding: 50px 20px;
+  max-width:90vw;
+  font-size:1.3em;
+  }
+  .lp-container > li {
+  font-size:1.3em;
+  }
+}
+
+
+
+
+.lp-container h2 {
+  display:block;
+  font-size: 24px;
+  color:red;
+  transform:translate(-90%,0);
+  background-color:red;
+  margin-bottom: 15px;
+  text-align:left;
+}
+
+.lp-container ul {
+  padding-left: 20px;
+  color: #555;
+  margin: 0;
+  list-style: none;
+}
+
+.lp-container li{
+ text-align:left;
+}
+
+
+.lp-container li::before {
+  content: "✔ ";
+  color: green;
+}
+
+.lp-container table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #555;
+}
+
+.lp-container td {
+  padding: 8px 0px;
+  border-bottom: 1px solid #ccc;
+  white-space:nowrap;
+}
+</style>
+
+
+  <div  class="lp-container" style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+    
+    <!-- 左：サービス内容 -->
+    <div style="flex: 1;">
+      <h2 class="fadeelem">　　サービス内容</h2>
+      <ul style="padding-left: 20px; color: #555;">
+        <li> サイト制作（スマホ対応）</li>
+        <li> サーバー・ドメイン設定代行</li>
+        <li> 営業時間・メニューなど店舗情報の掲載</li>
+        <li> SNSやGoogleマップとの連携</li>
+        <li> 基本的なSEO対応</li>
+      </ul>
+    </div>
+
+    <!-- 右：制作料金 -->
+    <div style="flex: 1;">
+      <h2  class="fadeelem" style="">　　制作料金の目安</h2>
+      <table style="width: 100%; border-collapse: collapse; color: #555;">
+        <tr>
+          <td style="border-bottom: 1px solid #ccc;">基本制作パック</td>
+          <td class="fadeelem price" style="transition:transform 1s ease 0.2s,color 1s ease 0.2s;">49,800円（税込）</td>
+        </tr>
+        <tr>
+          <td style=" border-bottom: 1px solid #ccc;">ページの個別構成</td>
+          <td class="fadeelem price" style="transition:transform 1s ease 0.4s,color 1s ease 0.4s;">+10,000円〜</td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 1px solid #ccc;">メンテナンス</td>
+          <td  class="fadeelem price" style="transition:transform 1s ease 0.6s,color 1s ease 0.6s;">月額2,000円〜</td>
+        </tr>
+        <tr>
+          <td style="">サーバー/ドメイン代</td>
+          <td  class="fadeelem price" style="transition:transform 1s ease 0.7s,color 1s ease 0.7s;">年額 約6,000円〜</td>
+        </tr>
+      </table>
+<style>
+.price.fade-in{
+ transform:scale(1.2);
+ color:black;
+
+ 
+}
+ h2.fade-in{
+transition:transform 0.5s ease 0.0s,color 1s ease 0.7s;
+transform:translate(0,0);
+color:white !important;
+ }
+
+</style>
+    </div>
+
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+
+
 <div class="fadeelem wrapper-wrpper" style="transform:translateX(-40%);box-sizing:border-box;transition:0.4s transform ease;height:200px;overflow:hidden;">
 
 <div class="button-wrapper" style=" 
@@ -332,8 +494,6 @@ white-space:nowrap;
 width:110vw;
 position:relateve;
 left:-5vw;
-
-
  ">
  <a href="/contact.html" class="cta-button" style="
 display:inline-block;
@@ -345,11 +505,6 @@ white-space: nowrap;
   ">Contact →</a>
 </div>
 </div>
-
-<link rel="stylesheet" href="{% static 'css/land2.css' %}?p={{fileparam2}}">
-<style>
-</style>
-
   </section>
 
 <section class="hero3" style="min-height:100vh">
