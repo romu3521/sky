@@ -358,8 +358,10 @@ text-align:center;
 
 .lp-container > div {
   flex: 1;
+
+  background-image:url("{% static 'graphic/dots.svg' %}");
   width:300px;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
@@ -428,7 +430,8 @@ text-align:center;
 </style>
 
 
-  <div  class="lp-container" style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+  <div  class="lp-container" 
+   style="display:flex;flex-wrap:wrap;gap:40px;margin-top:30px;">
     
     <!-- 左：サービス内容 -->
     <div style="flex: 1;">
@@ -595,6 +598,7 @@ style="transition: opacity 0.8s 0.9s ease-out, transform 0.8s 0.9s ease-out;"
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease !important;
+            background-image:url("{% static 'graphic/dots.svg' %}");
         }
         .card:hover {
             transform: translateY(-5px);
