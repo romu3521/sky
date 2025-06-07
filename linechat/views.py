@@ -58,7 +58,7 @@ def send_push_message(token,userid,message):
         'messages': [
             {
                 'type': 'text',
-                'text': f'message をどうぞ「{message}」'
+                'text': f'担当者がメッセージを確認致します！'
             }
         ]
     }
