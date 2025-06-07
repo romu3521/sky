@@ -144,7 +144,7 @@
       margin: 5px;
       position: relative;
       background-repeat: no-repeat;
-      background-size: cover !important;
+      background-size: cover;
       background-position: 25% 25%;
       overflow: hidden;
       z-index: 9;
