@@ -28,10 +28,14 @@ div#RomProf2 div#rm_profile0 {
   box-sizing: border-box;
   width: 40vw;
   background-color: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
   display: inline-block;
   font-family: DotGothic16;
   margin-bottom: 50px;
   margin-top: 50px; }
+  @media screen and (min-width: 600px) {
+    div#RomProf2 div#rm_profile0 {
+      height: 55vh; } }
   @media screen and (max-width: 600px) {
     div#RomProf2 div#rm_profile0 {
       width: 90vw; } }
@@ -49,7 +53,7 @@ div#RomProf2 div#rm_profile0 {
       div#RomProf2 div#rm_profile0 > div, div#RomProf2 div#rm_profile0 > a {
         padding-left: 1em; } }
     div#RomProf2 div#rm_profile0 > div .StrEnphOpa, div#RomProf2 div#rm_profile0 > a .StrEnphOpa {
-      font-size: 1.6em; }
+      font-size: 1.4em; }
 div#RomProf2 div#rm_profile {
   margin-left: 1em;
   margin-top: 50px;
