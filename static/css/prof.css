@@ -32,9 +32,6 @@ div#RomProf2 div#rm_profile0 {
   font-family: DotGothic16;
   margin-bottom: 50px;
   margin-top: 50px; }
-  @media screen and (min-width: 600px) {
-    div#RomProf2 div#rm_profile0 {
-      height: 55vh; } }
   @media screen and (max-width: 600px) {
     div#RomProf2 div#rm_profile0 {
       width: 90vw; } }
