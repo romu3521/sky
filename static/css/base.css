@@ -22,11 +22,11 @@
     color: white;
     text-decoration: none;
     opacity: 1;
-    background-color: black; }
+    background-color: black;
+    transition: opacity 0.5s ease,background-color 0.5s ease; }
     .rmnavi a:hover {
       opacity: 0.5 !important;
-      background-color: #646464;
-      transition: opacity,background-color 0.5s ease; }
+      background-color: #646464; }
     .rmnavi a:visited {
       color: white; }
 

@@ -6,12 +6,12 @@
  style="overflow:hidden"
  data-picurl="/static/pic" id="RomProf2">
 
-<div id="rm_profile_t" style="background-image:url('{% static 'graphic/title_log.png' %}') !important;background-color:rgba(240,240,240,1);"></div>
+<div id="rm_profile_t"  class="area"  style="background-image:url('{% static 'graphic/title_log.png' %}') !important;background-color:rgba(240,240,240,1);"></div>
 
 
 
 <div class="paper" style="">
-<div id="rm_profile0" style="vertical-align:top;align-items: center;justify-content: center; ">
+<div id="rm_profile0"  class="area" style="vertical-align:top;align-items: center;justify-content: center; ">
  <div>
   <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >代表：Rom</span>
  </div>
@@ -31,14 +31,20 @@
   <span data-basedelay="400" class="StrEnphOpa rmlinktitle" >連絡先 : ランサーズ</span>
  </a>
 </div>
-<div id="rm_profile" style="background-size:95% 95%;background-image:url('{% static 'graphic/title_log.png' %}') !important;align-items: center;justify-content: center "></div>
+<div id="rm_profile" style="background-size:60% 60%;background-image:url('{% static 'graphic/title_log.png' %}') !important;align-items: center;justify-content: center "></div>
 </div>
 </div>
 
 <br>
 <style>
+.area{
+  border-radius:5px !important;
+  background-color:white !important;
+  background-image:url("{% static 'graphic/dots.svg' %}");
+}
 </style>
-<div id="keireki"><div style="width:82vw;background-color:white;align-items:flex-start;display:flex;">
+<div id="keireki">
+ <div class="area" style="width:82vw;background-color:white;align-items:flex-start;display:flex;">
   <div class="introduce">
     <h1>rom</h1>
     <p><strong>職種:</strong> フルスタックエンジニア</p>
@@ -89,6 +95,11 @@
 display:flex;justify-content:center;align-items:center;
  min-height:10vh;
 
+}
+@media screen and (max-width: 600px) {
+ #keireki>div {
+        width: 90vw !important;
+    }
 }
 </style>
 

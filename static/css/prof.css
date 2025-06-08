@@ -42,7 +42,7 @@ div#RomProf2 div#rm_profile0 {
     text-decoration: none;
     display: block;
     white-space: nowrap;
-    transition: filter opacity 0.3s ease;
+    transition: filter 0.3s ease, opacity 0.3s ease;
     border-bottom: 2px solid black;
     padding-top: 1em;
     padding-bottom: 1em; }
