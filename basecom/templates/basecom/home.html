@@ -1,6 +1,16 @@
 {% extends "basecom/base.html" %}
 {% load static %}
 {% block content %}
+
+
+
+
+
+
+
+
+
+
 <style>
   .mlider_app {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
@@ -29,7 +39,10 @@
 
 </style>
 
-<div data-baseurl="" data-picurl="/static/pic" id="mlider" style="margin-bottom:15px;overflow:hidden;text-align:center;opacity:0;transition:opacity 0.1s ease;display:flex;justify-content:center;align-itemscenter;">
+<div data-baseurl="" data-picurl="/static/pic" 
+id="mlider"
+class="content-section ind1" 
+ style="margin-bottom:15px;overflow:hidden;text-align:center;opacity:0;transition:opacity 0.1s ease;display:flex;justify-content:center;align-itemscenter;">
 
  <a href="https://wordpress.com/ja/"
   data-href="https://wordpress.com/ja/"
@@ -51,7 +64,7 @@ data-href="https://ja.legacy.reactjs.org/"
 
 </div>
 <div id="parallax">
-<div id="romMidashi" style="display:none;"><div><span class="StrEnphOpa" >Update Log</span></div></div>
+<div id="romMidashi" class="content-section ind2" style="display:none;"><div><span class="StrEnphOpa" >Update Log</span></div></div>
 <div class="rmblock" ></div>
 
 <script>
@@ -114,7 +127,7 @@ color:white;font-size:1.2em;white-space:normal;overflow:hidden;"
 <div style="color:red;width:100%;height:300px;background-color:white">
 
 
-<div class="web-design" style="background-image:url('{% static 'graphic/title_log.png' %}') !important;background-size:contain;background-repeat:no-repeat;background-position: center center;background-color:rgba(200,150,150,0.5);border-radius:5px;
+<div class="web-design "  class=""  style="background-image:url('{% static 'graphic/title_log.png' %}') !important;background-size:contain;background-repeat:no-repeat;background-position: center center;background-color:rgba(200,150,150,0.5);border-radius:5px;
  width: 100%; height: 100%; position: relative;">
 </div>
 
@@ -255,7 +268,10 @@ left:0px;
 
 
 </style>
-<div class="land2" style="min-height:100vh;position:relative;
+<div 
+id=""
+class="content-section land2 ind3"
+style="min-height:100vh;position:relative;
  overflow:hidden">
 <div 
 class="wooddsn"
@@ -325,7 +341,10 @@ style="position:relative;transition: opacity 0.8s 0.6s ease-out, transform 0.8s 
 <style>
 </style>
 
-<div style="position:relative;width:100vw;padding:100px 0px; ">
+<div
+id=""
+class="content-section ind4"
+ style="position:relative;width:100vw;padding:100px 0px; ">
 <div style="max-width: 1000px; margin: 0 auto;line-height: 1.6; padding: 10px;">
 
  <h1 class="h2mess fadeelem" style="">かんたんウェブサイト制作<br>パッケージ</h1>
@@ -517,7 +536,10 @@ white-space: nowrap;
 </div>
   </section>
 
-<section class="hero3" style="min-height:100vh">
+<section 
+ id=""
+ class="content-section hero3 ind5" style="min-height:100vh">
+
 <div class="container" style="">
 
 
@@ -647,6 +669,82 @@ style="transition: opacity 0.8s 0.9s ease-out, transform 0.8s 0.9s ease-out;"
 </style>
 <link rel="stylesheet" href="{% static 'css/home.css' %}?p={{fileparam2}}">
 <script type="text/javascript" crossorigin  src="{% static 'js/mlide_mk2.js' %}?p={{fileparam_js}}"  ></script> 
+
+
+
+<div id="indicator" class="indicator">
+  <span data-target="ind1" style=""></span>
+  <span data-target="ind2"></span>
+  <span data-target="ind3"></span>
+  <span data-target="ind4"></span>
+  <span data-target="ind5"></span>
+</div>
+
+
+<style>
+.indicator {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999;
+}
+
+.indicator span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #aaa;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicator span.active {
+  background: #333;
+}
+</style>
+<script>
+const indicators = document.querySelectorAll('.indicator span');
+const sections = Array.from(document.querySelectorAll('.content-section'));
+     console.log(sections)
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    const top = rect.top + scrollY;
+
+    if (scrollY >= top - windowHeight / 2) {
+      indicators.forEach(ind => ind.classList.remove('active'));
+      indicators[index].classList.add('active');
+    }
+  });
+});
+
+indicators.forEach(span => {
+  span.addEventListener('click', () => {
+    const target = document.getElementsByClassName(span.dataset.target)[0];
+    if (target) {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY,
+        behavior: 'smooth',
+      });
+    }
+  });
+});
+
+
+</script>
+
+
+
+
+
 
 
 {% endblock %}
