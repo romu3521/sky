@@ -89,11 +89,21 @@ div#RomProf2 div#rm_profile {
 
 .introduce {
   padding: 40px 20px; }
-  .introduce p, .introduce ul {
+  .introduce h4 {
+    margin-bottom: 0px; }
+  .introduce p {
     background-color: #f0f0f0;
     box-shadow: 3px 3px 2px 1px rgba(200, 200, 255, 0.5);
     font-size: 1.1em;
-    padding: 5px;
+    padding: 0.5em 5px;
+    margin-top: 0px;
+    list-style: none; }
+  .introduce ul {
+    background-color: #f0f0f0;
+    box-shadow: 3px 3px 2px 1px rgba(200, 200, 255, 0.5);
+    font-size: 1.1em;
+    padding: 0.5em 5px;
+    margin-top: 0px;
     list-style: none; }
 
 /*# sourceMappingURL=prof.css.map */
